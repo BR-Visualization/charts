@@ -1,4 +1,4 @@
-fig2_colors <- c("#00AFBB","#FFDB6D")
+fig2_colors <- c("#00AFBB", "#FFDB6D")
 fig3_colours <- colorBlindness::Blue2DarkOrange18Steps[12:18]
 cormobidities_colors <- c("#ABDDA4", "#66C2A5", "#3288BD")
 fig6_colors <- c("#d7191c", "#009292", "#ff6db6", "#490092", "#006ddb")

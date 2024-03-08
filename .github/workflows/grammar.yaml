@@ -1,6 +1,6 @@
 ---
 name: Grammar 📓
-
+run-name: ${{ github.actor }} is checking grammar
 on:
   push:
     branches:

@@ -4,7 +4,7 @@ run-name: ${{ github.actor }} is using roxygen to generate .Rd files in man/ dir
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     types:
       - opened
@@ -12,7 +12,7 @@ on:
       - reopened
       - ready_for_review
     branches:
-      - main
+      - master
   workflow_dispatch:
   workflow_call:
     inputs:

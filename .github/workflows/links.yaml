@@ -4,7 +4,7 @@ run-name: ${{ github.actor }} is checking whether URLs embedded in code and docu
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     types:
       - opened
@@ -12,7 +12,7 @@ on:
       - reopened
       - ready_for_review
     branches:
-      - main
+      - master
   workflow_dispatch:
   workflow_call:
     inputs:

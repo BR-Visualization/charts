@@ -1,6 +1,6 @@
 ---
 name: Check URLs 🌐
-run-name: ${{ github.actor }} is checking whether URLs are valid
+run-name: ${{ github.actor }} is checking whether URLs in documentation are valid
 on:
   push:
     branches:

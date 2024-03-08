@@ -1,6 +1,6 @@
 ---
 name: Roxygen 🅾
-run-name: ${{ github.actor }} is using roxygen to generate .Rd files in man/ directory and checking if manuals are up-to-date with roxygen comments in the code
+run-name: ${{ github.actor }} is using roxygen to generate .Rd files and checking if manuals are up-to-date with roxygen comments in the code
 on:
   push:
     branches:

@@ -1,6 +1,6 @@
 ---
 name: Release 🚀
-run-name: ${{ github.actor }} is creating a GitHub release from a git tag and generating changelog based on NEWS.md file
+run-name: ${{ github.actor }} is creating a GitHub release and generating the NEWS file
 on:
   push:
     tags:

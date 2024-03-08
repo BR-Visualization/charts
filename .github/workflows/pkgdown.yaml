@@ -1,6 +1,6 @@
 ---
 name: Pkgdown Docs 📚
-run-name: ${{ github.actor }} is using the pkgdown framework to generate documentation in HTML
+run-name: ${{ github.actor }} is generaging html documentation using pkgdown
 on:
   push:
     tags:

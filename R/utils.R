@@ -1,13 +1,23 @@
-fig2_colors<-c("#00AFBB",     "#FFDB6D")
-fig3_colours <- colorBlindness::Blue2DarkOrange18Steps[12:18]
-cormobidities_colors <- c("#ABDDA4", "#66C2A5", "#3288BD")
-fig6_colors <- c("#d7191c", "#009292", "#ff6db6", "#490092", "#006ddb")
-fig7_colors <- c("#009292", "#ff6db6", "#490092", "#006ddb")
-fig10_colors <- c("#0571b0", "white", "#ca0020")
-fig11_colors <- c("#00AFBB", "red", "blue")
-fig12_colors <- c("#0571b0", "#92c5de", "#f7f7f7", "#f4a582", "#ca0020")
-fig13_colors <- c("#0571b0", "#ca0020")
 
+#' Function for colors
+#'
+#' @return figure colors
+#' @import colorBlindness
+#' @export
+#'
+colfun <- function(){
+  fig2_colors <- c("#00AFBB", "#FFDB6D")
+  fig3_colors <- colorBlindness::Blue2DarkOrange18Steps[12:18]
+  fig4_colors <- c("#ABDDA4", "#66C2A5", "#3288BD")
+  fig6_colors <- c("#d7191c", "#009292", "#ff6db6", "#490092", "#006ddb")
+  fig7_colors <- c("#009292", "#ff6db6", "#490092", "#006ddb")
+  fig10_colors <- c("#0571b0", "white", "#ca0020")
+  fig11_colors <- c("#00AFBB", "red", "blue")
+  fig12_colors <- c("#0571b0", "#92c5de", "#f7f7f7", "#f4a582", "#ca0020")
+  fig13_colors <- c("#0571b0", "#ca0020")
+  return(c(fig2_colors, fig3_colours, fig4_colors, fig6_colors, fig7_colors, 
+           fig11_colors, fig12_colors, fig13_colors))
+}
 
 #' Prepare data analysis for binary and continous outcomes with Supplied
 #' interval confidence

@@ -5,7 +5,7 @@
 #' @import colorBlindness
 #' @export
 #'
-colfun <- function(){
+colfun <- function() {
   fig2_colors <- c("#00AFBB", "#FFDB6D")
   fig3_colors <- colorBlindness::Blue2DarkOrange18Steps[12:18]
   fig4_colors <- c("#ABDDA4", "#66C2A5", "#3288BD")

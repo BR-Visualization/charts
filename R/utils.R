@@ -1,4 +1,3 @@
-
 #' Function for colors
 #'
 #' @return figure colors

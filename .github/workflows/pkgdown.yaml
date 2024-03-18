@@ -1,12 +1,12 @@
 ---
 name: Pkgdown Docs 📚
-run-name: ${{ github.actor }} is generaging html documentation using pkgdown
+run-name: ${{ github.actor }} is generating html documentation using pkgdown
 on:
   push:
     tags:
       - "v*"
     branches:
-      - master
+      - '**'
   pull_request:
     types:
       - opened
@@ -14,7 +14,7 @@ on:
       - reopened
       - ready_for_review
     branches:
-      - master
+      - '**'
     paths:
       - inst/templates/**
       - _pkgdown.yaml

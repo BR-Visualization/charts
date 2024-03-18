@@ -8,23 +8,23 @@
 #'
 #' @examples
 #'
-#' cormobidities <- cormobidities(data = comorbidities)
-#' ggsave_custom("cormobidities.jpeg", imgpath = "~/charts/inst/img/",
-#' inplot = cormobidities, device = jpeg)
+#' fig4 <- figure4(data = comorbidities)
+#' ggsave_custom("figure4.jpeg", imgpath = "/cloud/project/inst/img/",
+#' inplot = fig4, device = jpeg)
 #'
-cormobidities <- function(data) {
+figure4 <- function(data) {
 
   # grouped bar chart
   data$Severity <- factor(data$Severity,
                           levels = c("Mild", "Moderate", "Severe"))
 
-  cormobidities <- ggplot(data, aes_string(fill = "Severity",
+  fig4 <- ggplot(data, aes_string(fill = "Severity",
                                   y = "Prevalence", x = "Comorbidities")) +
     geom_bar(position = "dodge", stat = "identity") +
     labs(
       color = "Severity"
     ) +
     guides(fill = guide_legend(title = "Severity:")) +
-    scale_fill_manual(values = cormobidities_colors)
-  cormobidities
+    scale_fill_manual(values = colfun()$fig4_colors)
+  fig4
 }

@@ -37,5 +37,5 @@ Adds customised defaults to ggsave for the BRAP Journal requirements
 }
 \examples{
 fig4 <- figure4(data = comorbidities)
-ggsave_custom("figure4.jpeg", imgpath = "~/BRAPfig/inst/img/", inplot = fig4)
+ggsave_custom("figure4.jpeg", imgpath = "/cloud/project/inst/img/", inplot = fig4)
 }

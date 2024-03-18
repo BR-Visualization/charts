@@ -14,8 +14,16 @@ colfun <- function() {
   fig11_colors <- c("#00AFBB", "red", "blue")
   fig12_colors <- c("#0571b0", "#92c5de", "#f7f7f7", "#f4a582", "#ca0020")
   fig13_colors <- c("#0571b0", "#ca0020")
-  return(c(fig2_colors, fig3_colours, fig4_colors, fig6_colors, fig7_colors, 
-           fig11_colors, fig12_colors, fig13_colors))
+  
+  return(list(fig2_colors = fig2_colors, 
+              fig3_colors = fig3_colors, 
+              fig4_colors = fig4_colors, 
+              fig6_colors = fig6_colors, 
+              fig7_colors = fig7_colors, 
+              fig10_colors = fig10_colors,
+              fig11_colors = fig11_colors,
+              fig12_colors = fig12_colors,
+              fig13_colors = fig13_colors))
 }
 
 #' Prepare data analysis for binary and continous outcomes with Supplied
@@ -252,7 +260,7 @@ relmax <- function(rmax, type_scale) {
 #'
 #' @examples
 #' fig4 <- figure4(data = comorbidities)
-#' ggsave_custom("figure4.jpeg", imgpath = "~/BRAPfig/inst/img/", inplot = fig4)
+#' ggsave_custom("figure4.jpeg", imgpath = "/cloud/project/inst/img/", inplot = fig4)
 ggsave_custom <-
   function(save_name,
            inplot,

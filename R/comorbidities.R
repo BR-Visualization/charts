@@ -1,4 +1,4 @@
-#' Codes to create cormobidities
+#' Codes to create comorbidities
 #'
 #' @param data example data for the manuscript is `comorbidities`
 #'

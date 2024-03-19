@@ -26,7 +26,7 @@ colfun <- function() {
               fig13_colors = fig13_colors))
 }
 
-#' Prepare data analysis for binary and continous outcomes with Supplied
+#' Prepare data analysis for binary and continuous outcomes with Supplied
 #' interval confidence
 #' identifies whether the dataframe is for Benefit or Risk analysis
 #' @param df (`data.frame`) dataset
@@ -65,7 +65,7 @@ prepare_br_supplied_ci <- function(df, colname, metric_name, func) {
   output
 }
 
-#' Prepare data analysis for binary and continous outcomes with Calculated
+#' Prepare data analysis for binary and continuous outcomes with Calculated
 #' interval confidence
 #' identifies whether the dataframe is for Benefit or Risk analysis
 #' @param df (`data.frame`) dataset
@@ -130,7 +130,7 @@ add_exprs <- function(...) {
 #' @param bold (`character`)  level to bold
 #' @param nonbold (`character`)\cr which level to bold.
 #'
-#' @details The function bolds text in variable (`bold`) and concatenates it
+#' @details The function boldens text in variable (`bold`) and concatenates it
 #' with string in (`nonbold`) and returns a `dataframe`.
 #'
 #' @import magrittr dplyr
@@ -242,12 +242,12 @@ relmax <- function(rmax, type_scale) {
 #' Wrapper to ggsave: Save a ggplot (or other grid object) with sensible
 #' defaults
 #'
-#' Adds customised defaults to ggsave for the BRAP Journal requirements
+#' Adds customized defaults to ggsave for the BRAP Journal requirements
 #'
 #' @param save_name File name to create on disk.
 #' @param inplot 	Plot to save, defaults to last plot displayed.
 #' @param imgpath Path of the directory to save plot to: path
-#' @param bgcol Background colour. If NULL, uses the plot.background fill value
+#' @param bgcol Background color. If NULL, uses the plot.background fill value
 #' from the plot theme.
 #' @param ... Other arguments passed on to the graphics device function,
 #' as specified by device.

@@ -2,7 +2,7 @@
 % Please edit documentation in R/utils.R
 \name{prepare_br_calculated_ci}
 \alias{prepare_br_calculated_ci}
-\title{Prepare data analysis for binary and continous outcomes with Calculated
+\title{Prepare data analysis for binary and continuous outcomes with Calculated
 interval confidence
 identifies whether the dataframe is for Benefit or Risk analysis}
 \usage{
@@ -25,7 +25,7 @@ either \code{nPat}, \code{Py}}
 data frame for specified type of analysis
 }
 \description{
-Prepare data analysis for binary and continous outcomes with Calculated
+Prepare data analysis for binary and continuous outcomes with Calculated
 interval confidence
 identifies whether the dataframe is for Benefit or Risk analysis
 }

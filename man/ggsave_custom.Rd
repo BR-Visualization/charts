@@ -26,16 +26,16 @@ If not supplied, uses the size of current graphics device.}
 
 \item{imgpath}{Path of the directory to save plot to: path}
 
-\item{bgcol}{Background colour. If NULL, uses the plot.background fill value
+\item{bgcol}{Background color. If NULL, uses the plot.background fill value
 from the plot theme.}
 
 \item{...}{Other arguments passed on to the graphics device function,
 as specified by device.}
 }
 \description{
-Adds customised defaults to ggsave for the BRAP Journal requirements
+Adds customized defaults to ggsave for the BRAP Journal requirements
 }
 \examples{
 fig4 <- figure4(data = comorbidities)
-ggsave_custom("figure4.jpeg", imgpath = "~/BRAPfig/inst/img/", inplot = fig4)
+ggsave_custom("figure4.jpeg", imgpath = "/cloud/project/inst/img/", inplot = fig4)
 }

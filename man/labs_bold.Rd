@@ -17,7 +17,7 @@ labs_bold(cond, bold, nonbold)
 Selectively bold label for \code{\link[ggplot2:ggplot2-package]{ggplot2::ggplot2()}}.
 }
 \details{
-The function bolds text in variable (\code{bold}) and concatenates it
+The function bold text in variable (\code{bold}) and concatenates it
 with string in (\code{nonbold}) and returns a \code{dataframe}.
 }
 \examples{
@@ -25,15 +25,15 @@ library(dplyr)
 library(ggplot2)
 
 xxx <- tribble(
-~x, ~z, ~w, ~y,
-1, "BOLD_AA"," plain", 1,
-2, "b","b", 0,
-3, "c", "c", 0
+  ~x, ~z, ~w, ~y,
+  1, "BOLD_AA", " plain", 1,
+  2, "b", "b", 0,
+  3, "c", "c", 0
 )
 ggplot(xxx, aes_string(x = "x", y = "z")) +
   geom_point() +
   scale_y_discrete(
-  label = labs_bold(cond = xxx[["y"]], xxx[["z"]], nonbold =xxx[["w"]])
+    label = labs_bold(cond = xxx[["y"]], xxx[["z"]], nonbold = xxx[["w"]])
   )
 
 }

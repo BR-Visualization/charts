@@ -528,7 +528,7 @@ jobs:
 
       - name: Push storage branch ${{ env.junit_xml_storage }} 🗄️
         if: env.junit_xml_comparison == 'true'
-        uses: ad-m/github-push-action@main
+        uses: ad-m/github-push-action@master
         with:
           github_token: ${{ steps.github-token.outputs.token }}
           branch: ${{ env.junit_xml_storage }}
@@ -620,7 +620,7 @@ jobs:
 
       - name: Push JUnit XML report to ${{ env.junit_xml_storage }} 📄
         if: steps.check-junit-xml.outputs.files_exists == 'true' && env.junit_xml_comparison == 'true'
-        uses: ad-m/github-push-action@main
+        uses: ad-m/github-push-action@master
         with:
           github_token: ${{ steps.github-token.outputs.token }}
           branch: ${{ env.junit_xml_storage }}

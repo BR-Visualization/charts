@@ -22,13 +22,18 @@ ggsave_custom(
 
 \item{inplot}{Plot to save, defaults to last plot displayed.}
 
-\item{wdth, hght, unts}{Plot size in units ("in", "cm", "mm", or "px").
-If not supplied, uses the size of current graphics device.}
+\item{wdth}{width of plot}
+
+\item{hght}{height of plot}
+
+\item{unts}{units of plot}
 
 \item{imgpath}{Path of the directory to save plot to: path}
 
 \item{bgcol}{Background color. If NULL, uses the plot.background fill value
 from the plot theme.}
+
+\item{create_dir}{create directory of output if folder doesn't exist}
 
 \item{...}{Other arguments passed on to the graphics device function,
 as specified by device.}

@@ -256,10 +256,12 @@ relmax <- function(rmax, type_scale) {
 #' from the plot theme.
 #' @param ... Other arguments passed on to the graphics device function,
 #' as specified by device.
-#' @param wdth,hght,unts Plot size in units ("in", "cm", "mm", or "px").
-#' If not supplied, uses the size of current graphics device.
 #' @param bgcol Background color. If NULL, uses the plot.background fill value
 #' from the plot theme.
+#' @param wdth width of plot
+#' @param hght height of plot
+#' @param unts units of plot
+#' @param create_dir create directory of output if folder doesn't exist
 #'
 #' @export
 #'

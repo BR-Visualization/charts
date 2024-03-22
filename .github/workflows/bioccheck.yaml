@@ -6,7 +6,7 @@ on:
     tags:
       - "v*"
     branches:
-      - master
+      - "**"
   pull_request:
     types:
       - opened
@@ -14,7 +14,7 @@ on:
       - reopened
       - ready_for_review
     branches:
-      - master
+      - "**"
   workflow_dispatch:
   workflow_call:
     secrets:

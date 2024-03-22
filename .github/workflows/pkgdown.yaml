@@ -65,16 +65,16 @@ on:
           drop-down. Similarly, if docs have been generated for the ref, but the ref is not
           listed in the vector, it will not appear in the drop-down.
         required: false
-        default: c("devel", "pre-release", "master", "latest-tag")
+        default: c("devel", "pre-release", "main", "latest-tag")
         type: string
       default-landing-page:
         description:
           The default branch or tag on gh-pages that corresponds to the landing page.
-          For instance, if your root index page on gh-pages is built using the 'master'
+          For instance, if your root index page on gh-pages is built using the 'main'
           branch, then the root page of the website will correspond to this page.
           If 'latest-tag' is selected, then the latest version will become the default.
         required: false
-        default: master
+        default: main
         type: string
       sd-direction:
         description: The direction to use to install staged dependencies. Choose between 'upstream', 'downstream' and 'all'
@@ -105,7 +105,7 @@ on:
         required: false
         type: string
         default: >-
-          ^master$|^devel$|^pre-release$|^latest-tag$|^release-candidate$|^develop$|^v([0-9]+\\.)?([0-9]+\\.)?([0-9]+)|^v([0-9]+\\.)?([0-9]+\\.)?([0-9]+)(-rc[0-9]+)$
+          ^main|^devel$|^pre-release$|^latest-tag$|^release-candidate$|^develop$|^v([0-9]+\\.)?([0-9]+\\.)?([0-9]+)|^v([0-9]+\\.)?([0-9]+\\.)?([0-9]+)(-rc[0-9]+)$
       package-subdirectory:
         description: Subdirectory in the repository, where the R package is located.
         required: false
@@ -295,7 +295,7 @@ jobs:
           DEFAULT_LANDING_PAGE="${{ inputs.default-landing-page }}"
           if [ "$DEFAULT_LANDING_PAGE" == "" ]
           then {
-            DEFAULT_LANDING_PAGE=master
+            DEFAULT_LANDING_PAGE=main
           }
           fi
           echo "default-landing-page=$DEFAULT_LANDING_PAGE" >> "$GITHUB_ENV"

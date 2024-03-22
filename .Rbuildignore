@@ -1,3 +1,6 @@
 ^charts\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
+^charts\.Rcheck$
+^charts.*\.tar\.gz$
+^charts.*\.tgz$

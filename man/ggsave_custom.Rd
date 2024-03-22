@@ -13,6 +13,7 @@ ggsave_custom(
   unts = "in",
   imgpath = "inst/img/",
   bgcol = "white",
+  create.dir = TRUE,
   ...
 )
 }

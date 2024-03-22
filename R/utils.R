@@ -274,7 +274,7 @@ ggsave_custom <-
            unts = "in",
            imgpath = "inst/img/",
            bgcol = "white",
-           create.dir = TRUE,
+           create_dir = TRUE,
            ...) {
     ggsave(
       filename = paste0(imgpath, save_name),
@@ -283,6 +283,7 @@ ggsave_custom <-
       height = hght,
       units = unts,
       bg = bgcol,
+      create.dir = create_dir,
       ...
     )
   }

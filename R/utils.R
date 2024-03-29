@@ -267,7 +267,7 @@ relmax <- function(rmax, type_scale) {
 #'
 #' @examples
 #' fig4 <- figure4(data = comorbidities)
-#' ggsave_custom("figure4.jpeg", imgpath = "inst/img/", inplot = fig4)
+#' ggsave_custom("figure4.jpeg", imgpath = "img/", inplot = fig4)
 ggsave_custom <-
   function(save_name,
            inplot,

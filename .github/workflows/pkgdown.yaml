@@ -234,7 +234,8 @@ jobs:
           ref: "gh-pages"
 
       - name: Upload docs to gh-pages 📙
-        if: startsWith(github.ref, 'refs/tags/v') || github.event_name == 'push'
+        # if: startsWith(github.ref, 'refs/tags/v') || github.event_name == 'push'
+        if: "!contains(github.event.commits[0].message, '[skip ci]')"
         run: |
           GH_PAGES_DIR="gh-pages/${{ steps.current-branch-or-tag.outputs.ref-name }}"
           mkdir -p $GH_PAGES_DIR

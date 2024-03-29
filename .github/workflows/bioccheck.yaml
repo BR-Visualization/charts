@@ -68,10 +68,10 @@ jobs:
             tag: latest
     name: ${{ matrix.config.image }}, version ${{ matrix.config.tag }}
     runs-on: ubuntu-latest
-    if: >
-      !contains(github.event.commits[0].message, '[skip bioccheck]')
-        && contains(inputs.enable-bioccheck, 'true')
-        && github.event.pull_request.draft == false
+    # if: >
+    #   !contains(github.event.commits[0].message, '[skip bioccheck]')
+    #     && contains(inputs.enable-bioccheck, 'true')
+    #     && github.event.pull_request.draft == false
     container:
       image: ${{ matrix.config.image }}:${{ matrix.config.tag }}
 

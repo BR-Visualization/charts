@@ -267,7 +267,7 @@ relmax <- function(rmax, type_scale) {
 #'
 #' @examples
 #' fig4 <- figure4(data = comorbidities)
-#' ggsave_custom("figure4.jpeg", imgpath = "/cloud/project/inst/img/", inplot = fig4)
+#' ggsave_custom("figure4.jpeg", imgpath = "inst/img/", inplot = fig4)
 ggsave_custom <-
   function(save_name,
            inplot,
@@ -276,7 +276,6 @@ ggsave_custom <-
            unts = "in",
            imgpath = "inst/img/",
            bgcol = "white",
-           create_dir = TRUE,
            ...) {
     ggsave(
       filename = paste0(imgpath, save_name),
@@ -285,7 +284,6 @@ ggsave_custom <-
       height = hght,
       units = unts,
       bg = bgcol,
-      create.dir = create_dir,
       ...
     )
   }

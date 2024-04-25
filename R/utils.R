@@ -261,13 +261,12 @@ relmax <- function(rmax, type_scale) {
 #' @param wdth width of plot
 #' @param hght height of plot
 #' @param unts units of plot
-#' @param create_dir create directory of output if folder doesn't exist
 #'
 #' @export
 #'
 #' @examples
 #' fig4 <- figure4(data = comorbidities)
-#' ggsave_custom("figure4.jpeg", imgpath = "img/", inplot = fig4)
+#' ggsave_custom("figure4.jpeg", imgpath = tempdir(), inplot = fig4)
 ggsave_custom <-
   function(save_name,
            inplot,

@@ -34,13 +34,11 @@ from the plot theme.}
 
 \item{...}{Other arguments passed on to the graphics device function,
 as specified by device.}
-
-\item{create_dir}{create directory of output if folder doesn't exist}
 }
 \description{
 Adds customized defaults to ggsave for the BRAP Journal requirements
 }
 \examples{
 fig4 <- figure4(data = comorbidities)
-ggsave_custom("figure4.jpeg", imgpath = "inst/img/", inplot = fig4)
+ggsave_custom("figure4.jpeg", imgpath = tempdir(), inplot = fig4)
 }

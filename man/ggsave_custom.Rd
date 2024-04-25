@@ -21,8 +21,11 @@ ggsave_custom(
 
 \item{inplot}{Plot to save, defaults to last plot displayed.}
 
-\item{wdth, hght, unts}{Plot size in units ("in", "cm", "mm", or "px").
-If not supplied, uses the size of current graphics device.}
+\item{wdth}{width of plot}
+
+\item{hght}{height of plot}
+
+\item{unts}{units of plot}
 
 \item{imgpath}{Path of the directory to save plot to: path}
 
@@ -37,5 +40,5 @@ Adds customized defaults to ggsave for the BRAP Journal requirements
 }
 \examples{
 fig4 <- figure4(data = comorbidities)
-ggsave_custom("figure4.jpeg", imgpath = "/cloud/project/inst/img/", inplot = fig4)
+ggsave_custom("figure4.jpeg", imgpath = tempdir(), inplot = fig4)
 }

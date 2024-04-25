@@ -19,7 +19,7 @@ Codes to create comorbidities
 
 fig4 <- figure4(data = comorbidities)
 ggsave_custom("figure4.jpeg",
-  imgpath = "/cloud/project/inst/img/",
+  imgpath = tempdir(),
   inplot = fig4, device = jpeg
 )
 

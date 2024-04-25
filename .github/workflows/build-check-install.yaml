@@ -7,7 +7,7 @@ on:
     tags:
       - "v*"
     branches:
-      - master
+      - "**"
   pull_request:
     types:
       - opened
@@ -15,7 +15,7 @@ on:
       - reopened
       - ready_for_review
     branches:
-      - master
+      - "**"
   workflow_dispatch:
   workflow_call:
     secrets:
@@ -95,7 +95,7 @@ on:
       junit-xml-diff-branch:
         description: Against which branch should the JUnit XML report from the current branch be compared?
         required: false
-        default: master
+        default: main
         type: string
       junit-xml-comparison:
         description: Turn on JUnit XML comparison
@@ -302,7 +302,7 @@ jobs:
           junit_xml_positive_threshold="${{ inputs.junit-xml-positive-threshold }}"
           junit_xml_negative_threshold="${{ inputs.junit-xml-negative-threshold }}"
           echo "junit_xml_storage=${junit_xml_storage_input:-_junit_xml_reports}" >> $GITHUB_ENV
-          echo "junit_xml_diff_branch=${junit_xml_diff_branch_input:-master}" >> $GITHUB_ENV
+          echo "junit_xml_diff_branch=${junit_xml_diff_branch_input:-main}" >> $GITHUB_ENV
           echo "junit_xml_comparison=${junit_xml_comparison_input:-true}" >> $GITHUB_ENV
           echo "junit_xml_positive_threshold=${junit_xml_positive_threshold:-1.0}" >> $GITHUB_ENV
           echo "junit_xml_negative_threshold=${junit_xml_negative_threshold:-1.0}" >> $GITHUB_ENV

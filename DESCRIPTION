@@ -14,7 +14,9 @@ Imports:
     dplyr,
     ggplot2,
     glue,
-    magrittr
+    magrittr,
+    patchwork,
+    readxl
 Depends: 
     R (>= 2.10)
 LazyData: true

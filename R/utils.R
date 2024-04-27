@@ -5,6 +5,45 @@
 #' @export
 #'
 colfun <- function() {
+  control_palettes <-  data.frame(
+    name = c(
+      "Blue",
+      "Purple",
+      "Pink",
+      "Orange",
+      "Black",
+      "Grey 4",
+      "Grey 3",
+      "Grey 2",
+      "Grey 1",
+      "Secondary Blue",
+      "Secondary Green"
+    ),
+    hex = c(
+      "#354B96",
+      "#5E366E",
+      "#CF004D",
+      "#EE8000",
+      "#1C1C1B",
+      "#555555",
+      "#888888",
+      "#BCBCBC",
+      "#ECEDED",
+      "#4EADD0",
+      "#96BA39"
+    ),
+    order = c(1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11)
+  )
   fig2_colors <- c("#00AFBB", "#FFDB6D")
   fig3_colors <- colorBlindness::Blue2DarkOrange18Steps[12:18]
   fig4_colors <- c("#ABDDA4", "#66C2A5", "#3288BD")
@@ -16,6 +55,7 @@ colfun <- function() {
   fig13_colors <- c("#0571b0", "#ca0020")
 
   return(list(
+    control_palettes = control_palettes,
     fig2_colors = fig2_colors,
     fig3_colors = fig3_colors,
     fig4_colors = fig4_colors,
@@ -26,6 +66,282 @@ colfun <- function() {
     fig12_colors = fig12_colors,
     fig13_colors = fig13_colors
   ))
+}
+
+
+#' Control Fonts
+#'
+#' @description `control_fonts()` calculates font-sizes depending on output size
+#'
+#' @param base_font_size (unit)\cr Font-size of normal paragraph text.
+#'
+#'   By default is 9pt.
+#'
+#'   By editing this value, all the other parameters get updated too.
+#'
+#' @param h1 (unit)\cr Font-size of title of the graph,
+#'   dependent of `base_font_size`. By default, 12pt.
+#'
+#' @param h2 (unit)\cr Font-size of subtitle of the graph,
+#'   dependent of `base_font_size`. By default, 10pt.
+#'
+#' @param label (unit)\cr Font-size of text that's called outside the ggplot
+#'   theme. It should render at the same font size as base_font_size
+#'
+#' @details It returns a list with the font sizes of:
+#'
+#' * **p** - normal text elements within the ggplot theme.
+#'
+#' * **h1** - titles.
+#'
+#' * **h2** - subtitles.
+#'
+#' * **label** - for text elements outside the ggplot theme. If you want to add
+#' an annotation or a label to your plot, use the font size `label`. By default,
+#' it renders at 10pt.
+#'
+#' * **rel** - for legend elements.
+#'
+#' @export
+#' @examples
+#' control_fonts(base_font_size = 10)
+
+control_fonts <- function(base_font_size = 9,
+                          h1 = 12,
+                          h2 = 10,
+                          label = base_font_size + 1) {
+
+  rel <- 7.253 / 9
+
+  list(
+    p = base_font_size,
+    h1 = h1 * rel * 1.2,
+    h2 = h2 * rel * 1.25,
+    label = label * rel * 0.423,
+    rel = base_font_size * rel
+  )
+}
+
+#' BR charts charts theme
+#'
+#' @param base_family - font
+#' @param base_font_size (unit)\cr Font-size of normal paragraph text.
+#' @param base_stroke (unit)\cr line thickness
+#' @param margin (unit)\cr margin around entire plot (unit with the sizes of the top, right, bottom, and left margins)
+#' @param get_fonts fonts
+#' @param get_colors colors
+#' @param axis_text_x tick labels along axes
+#' @param axis_line all line elements
+#' @param axis_title_y labels of axes
+#' @param axis_text_y_left tick labels along axes
+#' @param legend_position position
+#' @param panel_grid_minor grid lines
+#' @param panel_grid_major grid lines
+#' @param ... Additional arguments passed to other methods.
+#'
+#' @return theme for chart
+#' @export
+charts_style_theme <- function(base_family = "",
+                              base_font_size = 9,
+                              base_stroke = 1,
+                              margin = 1,
+                              get_fonts = control_fonts,
+                              get_colors = colfun()[["control_palettes"]],
+                              axis_text_x = ggplot2::element_text(colour = black),
+                              axis_line = ggplot2::element_line(colour = black, size = stroke_size),
+                              axis_title_y = ggplot2::element_text(),
+                              axis_text_y_left = ggplot2::element_text(
+                                margin = ggplot2::margin(
+                                  t = 0,
+                                  r = spacing / 2,
+                                  l = 0,
+                                  b = 0,
+                                  unit = "pt"
+                                )
+                              ),
+                              legend_position = "top",
+                              panel_grid_minor = ggplot2::element_line(
+                                colour = grey_2,
+                                size = stroke_size / 2,
+                                linetype = "dashed"
+                              ),
+                              panel_grid_major = ggplot2::element_line(
+                                colour = grey_2,
+                                size = stroke_size / 2,
+                                linetype = "dashed"
+                              ),
+                              ...) {
+
+  # stroke size
+  stroke_size <- base_stroke * 0.47
+
+  # fonts
+  fonts <- get_fonts(base_font_size = base_font_size)
+
+  # in pt
+  spacing <- fonts$rel
+
+  # colors
+  colors <- get_colors
+
+  black <- colors[colors$name == "Black", "hex"]
+  grey_4 <- colors[colors$name == "Grey 4", "hex"]
+  grey_2 <- colors[colors$name == "Grey 2", "hex"]
+  white <- "#ffffff"
+
+  # Change ggplot theme ---------------------------
+  ggplot2::theme(
+
+    # Elements in the first block are not used directly,
+    # but are inherited by others
+    line = ggplot2::element_line(
+      colour = grey_2,
+      size = stroke_size,
+      linetype = 1,
+      lineend = "butt"
+    ),
+
+    rect = ggplot2::element_rect(
+      fill = white,
+      colour = black,
+      size = stroke_size,
+      linetype = 1
+    ),
+
+    text = ggplot2::element_text(
+      size = fonts$p,
+      family = base_family,
+      colour = black
+    ),
+
+    axis.text = ggplot2::element_text(size = fonts$p, colour = grey_4),
+
+    # 1 Axis format ===============================
+    # sets the text font, size and colour for the axis test, and margins
+    # and removes lines
+    # If we need those axis lines and ticks, the cookbook shows how to add them
+
+    # 1.1 lines
+    axis.line = axis_line,
+
+    # 1.2 texts
+    # axis titles are removed by default
+    axis.title = ggplot2::element_text(
+      colour = black,
+      face = "bold",
+      size = fonts$p),
+    axis.title.y = axis_title_y,
+    axis.text.x = axis_text_x,
+    axis.text.x.bottom = ggplot2::element_text(
+      margin = ggplot2::margin(
+        t = spacing / 2,
+        r = 0,
+        l = 0,
+        b = spacing,
+        unit = "pt"
+      )
+    ),
+    axis.text.y.left = axis_text_y_left,
+
+    # 1.3 ticks
+    axis.ticks = ggplot2::element_line(colour = black),
+    axis.ticks.length = ggplot2::unit(spacing / 2, "pt"),
+
+    # 2 Panel =========================
+    panel.background = ggplot2::element_blank(),
+    panel.border = ggplot2::element_blank(),
+    panel.grid.minor = panel_grid_minor,
+    panel.grid.major = panel_grid_major,
+    panel.spacing = ggplot2::unit(spacing * 2, "pt"),
+
+    # 3 Legend Format =============================
+    # 3.1 sets the position and alignment of the legend
+    # removes a title and background for it and sets the requirements
+    # for any text within the legend.
+    # The legend is positioned on the top left side of the chart
+    legend.background = ggplot2::element_blank(),
+    legend.position = legend_position,
+    legend.justification = "left",
+    legend.direction = "horizontal",
+    legend.margin = ggplot2::margin(
+      t = spacing / 4,
+      r = 0,
+      b = spacing / 2,
+      l = 0,
+      unit = "pt"
+    ),
+    legend.key = ggplot2::element_blank(),
+    legend.key.size = ggplot2::unit(spacing * 1.5, "pt"),
+    legend.title = ggplot2::element_text(
+      size = fonts$p,
+      colour = grey_4,
+      margin = ggplot2::margin(r = spacing / 2, unit = "pt")
+    ),
+    legend.text.align = 0,
+    legend.text = ggplot2::element_text(
+      colour = grey_4,
+      size = fonts$p,
+      hjust = 0,
+      margin = ggplot2::margin(
+        t = 0,
+        r = spacing * 2,
+        b = 0,
+        l = 0,
+        unit = "pt"
+      )
+    ),
+    legend.box = NULL,
+    legend.spacing.x = ggplot2::unit(spacing / 2, "pt"),
+
+
+    # 4 Title & subtitle =======================
+    # it changes the font, size, weight and colour
+    plot.title.position = "plot",
+    plot.title = ggplot2::element_text(
+      size = fonts$h1,
+      face = "bold",
+      colour = black,
+      margin = ggplot2::margin(
+        t = 0,
+        r = 0,
+        b = spacing / 2,
+        l = 0,
+        unit = "pt"
+      )
+    ),
+    plot.subtitle = ggplot2::element_text(
+      size = fonts$h2,
+      colour = black,
+      hjust = 0,
+      margin = ggplot2::margin(
+        t = spacing / 2,
+        b = spacing * 1.5,
+        unit = "pt"
+      )
+    ),
+
+    # 5 add a general margin to the plot ==========
+    plot.margin = ggplot2::margin(
+      t = spacing * 2 * margin,
+      b = spacing * 2 * margin,
+      l = spacing * 2 * margin,
+      r = spacing * 2 * margin,
+      unit = "pt"
+    ),
+
+    # 6 Facets & small multiples ==================
+    # background of the title facets
+    strip.background = ggplot2::element_rect(fill = white, size = 0),
+
+    # titles of the facets
+    strip.text = ggplot2::element_text(
+      size = fonts$h2,
+      face = "bold",
+      hjust = 0,
+      margin = ggplot2::margin(t = 0, r = 0, l = 0, b = spacing, unit = "pt")
+    )
+  ) + ggplot2::theme(...)
+
 }
 
 #' Prepare data analysis for binary and continuous outcomes with Supplied
@@ -192,20 +508,20 @@ labs_bold <- function(cond, bold, nonbold) {
 relmin <- function(rmin, type_scale) {
   if (type_scale == "Fixed") {
     ifelse(rmin >= 0,
-      0,
-      ifelse(
-        rmin >= -1,
-        floor(10 * rmin) / 10,
-        floor(rmin)
-      )
+           0,
+           ifelse(
+             rmin >= -1,
+             floor(10 * rmin) / 10,
+             floor(rmin)
+           )
     )
   } else {
     ifelse(rmin >= 1,
-      floor(rmin),
-      ifelse(rmin >= -1,
-        floor(10 * rmin) / 10,
-        floor(rmin)
-      )
+           floor(rmin),
+           ifelse(rmin >= -1,
+                  floor(10 * rmin) / 10,
+                  floor(rmin)
+           )
     )
   }
 }
@@ -226,20 +542,20 @@ relmin <- function(rmin, type_scale) {
 relmax <- function(rmax, type_scale) {
   if (type_scale == "Fixed") {
     ifelse(rmax <= 0,
-      0,
-      ifelse(
-        rmax <= 1,
-        ceiling(10 * rmax) / 10,
-        ceiling(rmax)
-      )
+           0,
+           ifelse(
+             rmax <= 1,
+             ceiling(10 * rmax) / 10,
+             ceiling(rmax)
+           )
     )
   } else {
     ifelse(rmax <= -1,
-      ceiling(rmax),
-      ifelse(rmax <= 1,
-        ceiling(10 * rmax) / 10,
-        ceiling(rmax)
-      )
+           ceiling(rmax),
+           ifelse(rmax <= 1,
+                  ceiling(10 * rmax) / 10,
+                  ceiling(rmax)
+           )
     )
   }
 }

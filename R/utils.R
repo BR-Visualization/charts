@@ -5,7 +5,7 @@
 #' @export
 #'
 colfun <- function() {
-  control_palettes <-  data.frame(
+  control_palettes <- data.frame(
     name = c(
       "Blue",
       "Purple",
@@ -32,17 +32,19 @@ colfun <- function() {
       "#4EADD0",
       "#96BA39"
     ),
-    order = c(1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7,
-              8,
-              9,
-              10,
-              11)
+    order = c(
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    )
   )
   fig2_colors <- c("#00AFBB", "#FFDB6D")
   fig3_colors <- colorBlindness::Blue2DarkOrange18Steps[12:18]
@@ -105,12 +107,10 @@ colfun <- function() {
 #' @export
 #' @examples
 #' control_fonts(base_font_size = 10)
-
 control_fonts <- function(base_font_size = 9,
                           h1 = 12,
                           h2 = 10,
                           label = base_font_size + 1) {
-
   rel <- 7.253 / 9
 
   list(
@@ -142,36 +142,35 @@ control_fonts <- function(base_font_size = 9,
 #' @return theme for chart
 #' @export
 charts_style_theme <- function(base_family = "",
-                              base_font_size = 9,
-                              base_stroke = 1,
-                              margin = 1,
-                              get_fonts = control_fonts,
-                              get_colors = colfun()[["control_palettes"]],
-                              axis_text_x = ggplot2::element_text(colour = black),
-                              axis_line = ggplot2::element_line(colour = black, size = stroke_size),
-                              axis_title_y = ggplot2::element_text(),
-                              axis_text_y_left = ggplot2::element_text(
-                                margin = ggplot2::margin(
-                                  t = 0,
-                                  r = spacing / 2,
-                                  l = 0,
-                                  b = 0,
-                                  unit = "pt"
-                                )
-                              ),
-                              legend_position = "top",
-                              panel_grid_minor = ggplot2::element_line(
-                                colour = grey_2,
-                                size = stroke_size / 2,
-                                linetype = "dashed"
-                              ),
-                              panel_grid_major = ggplot2::element_line(
-                                colour = grey_2,
-                                size = stroke_size / 2,
-                                linetype = "dashed"
-                              ),
-                              ...) {
-
+                               base_font_size = 9,
+                               base_stroke = 1,
+                               margin = 1,
+                               get_fonts = control_fonts,
+                               get_colors = colfun()[["control_palettes"]],
+                               axis_text_x = ggplot2::element_text(colour = black),
+                               axis_line = ggplot2::element_line(colour = black, size = stroke_size),
+                               axis_title_y = ggplot2::element_text(),
+                               axis_text_y_left = ggplot2::element_text(
+                                 margin = ggplot2::margin(
+                                   t = 0,
+                                   r = spacing / 2,
+                                   l = 0,
+                                   b = 0,
+                                   unit = "pt"
+                                 )
+                               ),
+                               legend_position = "top",
+                               panel_grid_minor = ggplot2::element_line(
+                                 colour = grey_2,
+                                 size = stroke_size / 2,
+                                 linetype = "dashed"
+                               ),
+                               panel_grid_major = ggplot2::element_line(
+                                 colour = grey_2,
+                                 size = stroke_size / 2,
+                                 linetype = "dashed"
+                               ),
+                               ...) {
   # stroke size
   stroke_size <- base_stroke * 0.47
 
@@ -200,20 +199,17 @@ charts_style_theme <- function(base_family = "",
       linetype = 1,
       lineend = "butt"
     ),
-
     rect = ggplot2::element_rect(
       fill = white,
       colour = black,
       size = stroke_size,
       linetype = 1
     ),
-
     text = ggplot2::element_text(
       size = fonts$p,
       family = base_family,
       colour = black
     ),
-
     axis.text = ggplot2::element_text(size = fonts$p, colour = grey_4),
 
     # 1 Axis format ===============================
@@ -229,7 +225,8 @@ charts_style_theme <- function(base_family = "",
     axis.title = ggplot2::element_text(
       colour = black,
       face = "bold",
-      size = fonts$p),
+      size = fonts$p
+    ),
     axis.title.y = axis_title_y,
     axis.text.x = axis_text_x,
     axis.text.x.bottom = ggplot2::element_text(
@@ -341,7 +338,6 @@ charts_style_theme <- function(base_family = "",
       margin = ggplot2::margin(t = 0, r = 0, l = 0, b = spacing, unit = "pt")
     )
   ) + ggplot2::theme(...)
-
 }
 
 #' Prepare data analysis for binary and continuous outcomes with Supplied
@@ -508,20 +504,20 @@ labs_bold <- function(cond, bold, nonbold) {
 relmin <- function(rmin, type_scale) {
   if (type_scale == "Fixed") {
     ifelse(rmin >= 0,
-           0,
-           ifelse(
-             rmin >= -1,
-             floor(10 * rmin) / 10,
-             floor(rmin)
-           )
+      0,
+      ifelse(
+        rmin >= -1,
+        floor(10 * rmin) / 10,
+        floor(rmin)
+      )
     )
   } else {
     ifelse(rmin >= 1,
-           floor(rmin),
-           ifelse(rmin >= -1,
-                  floor(10 * rmin) / 10,
-                  floor(rmin)
-           )
+      floor(rmin),
+      ifelse(rmin >= -1,
+        floor(10 * rmin) / 10,
+        floor(rmin)
+      )
     )
   }
 }
@@ -542,20 +538,20 @@ relmin <- function(rmin, type_scale) {
 relmax <- function(rmax, type_scale) {
   if (type_scale == "Fixed") {
     ifelse(rmax <= 0,
-           0,
-           ifelse(
-             rmax <= 1,
-             ceiling(10 * rmax) / 10,
-             ceiling(rmax)
-           )
+      0,
+      ifelse(
+        rmax <= 1,
+        ceiling(10 * rmax) / 10,
+        ceiling(rmax)
+      )
     )
   } else {
     ifelse(rmax <= -1,
-           ceiling(rmax),
-           ifelse(rmax <= 1,
-                  ceiling(10 * rmax) / 10,
-                  ceiling(rmax)
-           )
+      ceiling(rmax),
+      ifelse(rmax <= 1,
+        ceiling(10 * rmax) / 10,
+        ceiling(rmax)
+      )
     )
   }
 }

@@ -111,7 +111,7 @@ control_fonts <- function(base_font_size = 9,
                           h1 = 12,
                           h2 = 10,
                           label = base_font_size + 1) {
-  rel <- 7.253 / 9
+  rel <- 7.253 / base_font_size
 
   list(
     p = base_font_size,

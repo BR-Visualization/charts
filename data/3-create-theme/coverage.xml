@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "https://raw.githubusercontent.com/cobertura/cobertura/master/cobertura/src/site/htdocs/xml/coverage-04.dtd">
-<coverage line-rate="0" branch-rate="0" lines-covered="0" lines-valid="367" branches-covered="0" branches-valid="0" complexity="0" version="3.6.4" timestamp="2024-05-06 10:47:57.927236">
+<coverage line-rate="0" branch-rate="0" lines-covered="0" lines-valid="369" branches-covered="0" branches-valid="0" complexity="0" version="3.6.4" timestamp="2024-05-06 10:51:44.579918">
   <sources>
     <source>/__w/charts/charts/charts</source>
   </sources>
@@ -51,15 +51,13 @@
           <methods>
             <method name="pyramid_chart" signature="" line-rate="0" branch-rate="0" complexity="0">
               <lines>
-                <line number="34" hits="0" branch="false"/>
-                <line number="35" hits="0" branch="false"/>
+                <line number="36" hits="0" branch="false"/>
                 <line number="37" hits="0" branch="false"/>
-                <line number="38" hits="0" branch="false"/>
                 <line number="39" hits="0" branch="false"/>
                 <line number="40" hits="0" branch="false"/>
                 <line number="41" hits="0" branch="false"/>
+                <line number="42" hits="0" branch="false"/>
                 <line number="43" hits="0" branch="false"/>
-                <line number="44" hits="0" branch="false"/>
                 <line number="45" hits="0" branch="false"/>
                 <line number="46" hits="0" branch="false"/>
                 <line number="47" hits="0" branch="false"/>
@@ -82,10 +80,10 @@
                 <line number="64" hits="0" branch="false"/>
                 <line number="65" hits="0" branch="false"/>
                 <line number="66" hits="0" branch="false"/>
+                <line number="67" hits="0" branch="false"/>
                 <line number="68" hits="0" branch="false"/>
                 <line number="69" hits="0" branch="false"/>
                 <line number="70" hits="0" branch="false"/>
-                <line number="71" hits="0" branch="false"/>
                 <line number="72" hits="0" branch="false"/>
                 <line number="73" hits="0" branch="false"/>
                 <line number="74" hits="0" branch="false"/>
@@ -108,30 +106,32 @@
                 <line number="91" hits="0" branch="false"/>
                 <line number="92" hits="0" branch="false"/>
                 <line number="93" hits="0" branch="false"/>
+                <line number="94" hits="0" branch="false"/>
                 <line number="95" hits="0" branch="false"/>
                 <line number="96" hits="0" branch="false"/>
                 <line number="97" hits="0" branch="false"/>
-                <line number="98" hits="0" branch="false"/>
                 <line number="99" hits="0" branch="false"/>
                 <line number="100" hits="0" branch="false"/>
                 <line number="101" hits="0" branch="false"/>
                 <line number="102" hits="0" branch="false"/>
                 <line number="103" hits="0" branch="false"/>
                 <line number="104" hits="0" branch="false"/>
+                <line number="105" hits="0" branch="false"/>
                 <line number="106" hits="0" branch="false"/>
+                <line number="107" hits="0" branch="false"/>
+                <line number="108" hits="0" branch="false"/>
+                <line number="110" hits="0" branch="false"/>
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="34" hits="0" branch="false"/>
-            <line number="35" hits="0" branch="false"/>
+            <line number="36" hits="0" branch="false"/>
             <line number="37" hits="0" branch="false"/>
-            <line number="38" hits="0" branch="false"/>
             <line number="39" hits="0" branch="false"/>
             <line number="40" hits="0" branch="false"/>
             <line number="41" hits="0" branch="false"/>
+            <line number="42" hits="0" branch="false"/>
             <line number="43" hits="0" branch="false"/>
-            <line number="44" hits="0" branch="false"/>
             <line number="45" hits="0" branch="false"/>
             <line number="46" hits="0" branch="false"/>
             <line number="47" hits="0" branch="false"/>
@@ -154,10 +154,10 @@
             <line number="64" hits="0" branch="false"/>
             <line number="65" hits="0" branch="false"/>
             <line number="66" hits="0" branch="false"/>
+            <line number="67" hits="0" branch="false"/>
             <line number="68" hits="0" branch="false"/>
             <line number="69" hits="0" branch="false"/>
             <line number="70" hits="0" branch="false"/>
-            <line number="71" hits="0" branch="false"/>
             <line number="72" hits="0" branch="false"/>
             <line number="73" hits="0" branch="false"/>
             <line number="74" hits="0" branch="false"/>
@@ -180,17 +180,21 @@
             <line number="91" hits="0" branch="false"/>
             <line number="92" hits="0" branch="false"/>
             <line number="93" hits="0" branch="false"/>
+            <line number="94" hits="0" branch="false"/>
             <line number="95" hits="0" branch="false"/>
             <line number="96" hits="0" branch="false"/>
             <line number="97" hits="0" branch="false"/>
-            <line number="98" hits="0" branch="false"/>
             <line number="99" hits="0" branch="false"/>
             <line number="100" hits="0" branch="false"/>
             <line number="101" hits="0" branch="false"/>
             <line number="102" hits="0" branch="false"/>
             <line number="103" hits="0" branch="false"/>
             <line number="104" hits="0" branch="false"/>
+            <line number="105" hits="0" branch="false"/>
             <line number="106" hits="0" branch="false"/>
+            <line number="107" hits="0" branch="false"/>
+            <line number="108" hits="0" branch="false"/>
+            <line number="110" hits="0" branch="false"/>
           </lines>
         </class>
         <class name="utils.R" filename="R/utils.R" line-rate="0" branch-rate="0" complexity="0">

@@ -1,4 +1,4 @@
-#' Demography Figure
+#' Pyramid Chart
 #'
 #' @param fig2_data `dataframe` demography data
 #' @param Typev `Factor` Type of Diabetis A or B

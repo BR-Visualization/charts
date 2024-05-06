@@ -122,7 +122,7 @@ control_fonts <- function(base_font_size = 9,
   )
 }
 
-#' BR charts charts theme
+#' BR charts theme
 #'
 #' @param base_family - font
 #' @param base_font_size (unit)\cr Font-size of normal paragraph text.

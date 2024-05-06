@@ -34,6 +34,8 @@ demography |>
     ),
     Sex = Gender
   ) |>
-  pyramid_chart(levelsvar = c("A", "B"), x = "figprev", y = "Age",
-  gendervar = "Sex", alpha_set = 0.7)
+  pyramid_chart(
+    levelsvar = c("A", "B"), x = "figprev", y = "Age",
+    gendervar = "Sex", alpha_set = 0.7
+  )
 }

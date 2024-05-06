@@ -141,7 +141,7 @@ control_fonts <- function(base_font_size = 9,
 #'
 #' @return theme for chart
 #' @export
-charts_style_theme <- function(base_family = "",
+br_charts_theme <- function(base_family = "",
                                base_font_size = 9,
                                base_stroke = 1,
                                margin = 1,

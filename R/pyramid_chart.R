@@ -22,8 +22,10 @@
 #'     ),
 #'     Sex = Gender
 #'   ) |>
-#'   pyramid_chart(levelsvar = c("A", "B"), x = "figprev", y = "Age",
-#'   gendervar = "Sex", alpha_set = 0.7)
+#'   pyramid_chart(
+#'     levelsvar = c("A", "B"), x = "figprev", y = "Age",
+#'     gendervar = "Sex", alpha_set = 0.7
+#'   )
 pyramid_chart <-
   function(data,
            xvar,
@@ -53,8 +55,10 @@ pyramid_chart <-
       scale_y_discrete() +
       scale_color_manual(values = colfun()$fig2_colors) +
       scale_fill_manual(values = colfun()$fig2_colors) +
-      labs(title = paste0("Type", levelsvar[[1]]),
-           x = "Prevalence (x 100 000)") +
+      labs(
+        title = paste0("Type", levelsvar[[1]]),
+        x = "Prevalence (x 100 000)"
+      ) +
       guides(
         fill = guide_legend(title = paste0({{ gendervar }}, ":")),
         color = guide_legend(title = paste0({{ gendervar }}, ":"))
@@ -99,9 +103,9 @@ pyramid_chart <-
       plot.title = element_text(hjust = 0.5)
     ) +
       fig2_2 + theme(
-      axis.title.y = element_blank(),
-      plot.title = element_text(hjust = 0.5)
-    ) + plot_layout(guides = "collect") & theme(legend.position = "top")
+        axis.title.y = element_blank(),
+        plot.title = element_text(hjust = 0.5)
+      ) + plot_layout(guides = "collect") & theme(legend.position = "top")
 
     cplot
   }

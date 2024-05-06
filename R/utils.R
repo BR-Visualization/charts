@@ -127,7 +127,8 @@ control_fonts <- function(base_font_size = 9,
 #' @param base_family - font
 #' @param base_font_size (unit)\cr Font-size of normal paragraph text.
 #' @param base_stroke (unit)\cr line thickness
-#' @param margin (unit)\cr margin around entire plot (unit with the sizes of the top, right, bottom, and left margins)
+#' @param margin (unit)\cr margin around entire plot (unit with the sizes of the
+#'  top, right, bottom, and left margins)
 #' @param get_fonts fonts
 #' @param get_colors colors
 #' @param axis_text_x tick labels along axes
@@ -142,35 +143,40 @@ control_fonts <- function(base_font_size = 9,
 #' @return theme for chart
 #' @export
 br_charts_theme <- function(base_family = "",
-                               base_font_size = 9,
-                               base_stroke = 1,
-                               margin = 1,
-                               get_fonts = control_fonts,
-                               get_colors = colfun()[["control_palettes"]],
-                               axis_text_x = ggplot2::element_text(colour = black),
-                               axis_line = ggplot2::element_line(colour = black, size = stroke_size),
-                               axis_title_y = ggplot2::element_text(),
-                               axis_text_y_left = ggplot2::element_text(
-                                 margin = ggplot2::margin(
-                                   t = 0,
-                                   r = spacing / 2,
-                                   l = 0,
-                                   b = 0,
-                                   unit = "pt"
-                                 )
-                               ),
-                               legend_position = "top",
-                               panel_grid_minor = ggplot2::element_line(
-                                 colour = grey_2,
-                                 size = stroke_size / 2,
-                                 linetype = "dashed"
-                               ),
-                               panel_grid_major = ggplot2::element_line(
-                                 colour = grey_2,
-                                 size = stroke_size / 2,
-                                 linetype = "dashed"
-                               ),
-                               ...) {
+                            base_font_size = 9,
+                            base_stroke = 1,
+                            margin = 1,
+                            get_fonts = control_fonts,
+                            get_colors = colfun()[["control_palettes"]],
+                            axis_text_x = ggplot2::element_text(
+                              colour = black
+                            ),
+                            axis_line = ggplot2::element_line(
+                              colour = black,
+                              size = stroke_size
+                            ),
+                            axis_title_y = ggplot2::element_text(),
+                            axis_text_y_left = ggplot2::element_text(
+                              margin = ggplot2::margin(
+                                t = 0,
+                                r = spacing / 2,
+                                l = 0,
+                                b = 0,
+                                unit = "pt"
+                              )
+                            ),
+                            legend_position = "top",
+                            panel_grid_minor = ggplot2::element_line(
+                              colour = grey_2,
+                              size = stroke_size / 2,
+                              linetype = "dashed"
+                            ),
+                            panel_grid_major = ggplot2::element_line(
+                              colour = grey_2,
+                              size = stroke_size / 2,
+                              linetype = "dashed"
+                            ),
+                            ...) {
   # stroke size
   stroke_size <- base_stroke * 0.47
 

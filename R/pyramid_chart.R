@@ -1,9 +1,11 @@
 #' Pyramid Chart
 #'
-#' @param fig2_data `dataframe` demography data
-#' @param Typev `Factor` Type of Diabetis A or B
+#' @param data `dataframe` demography data
+#' @param levelsvar `vector` factor levels
 #' @param gendervar `Factor` Gender variable
 #' @param alpha_set `Value` specify transparency of symbols
+#' @param xvar 'Value' x-axis
+#' @param yvar 'value' y-axis
 #'
 #' @importFrom patchwork plot_layout
 #' @importFrom dplyr mutate filter
@@ -20,14 +22,17 @@
 #'     ),
 #'     Sex = Gender
 #'   ) |>
-#'   pyramid_chart(Typev = c("A", "B"), gendervar = "Sex", alpha_set = 0.7)
+#'   pyramid_chart(levelsvar = c("A", "B"), x = "figprev", y = "Age",
+#'   gendervar = "Sex", alpha_set = 0.7)
 pyramid_chart <-
-  function(fig2_data,
-           Typev,
+  function(data,
+           xvar,
+           yvar,
+           levelsvar,
            gendervar,
            alpha_set) {
     figlimits <-
-      c(-1, 1) * ceiling(max(abs(fig2_data[["figprev"]])) / 10) * 10
+      c(-1, 1) * ceiling(max(abs(data[[xvar]])) / 10) * 10
 
     scale_x <- scale_x_continuous(
       limits = ~figlimits,
@@ -35,11 +40,11 @@ pyramid_chart <-
       labels = abs(seq(figlimits[1], figlimits[2], 10))
     )
 
-    fig2_1 <- fig2_data |>
-      filter(.data[["Type"]] == Typev[[1]]) |>
+    fig2_1 <- data |>
+      filter(.data[["Type"]] == levelsvar[[1]]) |>
       ggplot(aes(
-        x = .data[["figprev"]],
-        y = .data[["Age"]],
+        x = .data[[xvar]],
+        y = .data[[yvar]],
         fill = .data[[gendervar]],
         color = .data[[gendervar]]
       )) +
@@ -48,22 +53,23 @@ pyramid_chart <-
       scale_y_discrete() +
       scale_color_manual(values = colfun()$fig2_colors) +
       scale_fill_manual(values = colfun()$fig2_colors) +
-      labs(title = paste0("Type ", Typev[[1]]), x = "Prevalence (x 100 000)") +
+      labs(title = paste0("Type", levelsvar[[1]]),
+           x = "Prevalence (x 100 000)") +
       guides(
         fill = guide_legend(title = paste0({{ gendervar }}, ":")),
         color = guide_legend(title = paste0({{ gendervar }}, ":"))
       ) +
-      charts::charts_style_theme(
+      charts::br_charts_theme(
         axis.ticks = element_blank(),
         plot.margin = margin(4.5, 0, 4.5, 4.5),
         axis_line = element_blank()
       )
 
-    fig2_2 <- fig2_data |>
-      filter(.data[["Type"]] == Typev[[2]]) |>
+    fig2_2 <- data |>
+      filter(.data[["Type"]] == levelsvar[[2]]) |>
       ggplot(aes(
-        x = .data[["figprev"]],
-        y = .data[["Age"]],
+        x = .data[[xvar]],
+        y = .data[[yvar]],
         fill = .data[[gendervar]],
         color = .data[[gendervar]]
       )) +
@@ -76,8 +82,10 @@ pyramid_chart <-
         fill = guide_legend(title = paste0({{ gendervar }}, ":")),
         color = guide_legend(title = paste0({{ gendervar }}, ":"))
       ) +
-      labs(title = paste0("Type ", Typev[[2]]), x = "Prevalence (x 100 000)") +
-      charts::charts_style_theme(
+      labs(
+        title = paste0("Type", levelsvar[[2]]), x = "Prevalence (x 100 000)"
+      ) +
+      charts::br_charts_theme(
         axis.ticks = element_blank(),
         axis.title.y = element_blank(),
         plot.margin = margin(4.5, 4.5, 4.5, 4.5),
@@ -91,9 +99,9 @@ pyramid_chart <-
       plot.title = element_text(hjust = 0.5)
     ) +
       fig2_2 + theme(
-        axis.title.y = element_blank(),
-        plot.title = element_text(hjust = 0.5)
-      ) + plot_layout(guides = "collect") & theme(legend.position = "top")
+      axis.title.y = element_blank(),
+      plot.title = element_text(hjust = 0.5)
+    ) + plot_layout(guides = "collect") & theme(legend.position = "top")
 
     cplot
   }

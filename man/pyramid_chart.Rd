@@ -2,14 +2,18 @@
 % Please edit documentation in R/pyramid_chart.R
 \name{pyramid_chart}
 \alias{pyramid_chart}
-\title{Demography Figure}
+\title{Pyramid Chart}
 \usage{
-pyramid_chart(fig2_data, Typev, gendervar, alpha_set)
+pyramid_chart(data, xvar, yvar, levelsvar, gendervar, alpha_set)
 }
 \arguments{
-\item{fig2_data}{\code{dataframe} demography data}
+\item{data}{\code{dataframe} demography data}
 
-\item{Typev}{\code{Factor} Type of Diabetis A or B}
+\item{xvar}{'Value' x-axis}
+
+\item{yvar}{'value' y-axis}
+
+\item{levelsvar}{\code{vector} factor levels}
 
 \item{gendervar}{\code{Factor} Gender variable}
 
@@ -19,7 +23,7 @@ pyramid_chart(fig2_data, Typev, gendervar, alpha_set)
 ggplot object
 }
 \description{
-Demography Figure
+Pyramid Chart
 }
 \examples{
 library(charts)
@@ -30,5 +34,6 @@ demography |>
     ),
     Sex = Gender
   ) |>
-  pyramid_chart(Typev = c("A", "B"), gendervar = "Sex", alpha_set = 0.7)
+  pyramid_chart(levelsvar = c("A", "B"), x = "figprev", y = "Age",
+  gendervar = "Sex", alpha_set = 0.7)
 }

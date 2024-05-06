@@ -30,7 +30,7 @@ figure4 <- function(data) {
     ) +
     guides(fill = guide_legend(title = "Severity:")) +
     scale_fill_manual(values = colfun()$fig4_colors) +
-    charts_style_theme()
+    br_charts_theme()
 
   fig4
 }

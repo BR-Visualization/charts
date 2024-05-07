@@ -23,7 +23,7 @@
 #'     Sex = Gender
 #'   ) |>
 #'   pyramid_chart(
-#'     levelvar = c("A", "B"), x = "figprev", y = "Age",
+#'     levelvar = c("A", "B"), xvar = "figprev", yvar = "Age",
 #'     groupvar = "Sex", alpha_set = 0.7
 #'   )
 pyramid_chart <-

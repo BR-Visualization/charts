@@ -75,7 +75,7 @@ pyramid_chart <-
       )
 
     fig2_2 <- data |>
-      filter(.data[[levelvar]] == levels(.data[[levelvar]])[[1]]) |>
+      filter(.data[[levelvar]] == levels(.data[[levelvar]])[[2]]) |>
       ggplot(aes(
         x = .data[[xvar]],
         y = .data[[yvar]],

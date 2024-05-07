@@ -1,7 +1,7 @@
 #' Pyramid Chart
 #'
 #' @param data `dataframe` demography data
-#' @param levelvar `Factor` two factor levels, one for each pyramid 
+#' @param levelvar `Factor` two factor levels, one for each pyramid
 #' @param groupvar `Factor` two factor levels, one for each side of a pyramid
 #' @param alpha_set `Value` specify transparency of symbols
 #' @param xvar 'Value' x-axis
@@ -14,17 +14,17 @@
 #' @export
 #'
 #' @examples
-#' library(charts)
 #' demography |>
 #'   dplyr::mutate(
+#'     Type = as.factor(paste0("Type ", Type)),
 #'     figprev = ifelse(
 #'       Gender == "Females", -1 * Prevalence / 100000, Prevalence / 100000
 #'     ),
 #'     Sex = Gender
 #'   ) |>
 #'   pyramid_chart(
-#'     levelvar = c("A", "B"), xvar = "figprev", yvar = "Age",
-#'     groupvar = "Sex", alpha_set = 0.7
+#'     levelvar = "Type", xvar = "figprev", yvar = "Age",
+#'     groupvar = "Sex", alpha_set = 0.7, chartcolors = colfun()$fig2_colors
 #'   )
 pyramid_chart <-
   function(data,
@@ -32,7 +32,8 @@ pyramid_chart <-
            yvar,
            levelvar,
            groupvar,
-           alpha_set) {
+           alpha_set,
+           chartcolors) {
     figlimits <-
       c(-1, 1) * ceiling(max(abs(data[[xvar]])) / 10) * 10
 
@@ -43,7 +44,7 @@ pyramid_chart <-
     )
 
     fig2_1 <- data |>
-      filter(.data[["Type"]] == levelvar[[1]]) |>
+      filter(.data[[levelvar]] == levels(.data[[levelvar]])[[1]]) |>
       ggplot(aes(
         x = .data[[xvar]],
         y = .data[[yvar]],
@@ -53,15 +54,15 @@ pyramid_chart <-
       geom_col(alpha = alpha_set) +
       scale_x +
       scale_y_discrete() +
-      scale_color_manual(values = colfun()$fig2_colors) +
-      scale_fill_manual(values = colfun()$fig2_colors) +
+      scale_color_manual(values = chartcolors) +
+      scale_fill_manual(values = chartcolors) +
       labs(
-        title = paste0("Type", levelvar[[1]]),
+        title = levels(data[[levelvar]])[[1]],
         x = "Prevalence (x 100 000)"
       ) +
       guides(
-        fill = guide_legend(title = paste0({{ groupvar }}, ":")),
-        color = guide_legend(title = paste0({{ groupvar }}, ":"))
+        fill = guide_legend(title = paste0(groupvar, ":")),
+        color = guide_legend(title = paste0(groupvar, ":"))
       ) +
       charts::br_charts_theme(
         axis.ticks = element_blank(),
@@ -70,7 +71,7 @@ pyramid_chart <-
       )
 
     fig2_2 <- data |>
-      filter(.data[["Type"]] == levelvar[[2]]) |>
+      filter(.data[[levelvar]] == levels(.data[[levelvar]])[[1]]) |>
       ggplot(aes(
         x = .data[[xvar]],
         y = .data[[yvar]],
@@ -80,14 +81,14 @@ pyramid_chart <-
       geom_col(alpha = alpha_set) +
       scale_x +
       scale_y_discrete() +
-      scale_color_manual(values = colfun()$fig2_colors) +
-      scale_fill_manual(values = colfun()$fig2_colors) +
+      scale_color_manual(values = chartcolors) +
+      scale_fill_manual(values = chartcolors) +
       guides(
-        fill = guide_legend(title = paste0({{ groupvar }}, ":")),
-        color = guide_legend(title = paste0({{ groupvar }}, ":"))
+        fill = guide_legend(title = paste0(groupvar, ":")),
+        color = guide_legend(title = paste0(groupvar, ":"))
       ) +
       labs(
-        title = paste0("Type", levelvar[[2]]), x = "Prevalence (x 100 000)"
+        title = levels(data[[levelvar]])[[2]], x = "Prevalence (x 100 000)"
       ) +
       charts::br_charts_theme(
         axis.ticks = element_blank(),

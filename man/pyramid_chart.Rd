@@ -4,7 +4,7 @@
 \alias{pyramid_chart}
 \title{Pyramid Chart}
 \usage{
-pyramid_chart(data, xvar, yvar, levelsvar, gendervar, alpha_set)
+pyramid_chart(data, xvar, yvar, levelvar, groupvar, alpha_set, chartcolors)
 }
 \arguments{
 \item{data}{\code{dataframe} demography data}
@@ -13,9 +13,9 @@ pyramid_chart(data, xvar, yvar, levelsvar, gendervar, alpha_set)
 
 \item{yvar}{'value' y-axis}
 
-\item{levelsvar}{\code{vector} factor levels}
+\item{levelvar}{\code{Factor} two factor levels, one for each pyramid}
 
-\item{gendervar}{\code{Factor} Gender variable}
+\item{groupvar}{\code{Factor} two factor levels, one for each side of a pyramid}
 
 \item{alpha_set}{\code{Value} specify transparency of symbols}
 }
@@ -26,16 +26,16 @@ ggplot object
 Pyramid Chart
 }
 \examples{
-library(charts)
 demography |>
   dplyr::mutate(
+    Type = as.factor(paste0("Type ", Type)),
     figprev = ifelse(
       Gender == "Females", -1 * Prevalence / 100000, Prevalence / 100000
     ),
     Sex = Gender
   ) |>
   pyramid_chart(
-    levelsvar = c("A", "B"), x = "figprev", y = "Age",
-    gendervar = "Sex", alpha_set = 0.7
+    levelvar = "Type", xvar = "figprev", yvar = "Age",
+    groupvar = "Sex", alpha_set = 0.7, chartcolors = colfun()$fig2_colors
   )
 }

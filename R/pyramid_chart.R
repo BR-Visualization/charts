@@ -7,6 +7,7 @@
 #' @param xvar `value` x-axis
 #' @param yvar `value` y-axis
 #' @param chartcolors `vector` two colors, one for each side of a pyramid
+#' @param xlab `text` for x-axis label
 #'
 #' @importFrom patchwork plot_layout
 #' @importFrom dplyr mutate filter
@@ -25,7 +26,8 @@
 #'   ) |>
 #'   pyramid_chart(
 #'     levelvar = "Type", xvar = "figprev", yvar = "Age",
-#'     groupvar = "Sex", alpha_set = 0.7, chartcolors = colfun()$fig2_colors
+#'     groupvar = "Sex", alpha_set = 0.7, chartcolors = colfun()$fig2_colors,
+#'     xlab = "Prevalence (x 100 000)"
 #'   )
 pyramid_chart <-
   function(data,
@@ -33,6 +35,7 @@ pyramid_chart <-
            yvar,
            levelvar,
            groupvar,
+           xlab,
            alpha_set,
            chartcolors) {
     figlimits <-
@@ -59,7 +62,7 @@ pyramid_chart <-
       scale_fill_manual(values = chartcolors) +
       labs(
         title = levels(data[[levelvar]])[[1]],
-        x = "Prevalence (x 100 000)"
+        x = xlab
       ) +
       guides(
         fill = guide_legend(title = paste0(groupvar, ":")),
@@ -89,7 +92,7 @@ pyramid_chart <-
         color = guide_legend(title = paste0(groupvar, ":"))
       ) +
       labs(
-        title = levels(data[[levelvar]])[[2]], x = "Prevalence (x 100 000)"
+        title = levels(data[[levelvar]])[[2]], x = xlab
       ) +
       charts::br_charts_theme(
         axis.ticks = element_blank(),

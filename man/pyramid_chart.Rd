@@ -4,7 +4,16 @@
 \alias{pyramid_chart}
 \title{Pyramid Chart}
 \usage{
-pyramid_chart(data, xvar, yvar, levelvar, groupvar, alpha_set, chartcolors)
+pyramid_chart(
+  data,
+  xvar,
+  yvar,
+  levelvar,
+  groupvar,
+  xlab,
+  alpha_set,
+  chartcolors
+)
 }
 \arguments{
 \item{data}{\code{dataframe} demography data}
@@ -16,6 +25,8 @@ pyramid_chart(data, xvar, yvar, levelvar, groupvar, alpha_set, chartcolors)
 \item{levelvar}{\code{Factor} two factor levels, one for each pyramid}
 
 \item{groupvar}{\code{Factor} two factor levels, one for each side of a pyramid}
+
+\item{xlab}{\code{text} for x-axis label}
 
 \item{alpha_set}{\code{Value} specify transparency of symbols}
 
@@ -38,6 +49,7 @@ demography |>
   ) |>
   pyramid_chart(
     levelvar = "Type", xvar = "figprev", yvar = "Age",
-    groupvar = "Sex", alpha_set = 0.7, chartcolors = colfun()$fig2_colors
+    groupvar = "Sex", alpha_set = 0.7, chartcolors = colfun()$fig2_colors,
+    xlab = "Prevalence (x 100 000)"
   )
 }

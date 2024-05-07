@@ -44,7 +44,7 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">pyramid_chart</span><span class="op">(</span><span class="va">data</span>, <span class="va">xvar</span>, <span class="va">yvar</span>, <span class="va">levelsvar</span>, <span class="va">gendervar</span>, <span class="va">alpha_set</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">pyramid_chart</span><span class="op">(</span><span class="va">data</span>, <span class="va">xvar</span>, <span class="va">yvar</span>, <span class="va">levelvar</span>, <span class="va">groupvar</span>, <span class="va">alpha_set</span>, <span class="va">chartcolors</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -61,12 +61,12 @@
 <dd><p>'value' y-axis</p></dd>
 
 
-<dt>levelsvar</dt>
-<dd><p><code>vector</code> factor levels</p></dd>
+<dt>levelvar</dt>
+<dd><p><code>Factor</code> two factor levels, one for each pyramid</p></dd>
 
 
-<dt>gendervar</dt>
-<dd><p><code>Factor</code> Gender variable</p></dd>
+<dt>groupvar</dt>
+<dd><p><code>Factor</code> two factor levels, one for each side of a pyramid</p></dd>
 
 
 <dt>alpha_set</dt>
@@ -82,19 +82,19 @@
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">charts</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="va">demography</span> <span class="op">|&gt;</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">demography</span> <span class="op">|&gt;</span></span></span>
 <span class="r-in"><span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html" class="external-link">mutate</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>    Type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">as.factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="st">"Type "</span>, <span class="va">Type</span><span class="op">)</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>    figprev <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span></span></span>
 <span class="r-in"><span>      <span class="va">Gender</span> <span class="op">==</span> <span class="st">"Females"</span>, <span class="op">-</span><span class="fl">1</span> <span class="op">*</span> <span class="va">Prevalence</span> <span class="op">/</span> <span class="fl">100000</span>, <span class="va">Prevalence</span> <span class="op">/</span> <span class="fl">100000</span></span></span>
 <span class="r-in"><span>    <span class="op">)</span>,</span></span>
 <span class="r-in"><span>    Sex <span class="op">=</span> <span class="va">Gender</span></span></span>
 <span class="r-in"><span>  <span class="op">)</span> <span class="op">|&gt;</span></span></span>
 <span class="r-in"><span>  <span class="fu">pyramid_chart</span><span class="op">(</span></span></span>
-<span class="r-in"><span>    levelsvar <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span><span class="op">)</span>, x <span class="op">=</span> <span class="st">"figprev"</span>, y <span class="op">=</span> <span class="st">"Age"</span>,</span></span>
-<span class="r-in"><span>    gendervar <span class="op">=</span> <span class="st">"Sex"</span>, alpha_set <span class="op">=</span> <span class="fl">0.7</span></span></span>
+<span class="r-in"><span>    levelvar <span class="op">=</span> <span class="st">"Type"</span>, xvar <span class="op">=</span> <span class="st">"figprev"</span>, yvar <span class="op">=</span> <span class="st">"Age"</span>,</span></span>
+<span class="r-in"><span>    groupvar <span class="op">=</span> <span class="st">"Sex"</span>, alpha_set <span class="op">=</span> <span class="fl">0.7</span>, chartcolors <span class="op">=</span> <span class="fu"><a href="colfun.html">colfun</a></span><span class="op">(</span><span class="op">)</span><span class="op">$</span><span class="va">fig2_colors</span></span></span>
 <span class="r-in"><span>  <span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in pyramid_chart(dplyr::mutate(demography, figprev = ifelse(Gender ==     "Females", -1 * Prevalence/1e+05, Prevalence/1e+05), Sex = Gender),     levelsvar = c("A", "B"), x = "figprev", y = "Age", gendervar = "Sex",     alpha_set = 0.7):</span> unused arguments (levelsvar = c("A", "B"), gendervar = "Sex")</span>
+<span class="r-plt img"><img src="pyramid_chart-1.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </div>

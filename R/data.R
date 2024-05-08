@@ -23,7 +23,6 @@
 #' Example demography data
 #'
 #'
-#'
 #' @format ## `demography`
 #' A data frame with 48 rows and 5 columns:
 #' \describe{

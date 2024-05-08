@@ -22,7 +22,6 @@
 
 #' Example demography data
 #'
-#' Simulated demography data
 #'
 #'
 #' @format ## `who`

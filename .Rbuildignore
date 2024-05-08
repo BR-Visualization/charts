@@ -4,3 +4,4 @@
 ^charts\.Rcheck$
 ^charts.*\.tar\.gz$
 ^charts.*\.tgz$
+^README\.Rmd$

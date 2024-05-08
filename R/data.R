@@ -18,3 +18,19 @@
 #' @docType data
 #' @format A data frame with 105 rows and 51 variables
 "brdata"
+
+
+#' Example demography data
+#'
+#'
+#' @format ## `demography`
+#' A data frame with 48 rows and 5 columns:
+#' \describe{
+#'   \item{X}{Record ID number}
+#'   \item{Age}{Age in years}
+#'   \item{Type}{Diabetis Type A/B}
+#'   \item{Gender}{Gender Male/Female}
+#'   \item{Prevalence}{Prevalence}
+#'
+#' }
+"demography"

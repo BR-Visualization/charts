@@ -5,7 +5,7 @@
 \alias{demography}
 \title{Example demography data}
 \format{
-\subsection{\code{who}}{
+\subsection{\code{demography}}{
 
 A data frame with 48 rows and 5 columns:
 \describe{
@@ -22,6 +22,6 @@ A data frame with 48 rows and 5 columns:
 demography
 }
 \description{
-Simulated demography data
+Example demography data
 }
 \keyword{datasets}

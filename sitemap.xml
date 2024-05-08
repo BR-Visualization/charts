@@ -19,6 +19,9 @@
     <loc>/reference/add_exprs.html</loc>
   </url>
   <url>
+    <loc>/reference/br_charts_theme.html</loc>
+  </url>
+  <url>
     <loc>/reference/brdata.html</loc>
   </url>
   <url>
@@ -26,6 +29,12 @@
   </url>
   <url>
     <loc>/reference/comorbidities.html</loc>
+  </url>
+  <url>
+    <loc>/reference/control_fonts.html</loc>
+  </url>
+  <url>
+    <loc>/reference/demography.html</loc>
   </url>
   <url>
     <loc>/reference/effects_table.html</loc>
@@ -47,6 +56,9 @@
   </url>
   <url>
     <loc>/reference/prepare_br_supplied_ci.html</loc>
+  </url>
+  <url>
+    <loc>/reference/pyramid_chart.html</loc>
   </url>
   <url>
     <loc>/reference/relmax.html</loc>

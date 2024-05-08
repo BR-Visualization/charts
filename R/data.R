@@ -24,7 +24,7 @@
 #'
 #'
 #'
-#' @format ## `who`
+#' @format ## `demography`
 #' A data frame with 48 rows and 5 columns:
 #' \describe{
 #'   \item{X}{Record ID number}

@@ -11,6 +11,8 @@
 #'
 #' @importFrom patchwork plot_layout
 #' @importFrom dplyr mutate filter
+#' @import ggplot2
+#' @importFrom rlang .data
 #'
 #' @return ggplot object
 #' @export

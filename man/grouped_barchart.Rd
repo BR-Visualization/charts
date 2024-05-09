@@ -26,8 +26,10 @@ Grouped Bar Chart
 }
 \examples{
 
-grouped_barchart(data = comorbidities, xvar = "Comorbidities",
-yvar = "Prevalence", groupvar = "Severity",
-chartcolors = colfun()$fig4_colors)
+grouped_barchart(
+  data = comorbidities, xvar = "Comorbidities",
+  yvar = "Prevalence", groupvar = "Severity",
+  chartcolors = colfun()$fig4_colors
+)
 
 }

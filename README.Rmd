@@ -45,7 +45,9 @@ charts::demography |>
 ## Figure 4 - Comorbidities (Grouped Bar Chart)
 
 ```{r grouped_barchart, echo = FALSE}
-charts::grouped_barchart(data = charts::comorbidities, xvar = "Comorbidities",
-                 yvar = "Prevalence", groupvar = "Severity",
-                 chartcolors = colfun()$fig4_colors)
+charts::grouped_barchart(
+  data = charts::comorbidities, xvar = "Comorbidities",
+  yvar = "Prevalence", groupvar = "Severity",
+  chartcolors = colfun()$fig4_colors
+)
 ```

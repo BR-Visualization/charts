@@ -9,7 +9,7 @@ comorbidities <- as.data.frame(
 )
 
 comorbidities$Severity <- factor(comorbidities$Severity,
-                        levels = c("Mild", "Moderate", "Severe")
+  levels = c("Mild", "Moderate", "Severe")
 )
 
 usethis::use_data(comorbidities, overwrite = TRUE)

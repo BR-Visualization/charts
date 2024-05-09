@@ -20,7 +20,7 @@
 #'   \item{Comorbidities}{Comorbidities}
 #'   \item{Severity}{Severity of comorbidities Mild/Moderate/Severe}
 #'   \item{Prevalence}{Prevalence of comorbidities of each severity level}
-#'   
+#'
 #' }
 "comorbidities"
 
@@ -35,5 +35,3 @@
 #' @name brdata
 #' @format A data frame with 105 rows and 51 variables
 "brdata"
-
-

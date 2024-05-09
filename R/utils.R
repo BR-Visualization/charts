@@ -583,9 +583,11 @@ relmax <- function(rmax, type_scale) {
 #' @export
 #'
 #' @examples
-#' fig4 <- grouped_barchart(data = comorbidities, xvar = "Comorbidities",
-#' yvar = "Prevalence", groupvar = "Severity",
-#' chartcolors = colfun()$fig4_colors)
+#' fig4 <- grouped_barchart(
+#'   data = comorbidities, xvar = "Comorbidities",
+#'   yvar = "Prevalence", groupvar = "Severity",
+#'   chartcolors = colfun()$fig4_colors
+#' )
 #' ggsave_custom("figure4.jpeg", imgpath = tempdir(), inplot = fig4)
 ggsave_custom <-
   function(save_name,

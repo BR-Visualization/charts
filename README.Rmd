@@ -29,7 +29,7 @@ You can install the development version of charts from [GitHub](https://github.c
 devtools::install_github("BR-Visualization/charts")
 ```
 
-## Figure. 2 - Demographics (Pyramid Chart)
+## Figure 2 - Demographics (Pyramid Chart)
 
 ```{r pyramid_plot, echo = FALSE}
 charts::demography |>
@@ -40,4 +40,12 @@ charts::demography |>
     Sex = .data[["Gender"]]
   ) |>
   charts::pyramid_chart(Typev = c("A", "B"), gendervar = "Sex", alpha_set = 0.7)
+```
+
+## Figure 4 - Comorbidities (Grouped Bar Chart)
+
+```{r grouped_barchart, echo = FALSE}
+charts::grouped_barchart(data = charts::comorbidities, xvar = "Comorbidities",
+                 yvar = "Prevalence", groupvar = "Severity",
+                 chartcolors = colfun()$fig4_colors)
 ```

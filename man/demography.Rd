@@ -3,7 +3,7 @@
 \docType{data}
 \name{demography}
 \alias{demography}
-\title{Example demography data}
+\title{Example demography data used for Figure 2}
 \format{
 \subsection{\code{demography}}{
 
@@ -22,6 +22,6 @@ A data frame with 48 rows and 5 columns:
 demography
 }
 \description{
-Example demography data
+Example demography data used for Figure 2
 }
 \keyword{datasets}

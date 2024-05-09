@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "https://raw.githubusercontent.com/cobertura/cobertura/master/cobertura/src/site/htdocs/xml/coverage-04.dtd">
-<coverage line-rate="0" branch-rate="0" lines-covered="0" lines-valid="369" branches-covered="0" branches-valid="0" complexity="0" version="3.6.4" timestamp="2024-05-09 02:26:58.749329">
+<coverage line-rate="0" branch-rate="0" lines-covered="0" lines-valid="364" branches-covered="0" branches-valid="0" complexity="0" version="3.6.4" timestamp="2024-05-09 09:06:06.982665">
   <sources>
     <source>/__w/charts/charts/charts</source>
   </sources>
   <packages>
     <package name="charts" line-rate="0" branch-rate="0" complexity="0">
       <classes>
-        <class name="comorbidities.R" filename="R/comorbidities.R" line-rate="0" branch-rate="0" complexity="0">
+        <class name="grouped_barchart.R" filename="R/grouped_barchart.R" line-rate="0" branch-rate="0" complexity="0">
           <methods>
-            <method name="figure4" signature="" line-rate="0" branch-rate="0" complexity="0">
+            <method name="grouped_barchart" signature="" line-rate="0" branch-rate="0" complexity="0">
               <lines>
-                <line number="19" hits="0" branch="false"/>
-                <line number="20" hits="0" branch="false"/>
-                <line number="21" hits="0" branch="false"/>
+                <line number="22" hits="0" branch="false"/>
                 <line number="23" hits="0" branch="false"/>
                 <line number="24" hits="0" branch="false"/>
                 <line number="25" hits="0" branch="false"/>
@@ -22,17 +20,12 @@
                 <line number="28" hits="0" branch="false"/>
                 <line number="29" hits="0" branch="false"/>
                 <line number="30" hits="0" branch="false"/>
-                <line number="31" hits="0" branch="false"/>
                 <line number="32" hits="0" branch="false"/>
-                <line number="33" hits="0" branch="false"/>
-                <line number="35" hits="0" branch="false"/>
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="19" hits="0" branch="false"/>
-            <line number="20" hits="0" branch="false"/>
-            <line number="21" hits="0" branch="false"/>
+            <line number="22" hits="0" branch="false"/>
             <line number="23" hits="0" branch="false"/>
             <line number="24" hits="0" branch="false"/>
             <line number="25" hits="0" branch="false"/>
@@ -41,10 +34,7 @@
             <line number="28" hits="0" branch="false"/>
             <line number="29" hits="0" branch="false"/>
             <line number="30" hits="0" branch="false"/>
-            <line number="31" hits="0" branch="false"/>
             <line number="32" hits="0" branch="false"/>
-            <line number="33" hits="0" branch="false"/>
-            <line number="35" hits="0" branch="false"/>
           </lines>
         </class>
         <class name="pyramid_chart.R" filename="R/pyramid_chart.R" line-rate="0" branch-rate="0" complexity="0">
@@ -512,8 +502,6 @@
             </method>
             <method name="ggsave_custom" signature="" line-rate="0" branch-rate="0" complexity="0">
               <lines>
-                <line number="597" hits="0" branch="false"/>
-                <line number="598" hits="0" branch="false"/>
                 <line number="599" hits="0" branch="false"/>
                 <line number="600" hits="0" branch="false"/>
                 <line number="601" hits="0" branch="false"/>
@@ -521,6 +509,8 @@
                 <line number="603" hits="0" branch="false"/>
                 <line number="604" hits="0" branch="false"/>
                 <line number="605" hits="0" branch="false"/>
+                <line number="606" hits="0" branch="false"/>
+                <line number="607" hits="0" branch="false"/>
               </lines>
             </method>
           </methods>
@@ -800,8 +790,6 @@
             <line number="559" hits="0" branch="false"/>
             <line number="560" hits="0" branch="false"/>
             <line number="561" hits="0" branch="false"/>
-            <line number="597" hits="0" branch="false"/>
-            <line number="598" hits="0" branch="false"/>
             <line number="599" hits="0" branch="false"/>
             <line number="600" hits="0" branch="false"/>
             <line number="601" hits="0" branch="false"/>
@@ -809,6 +797,8 @@
             <line number="603" hits="0" branch="false"/>
             <line number="604" hits="0" branch="false"/>
             <line number="605" hits="0" branch="false"/>
+            <line number="606" hits="0" branch="false"/>
+            <line number="607" hits="0" branch="false"/>
           </lines>
         </class>
       </classes>

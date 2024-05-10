@@ -5,6 +5,7 @@ output: github_document
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
+devtools::load_all()
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
@@ -32,7 +33,6 @@ devtools::install_github("BR-Visualization/brcharts")
 ## Figure 2 - Demographics (Pyramid Chart)
 
 ```{r pyramid_plot, echo = FALSE}
-devtools::load_all()
 demography |>
   dplyr::mutate(
     Type = as.factor(paste0("Type ", Type)),

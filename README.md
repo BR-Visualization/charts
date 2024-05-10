@@ -24,8 +24,6 @@ devtools::install_github("BR-Visualization/brcharts")
 
 ## Figure 2 - Demographics (Pyramid Chart)
 
-    #> ℹ Loading charts
-
 <img src="man/figures/README-pyramid_plot-1.png" width="100%" />
 
 ## Figure 4 - Comorbidities (Grouped Bar Chart)

@@ -3,7 +3,7 @@
 \docType{data}
 \name{effects_table}
 \alias{effects_table}
-\title{Effects table data used for Figure 6 and Figure 7}
+\title{Example effects table data used for Figure 6 and Figure 7}
 \format{
 A data frame with 24 rows and 51 variables
 }
@@ -11,6 +11,6 @@ A data frame with 24 rows and 51 variables
 effects_table
 }
 \description{
-Effects table data used for Figure 6 and Figure 7
+Example effects table data used for Figure 6 and Figure 7
 }
 \keyword{datasets}

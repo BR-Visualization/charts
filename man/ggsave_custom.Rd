@@ -39,6 +39,10 @@ as specified by device.}
 Adds customized defaults to ggsave for the BRAP Journal requirements
 }
 \examples{
-fig4 <- figure4(data = comorbidities)
+fig4 <- grouped_barchart(
+  data = comorbidities, xvar = "Comorbidities",
+  yvar = "Prevalence", groupvar = "Severity",
+  chartcolors = colfun()$fig4_colors
+)
 ggsave_custom("figure4.jpeg", imgpath = tempdir(), inplot = fig4)
 }

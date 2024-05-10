@@ -29,15 +29,31 @@ You can install the development version of charts from [GitHub](https://github.c
 devtools::install_github("BR-Visualization/charts")
 ```
 
-## Figure. 2 - Demographics (Pyramid Chart)
+## Figure 2 - Demographics (Pyramid Chart)
 
 ```{r pyramid_plot, echo = FALSE}
-charts::demography |>
+devtools::load_all()
+demography |>
   dplyr::mutate(
+    Type = as.factor(paste0("Type ", Type)),
     figprev = ifelse(
-      .data[["Gender"]] == "Females", -1 * .data[["Prevalence"]] / 100000, .data[["Prevalence"]] / 100000
+      Gender == "Females", -1 * Prevalence / 100000, Prevalence / 100000
     ),
-    Sex = .data[["Gender"]]
+    Sex = Gender
   ) |>
-  charts::pyramid_chart(Typev = c("A", "B"), gendervar = "Sex", alpha_set = 0.7)
+  pyramid_chart(
+    levelvar = "Type", xvar = "figprev", yvar = "Age",
+    groupvar = "Sex", alpha_set = 0.7, chartcolors = colfun()$fig2_colors,
+    xlab = "Prevalence (x 100 000)"
+  )
+```
+
+## Figure 4 - Comorbidities (Grouped Bar Chart)
+
+```{r grouped_barchart, echo = FALSE}
+grouped_barchart(
+  data = comorbidities, xvar = "Comorbidities",
+  yvar = "Prevalence", groupvar = "Severity",
+  chartcolors = colfun()$fig4_colors
+)
 ```

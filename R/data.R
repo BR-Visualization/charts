@@ -1,27 +1,4 @@
-#' Comorbidities data used for Figure 4
-#'
-#' @name comorbidities
-#' @docType data
-#' @format A data frame with 15 rows and 3 variables
-"comorbidities"
-
-#' Effects table data used for Figure 6 and Figure 7
-#'
-#' @name effects_table
-#' @docType data
-#' @format A data frame with 24 rows and 51 variables
-"effects_table"
-
-#' Example effects table
-#'
-#' @name brdata
-#' @docType data
-#' @format A data frame with 105 rows and 51 variables
-"brdata"
-
-
-#' Example demography data
-#'
+#' Example demography data used for Figure 2
 #'
 #' @format ## `demography`
 #' A data frame with 48 rows and 5 columns:
@@ -34,3 +11,27 @@
 #'
 #' }
 "demography"
+
+#' Example comorbidities data used for Figure 4
+#'
+#' @name comorbidities
+#' @format A data frame with 15 rows and 3 variables
+#' \describe{
+#'   \item{Comorbidities}{Comorbidities}
+#'   \item{Severity}{Severity of comorbidities Mild/Moderate/Severe}
+#'   \item{Prevalence}{Prevalence of comorbidities of each severity level}
+#'
+#' }
+"comorbidities"
+
+#' Example effects table data used for Figure 6 and Figure 7
+#'
+#' @name effects_table
+#' @format A data frame with 24 rows and 51 variables
+"effects_table"
+
+#' Example effects table
+#'
+#' @name brdata
+#' @format A data frame with 105 rows and 51 variables
+"brdata"

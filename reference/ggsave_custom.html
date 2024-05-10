@@ -95,7 +95,11 @@ as specified by device.</p></dd>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">fig4</span> <span class="op">&lt;-</span> <span class="fu"><a href="figure4.html">figure4</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">comorbidities</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">fig4</span> <span class="op">&lt;-</span> <span class="fu"><a href="grouped_barchart.html">grouped_barchart</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>  data <span class="op">=</span> <span class="va">comorbidities</span>, xvar <span class="op">=</span> <span class="st">"Comorbidities"</span>,</span></span>
+<span class="r-in"><span>  yvar <span class="op">=</span> <span class="st">"Prevalence"</span>, groupvar <span class="op">=</span> <span class="st">"Severity"</span>,</span></span>
+<span class="r-in"><span>  chartcolors <span class="op">=</span> <span class="fu"><a href="colfun.html">colfun</a></span><span class="op">(</span><span class="op">)</span><span class="op">$</span><span class="va">fig4_colors</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">ggsave_custom</span><span class="op">(</span><span class="st">"figure4.jpeg"</span>, imgpath <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span>, inplot <span class="op">=</span> <span class="va">fig4</span><span class="op">)</span></span></span>
 </code></pre></div>
     </div>

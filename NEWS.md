@@ -1,4 +1,4 @@
-# brcharts (development version)
+# brcharts 0.0.0.1
 
 ### New features
 

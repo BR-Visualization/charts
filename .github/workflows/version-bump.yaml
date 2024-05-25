@@ -1,6 +1,6 @@
 ---
 name: Version bump ⬆
-
+run-name: ${{ github.actor }} is automating bumping of version of package
 on:
   push:
     branches:

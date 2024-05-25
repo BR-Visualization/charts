@@ -1,6 +1,6 @@
 ---
 name: Version check 🏁
-
+run-name: ${{ github.actor }} is checking consistency of versions across documents.
 on:
   push:
     branches:

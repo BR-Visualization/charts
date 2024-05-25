@@ -1,6 +1,6 @@
 ---
 name: License report 🗃
-
+run-name: ${{ github.actor }} is checking license
 on:
   push:
     branches:

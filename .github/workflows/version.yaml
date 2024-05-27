@@ -1,0 +1,104 @@
+---
+name: Version check 🏁
+run-name: ${{ github.actor }} is checking consistency of versions across documents.
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+    branches:
+      - '**'
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      package-subdirectory:
+        description: Subdirectory in the repository, where the R package is located.
+        required: false
+        type: string
+        default: "."
+
+concurrency:
+  group: version-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  version:
+    name: Version check 🏁
+    runs-on: ubuntu-latest
+    if: >
+      !contains(github.event.commits[0].message, '[skip version]')
+        && github.event.pull_request.draft == false
+    steps:
+      - name: Checkout repo 🛎
+        uses: actions/checkout@v4
+
+      - name: NEWS.md and DESCRIPTION Version check 🏁
+        run: |
+          DESC_VERSION=$(awk -F: '/Version:/{gsub(/[ ]+/,"") ; print $2}' DESCRIPTION | tr -d '\n' | xargs)
+          NEWS_VERSION=$(awk '/^#+ /{print $3,$4; exit}' NEWS.md | tr -d '\n' | xargs)
+          DESC_DEV_VERSION=$(echo $DESC_VERSION | awk -F '.' '{print $NF}')
+          echo "NEWS.md version: $NEWS_VERSION"
+          echo "DESCRIPTION version: $DESC_VERSION"
+          if test $DESC_VERSION = $NEWS_VERSION
+          then {
+            echo "NEWS.md and DESCRIPTION have the same version 🎉"
+            exit 0
+          }
+          fi
+          if [[ $DESC_DEV_VERSION -ge 9000 && "${NEWS_VERSION}" == "(development version)" ]]
+          then {
+            echo "NEWS.md and DESCRIPTION file versions are okay as package is in development mode."
+            echo "All is okay 🆗"
+            exit 0
+          }
+          fi
+          echo "🙈 NEWS.md and DESCRIPTION have different versions!"
+          echo "🙏 Please fix this."
+          exit 1
+        shell: bash
+        working-directory: ${{ inputs.package-subdirectory }}
+
+  emoji:
+    name: Emoji in NEWS.md 📰
+    runs-on: ubuntu-latest
+    if: >
+      !contains(github.event.commits[0].message, '[skip version]')
+        && github.event.pull_request.draft == false
+    steps:
+      - name: Checkout repo 🛎
+        uses: actions/checkout@v4
+
+      - name: Set up Python 🐍
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install the regex package 📦
+        uses: insightsengineering/pip-action@v2
+        with:
+          packages: regex
+
+      - name: Check for emojis in NEWS.md 🏁
+        run: |
+          import regex
+          import sys
+          with open('NEWS.md', 'r') as file:
+              text = file.read()
+          lines = text.split('\n')
+          emoji_pattern = regex.compile(r"(?![\d\p{P}])\p{Emoji}")
+          for line_num, line in enumerate(lines, start=1):
+              matches = [(match.group(), match.start(), match.end()) for match in emoji_pattern.finditer(line)]
+              for emoji, start, end in matches:
+                  print(f"Emoji: {emoji} | Line: {line_num} | Start: {start} | End: {end}")
+          if matches:
+              print("🚨 Emojis were found in the NEWS.md file! Please remove them 🙏")
+              print("ℹ️ Refer to https://github.com/insightsengineering/tern.gee/issues/37#issue-1714621201 for more information")
+              sys.exit(1)
+          print("🥰 No emojis found in the NEWS.md, good to go!")
+        shell: python
+        working-directory: ${{ inputs.package-subdirectory }}

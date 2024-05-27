@@ -48,6 +48,6 @@ po/*~
 # RStudio Connect folder
 rsconnect/
 .Rproj.user
-charts.Rcheck/
-charts*.tar.gz
-charts*.tgz
+brcharts.Rcheck/
+brcharts*.tar.gz
+brcharts*.tgz

@@ -70,7 +70,7 @@ pyramid_chart <-
         fill = guide_legend(title = paste0(groupvar, ":")),
         color = guide_legend(title = paste0(groupvar, ":"))
       ) +
-      charts::br_charts_theme(
+      br_charts_theme(
         axis.ticks = element_blank(),
         plot.margin = margin(4.5, 0, 4.5, 4.5),
         axis_line = element_blank()
@@ -96,7 +96,7 @@ pyramid_chart <-
       labs(
         title = levels(data[[levelvar]])[[2]], x = xlab
       ) +
-      charts::br_charts_theme(
+      br_charts_theme(
         axis.ticks = element_blank(),
         axis.title.y = element_blank(),
         plot.margin = margin(4.5, 4.5, 4.5, 4.5),

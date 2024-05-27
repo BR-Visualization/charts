@@ -13,7 +13,6 @@
 #' @examples
 #' calculate_diff_bin(.45, 0.25, 500, 500)
 calculate_diff_bin <- function(prop1, prop2, N1, N2) {
-
   # Calculating the different elements
   zscore <- 1.96
   diff <- prop1 - prop2
@@ -47,7 +46,6 @@ calculate_diff_bin <- function(prop1, prop2, N1, N2) {
 #' @examples
 #' calculate_log_rel_risk_bin(.45, 0.25, 500, 500)
 calculate_log_rel_risk_bin <- function(prop1, prop2, N1, N2) {
-
   # Calculating the different elements
   zscore <- 1.96
   diff <- log(prop1 / prop2)
@@ -84,13 +82,14 @@ calculate_log_rel_risk_bin <- function(prop1, prop2, N1, N2) {
 #'
 #' @export
 #'
-#'@examples
+#' @examples
 #' calculate_rel_risk_bin(.45, 0.25, 500, 500)
 calculate_rel_risk_bin <- function(prop1, prop2, N1, N2) {
-
   # Calculating the different elements
-  validate(need(prop2 != 0,
-                "error : Proportion of cases in comparator treatment equal to 0"))
+  validate(need(
+    prop2 != 0,
+    "error : Proportion of cases in comparator treatment equal to 0"
+  ))
   zscore <- 1.96
   rr <- prop1 / prop2
 
@@ -128,14 +127,13 @@ calculate_rel_risk_bin <- function(prop1, prop2, N1, N2) {
 #' @examples
 #' calculate_log_odds_ratio_bin(.45, 0.25, 500, 500)
 calculate_log_odds_ratio_bin <- function(prop1, prop2, N1, N2) {
-
   # Calculating the different elements
   zscore <- 1.96
   diff <- log((prop1 * (1 - prop2)) / (prop2 * (1 - prop1)))
   se <- sqrt(1 / (N1 * prop1) +
-               1 / (N1 * (1 - prop1)) +
-               1 / (N2 * prop2) +
-               1 / (N2 * (1 - prop2)))
+    1 / (N1 * (1 - prop1)) +
+    1 / (N2 * prop2) +
+    1 / (N2 * (1 - prop2)))
   lower <- diff - zscore * se
   upper <- diff + zscore * se
 
@@ -169,23 +167,24 @@ calculate_log_odds_ratio_bin <- function(prop1, prop2, N1, N2) {
 #' @examples
 #' calculate_odds_ratio_bin(.45, 0.25, 500, 500)
 calculate_odds_ratio_bin <- function(prop1, prop2, N1, N2) {
-
   # Calculating the different elements
   zscore <- 1.96
-  validate(need(prop2 != 0,
-                "error : Proportion of cases in comparator treatment equal to 0"))
+  validate(need(
+    prop2 != 0,
+    "error : Proportion of cases in comparator treatment equal to 0"
+  ))
   or <- (prop1 * (1 - prop2)) / (prop2 * (1 - prop1))
 
   se <- sqrt(1 / (N1 * prop1) +
-               1 / (N1 * (1 - prop1)) +
-               1 / (N2 * prop2) +
-               1 / (N2 * (1 - prop2)))
+    1 / (N1 * (1 - prop1)) +
+    1 / (N2 * prop2) +
+    1 / (N2 * (1 - prop2)))
   lower <- exp(log(or) - zscore * se)
   upper <- exp(log(or) + zscore * se)
 
-  or[! is.finite(or)] <- NA
-  lower[! is.finite(lower)] <- NA
-  upper[! is.finite(upper)] <- NA
+  or[!is.finite(or)] <- NA
+  lower[!is.finite(lower)] <- NA
+  upper[!is.finite(upper)] <- NA
 
   # Creating a dataframe from the different calculated elements
   df <- data.frame(or, se, lower, upper)
@@ -216,7 +215,6 @@ calculate_odds_ratio_bin <- function(prop1, prop2, N1, N2) {
 #' @examples
 #' calculate_diff_con(0.6, 0.5, 0.1, 0.3, 400, 500)
 calculate_diff_con <- function(mean1, mean2, sd1, sd2, N1, N2) {
-
   # Calculating the different elements
   tscore <- 1.96
   diff <- mean1 - mean2
@@ -230,8 +228,7 @@ calculate_diff_con <- function(mean1, mean2, sd1, sd2, N1, N2) {
 
   # Writing a message that will be displayed in the log
   message(glue('[{format(Sys.time(),"%F %T")}] >
-               CI for treatment difference in continuous outcomes is calculated'
-  ))
+               CI for treatment difference in continuous outcomes is calculated'))
 
   # Returning the df object
   df
@@ -252,7 +249,6 @@ calculate_diff_con <- function(mean1, mean2, sd1, sd2, N1, N2) {
 #' @examples
 #' calculate_diff_rates(152.17, 65.21, 230, 230)
 calculate_diff_rates <- function(rate1, rate2, py1, py2) {
-
   # Calculating the different elements
   zscore <- 1.96
   diff <- rate1 - rate2
@@ -271,4 +267,3 @@ calculate_diff_rates <- function(rate1, rate2, py1, py2) {
   # Returning the df object
   df
 }
-

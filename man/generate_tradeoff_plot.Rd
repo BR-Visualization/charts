@@ -80,10 +80,10 @@ confidence intervals (Supplied, Calculated)}
 \item{ratio}{(\code{numeric}) specified maximum acceptable ratio
 between risk and benefit}
 
-\item{b1, b2, b3, b4, b5, b6, b7, b8, b9, b10}{(\code{numeric}) specified benefitX}
+\item{b1, b2, b3, b4, b5, b6, b7, b8, b9, b10}{(\code{numeric}) specified benefit}
 
 \item{r1, r2, r3, r4, r5, r6, r7, r8, r9, r10}{(\code{numeric})
-specified risk tolerance at benefitX}
+specified risk tolerance}
 
 \item{testdrug}{(\code{character}) selected choice to display test drug or not
 (Yes, No)}
@@ -132,7 +132,7 @@ generate_tradeoff_plot(
   r9 = 0.45,
   r10 = 0.45,
   testdrug = "Yes",
-  type_scale= "Free",
+  type_scale = "Free",
   lower_x = 0,
   upper_x = 0.5,
   lower_y = 0,

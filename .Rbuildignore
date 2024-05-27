@@ -1,7 +1,7 @@
-^charts\.Rproj$
+^brcharts\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
-^charts\.Rcheck$
-^charts.*\.tar\.gz$
-^charts.*\.tgz$
+^brcharts\.Rcheck$
+^brcharts.*\.tar\.gz$
+^brcharts.*\.tgz$
 ^README\.Rmd$

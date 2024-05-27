@@ -43,6 +43,15 @@ pyramid_chart <-
     data_filtered <- data[!is.na(data[[xvar]]), ]  # Filter out NA values
     figlimits <- c(-1, 1) * ceiling(max(abs(data_filtered[[xvar]])) / 10) * 10
 
+    # Convert levelvar to factor or character if not already
+    if (is.numeric(data_filtered[[levelvar]]) |
+        is.character(data_filtered[[levelvar]])) {
+      data_filtered[[levelvar]] <- as.factor(data_filtered[[levelvar]])
+    } else if (!is.factor(data_filtered[[levelvar]]) &&
+               !is.character(data_filtered[[levelvar]])) {
+      stop("levelvar should be a factor, character, or numeric vector")
+    }
+
     scale_x <- scale_x_continuous(
       limits = ~figlimits,
       breaks = seq(figlimits[1], figlimits[2], 10),

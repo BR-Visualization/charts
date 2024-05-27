@@ -40,8 +40,8 @@ pyramid_chart <-
            xlab,
            alpha_set,
            chartcolors) {
-    figlimits <-
-      c(-1, 1) * ceiling(max(abs(data[[xvar]])) / 10) * 10
+    data_filtered <- data[!is.na(data[[xvar]]), ]  # Filter out NA values
+    figlimits <- c(-1, 1) * ceiling(max(abs(data_filtered[[xvar]])) / 10) * 10
 
     scale_x <- scale_x_continuous(
       limits = ~figlimits,
@@ -49,7 +49,7 @@ pyramid_chart <-
       labels = abs(seq(figlimits[1], figlimits[2], 10))
     )
 
-    fig2_1 <- data |>
+    fig2_1 <- data_filtered |>
       filter(.data[[levelvar]] == levels(.data[[levelvar]])[[1]]) |>
       ggplot(aes(
         x = .data[[xvar]],
@@ -76,7 +76,7 @@ pyramid_chart <-
         axis_line = element_blank()
       )
 
-    fig2_2 <- data |>
+    fig2_2 <- data_filtered |>
       filter(.data[[levelvar]] == levels(.data[[levelvar]])[[2]]) |>
       ggplot(aes(
         x = .data[[xvar]],

@@ -11,6 +11,7 @@ prepare_tradeoff_data(
   benefit,
   risk,
   ci_method,
+  cl,
   type_risk,
   type_graph
 )
@@ -28,6 +29,8 @@ prepare_tradeoff_data(
 
 \item{ci_method}{(\code{character}) selected method to display
 confidence intervals}
+
+\item{cl}{(\code{numeric}) confidence level}
 
 \item{type_risk}{(\code{character}) selected way to display risk outcomes
 (crude proportions, Exposure-adjusted rates (per 100 PYs))}

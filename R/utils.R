@@ -396,6 +396,7 @@ prepare_br_supplied_ci <- function(df, colname, metric_name, func) {
 #' @param colname2 (`character`) feature to fetch for the analysis
 #' either `nPat`, `Py`
 #' @param func (`function`) function used to calculate metrics (or BR points)
+#' @param cl (`numeric`) confidence level
 #' @return data frame for specified type of analysis
 #' @details DETAILS
 #' @rdname prepare_br_calculated_ci
@@ -403,7 +404,7 @@ prepare_br_supplied_ci <- function(df, colname, metric_name, func) {
 
 
 
-prepare_br_calculated_ci <- function(df, colname1, colname2, func) {
+prepare_br_calculated_ci <- function(df, colname1, colname2, cl, func) {
   outcome <- sub(".*_", "", deparse(substitute(df)))
   output <- data.frame(
     df$Type,
@@ -413,7 +414,8 @@ prepare_br_calculated_ci <- function(df, colname1, colname2, func) {
       as.vector(unlist(df[paste0(colname1, "1")])),
       as.vector(unlist(df[paste0(colname1, "2")])),
       as.vector(unlist(df[paste0(colname2, "1")])),
-      as.vector(unlist(df[paste0(colname2, "2")]))
+      as.vector(unlist(df[paste0(colname2, "2")])),
+      cl
     )
   )
 

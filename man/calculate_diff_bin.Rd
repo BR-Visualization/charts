@@ -4,7 +4,7 @@
 \alias{calculate_diff_bin}
 \title{CI for absolute risk for binary outcomes}
 \usage{
-calculate_diff_bin(prop1, prop2, N1, N2)
+calculate_diff_bin(prop1, prop2, N1, N2, cl)
 }
 \arguments{
 \item{prop1}{(\code{numeric})\cr Proportion of cases in active treatment}
@@ -14,11 +14,14 @@ calculate_diff_bin(prop1, prop2, N1, N2)
 \item{N1}{(\code{numeric})\cr Total number of subjects in active treatment}
 
 \item{N2}{(\code{numeric})\cr Total number of subjects in comparator treatment}
+
+\item{cl}{(\code{numeric})\cr confidence level}
 }
 \description{
 Derive mean difference and associated confidence intervals
 for binary outcomes
 }
 \examples{
-calculate_diff_bin(.45, 0.25, 500, 500)
+calculate_diff_bin(prop1 = .45, prop2 = 0.25, N1 = 500, N2 = 500,
+cl = 0.95)
 }

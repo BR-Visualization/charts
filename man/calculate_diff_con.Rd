@@ -4,7 +4,7 @@
 \alias{calculate_diff_con}
 \title{CI for treatment difference in continuous outcomes}
 \usage{
-calculate_diff_con(mean1, mean2, sd1, sd2, N1, N2)
+calculate_diff_con(mean1, mean2, sd1, sd2, N1, N2, cl)
 }
 \arguments{
 \item{mean1}{(\code{numeric})\cr Mean of measure in active treatment}
@@ -19,11 +19,14 @@ treatment}
 \item{N1}{(\code{numeric})\cr Total number of subjects in active treatment}
 
 \item{N2}{(\code{numeric})\cr Total number of subjects in comparator treatment}
+
+\item{cl}{(\code{numeric})\cr confidence level}
 }
 \description{
 Derive mean difference and associated confidence intervals
 for continuous outcomes
 }
 \examples{
-calculate_diff_con(0.6, 0.5, 0.1, 0.3, 400, 500)
+calculate_diff_con(mean1 = 0.6, mean2 = 0.5, sd1 = 0.1, sd2 = 0.3,
+N1 = 400, N2 = 500, cl = 0.95)
 }

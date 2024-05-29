@@ -14,6 +14,7 @@
 #' or not (Yes, No)
 #' @param ci_method (`character`) selected method to display
 #' confidence intervals (Supplied, Calculated)
+#' @param cl (`numeric`) confidence level
 #' @param mab (`numeric`) specified minimum acceptable benefit
 #' @param mar (`numeric`) specified maximum acceptable risk
 #' @param threshold (`character`) selected way to set benefit-risk threshold
@@ -39,7 +40,7 @@
 #'   data = effects_table, filter = "None", category = "All",
 #'   benefit = "Primary Efficacy", risk = "Reoccurring AE",
 #'   type_risk = "Crude proportions", type_graph = "Absolute risk",
-#'   ci = "Yes", ci_method = "Calculated",
+#'   ci = "Yes", ci_method = "Calculated", cl = 0.95,
 #'   mab = 0.05,
 #'   mar = 0.45,
 #'   threshold = "Segmented line",
@@ -74,16 +75,16 @@
 #' )
 #'
 generate_tradeoff_plot <- function(data, filter, category, benefit, risk,
-                                   type_risk, type_graph, ci, ci_method, mab,
-                                   mar, threshold, ratio, b1, b2, b3, b4, b5,
-                                   b6, b7, b8, b9, b10, r1, r2, r3, r4, r5, r6,
-                                   r7, r8, r9, r10, testdrug, type_scale,
+                                   type_risk, type_graph, ci, ci_method, cl,
+                                   mab, mar, threshold, ratio, b1, b2, b3, b4,
+                                   b5, b6, b7, b8, b9, b10, r1, r2, r3, r4, r5,
+                                   r6, r7, r8, r9, r10, testdrug, type_scale,
                                    lower_x, upper_x, lower_y, upper_y,
                                    chartcolors) {
   # preparing data for the tradeoff plot
   df_br <- prepare_tradeoff_data(
     data, filter, category, benefit, risk,
-    ci_method, type_risk, type_graph
+    ci_method, cl, type_risk, type_graph
   )
 
   # set the axis limits for the benefit/risk outcomes
@@ -588,6 +589,7 @@ prepare_tradeoff_plot <- function(myplot, data, df_br, drug_status, filter, ci,
 #' confidence intervals
 #' @param ci_method (`character`) selected method to display
 #' confidence intervals
+#' @param cl (`numeric`) confidence level
 #' @param type_risk (`character`) selected way to display risk outcomes
 #' (crude proportions, Exposure-adjusted rates (per 100 PYs))
 #' @param type_graph (`character`) selected way to display binary outcomes
@@ -599,7 +601,7 @@ prepare_tradeoff_plot <- function(myplot, data, df_br, drug_status, filter, ci,
 #' @import shiny
 #' @export
 prepare_tradeoff_data <- function(data, filter, category, benefit, risk,
-                                  ci_method, type_risk, type_graph) {
+                                  ci_method, cl, type_risk, type_graph) {
   # control the data quality before plotting the tradeoff plot
 
   error_msg <- paste0(
@@ -1020,7 +1022,8 @@ prepare_tradeoff_data <- function(data, filter, category, benefit, risk,
           sd1 = df_benefit$Sd1,
           sd2 = df_benefit$Sd2,
           N1 = df_benefit$N1,
-          N2 = df_benefit$N2
+          N2 = df_benefit$N2,
+          cl = cl
         )
       )
 
@@ -1062,15 +1065,15 @@ prepare_tradeoff_data <- function(data, filter, category, benefit, risk,
 
       if (type_graph == "Absolute risk") {
         df_benefit <- prepare_br_calculated_ci(
-          df_benefit, "Prop", "N", calculate_diff_bin
+          df_benefit, "Prop", "N", cl, calculate_diff_bin
         )
       } else if (type_graph == "Relative risk") {
         df_benefit <- prepare_br_calculated_ci(
-          df_benefit, "Prop", "N", calculate_rel_risk_bin
+          df_benefit, "Prop", "N", cl, calculate_rel_risk_bin
         )
       } else if (type_graph == "Odds ratio") {
         df_benefit <- prepare_br_calculated_ci(
-          df_benefit, "Prop", "N", calculate_odds_ratio_bin
+          df_benefit, "Prop", "N", cl, calculate_odds_ratio_bin
         )
       }
     }
@@ -1103,15 +1106,15 @@ prepare_tradeoff_data <- function(data, filter, category, benefit, risk,
 
       if (type_graph == "Absolute risk") {
         df_risk <- prepare_br_calculated_ci(
-          df_risk, "Prop", "N", calculate_diff_bin
+          df_risk, "Prop", "N", cl, calculate_diff_bin
         )
       } else if (type_graph == "Relative risk") {
         df_risk <- prepare_br_calculated_ci(
-          df_risk, "Prop", "N", calculate_rel_risk_bin
+          df_risk, "Prop", "N", cl, calculate_rel_risk_bin
         )
       } else if (type_graph == "Odds ratio") {
         df_risk <- prepare_br_calculated_ci(
-          df_risk, "Prop", "N", calculate_odds_ratio_bin
+          df_risk, "Prop", "N", cl, calculate_odds_ratio_bin
         )
       }
     } else if (type_risk == "Exposure-adjusted rates (per 100 PYs)") {
@@ -1207,12 +1210,12 @@ prepare_tradeoff_data <- function(data, filter, category, benefit, risk,
 
       df_event_rate_risk <- df_risk[df_risk$Rate_Type == "EventRate", ]
       df_event_rate_risk <- prepare_br_calculated_ci(
-        df_event_rate_risk, "EventRate", "100PEY", calculate_diff_rates
+        df_event_rate_risk, "EventRate", "100PEY", cl, calculate_diff_rates
       )
 
       df_inc_rate_risk <- df_risk[df_risk$Rate_Type == "IncRate", ]
       df_inc_rate_risk <- prepare_br_calculated_ci(
-        df_inc_rate_risk, "IncRate", "100PYAR", calculate_diff_rates
+        df_inc_rate_risk, "IncRate", "100PYAR", cl, calculate_diff_rates
       )
 
       df_risk <- rbind(df_event_rate_risk, df_inc_rate_risk)

@@ -14,6 +14,7 @@ generate_tradeoff_plot(
   type_graph,
   ci,
   ci_method,
+  cl,
   mab,
   mar,
   threshold,
@@ -70,6 +71,8 @@ or not (Yes, No)}
 \item{ci_method}{(\code{character}) selected method to display
 confidence intervals (Supplied, Calculated)}
 
+\item{cl}{(\code{numeric}) confidence level}
+
 \item{mab}{(\code{numeric}) specified minimum acceptable benefit}
 
 \item{mar}{(\code{numeric}) specified maximum acceptable risk}
@@ -106,7 +109,7 @@ generate_tradeoff_plot(
   data = effects_table, filter = "None", category = "All",
   benefit = "Primary Efficacy", risk = "Reoccurring AE",
   type_risk = "Crude proportions", type_graph = "Absolute risk",
-  ci = "Yes", ci_method = "Calculated",
+  ci = "Yes", ci_method = "Calculated", cl = 0.95,
   mab = 0.05,
   mar = 0.45,
   threshold = "Segmented line",

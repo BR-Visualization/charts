@@ -49,7 +49,7 @@ for exposure-adjusted rates (per 100 PYs)</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">calculate_diff_rates</span><span class="op">(</span><span class="va">rate1</span>, <span class="va">rate2</span>, <span class="va">py1</span>, <span class="va">py2</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">calculate_diff_rates</span><span class="op">(</span><span class="va">rate1</span>, <span class="va">rate2</span>, <span class="va">py1</span>, <span class="va">py2</span>, <span class="va">cl</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -69,16 +69,21 @@ for exposure-adjusted rates (per 100 PYs)</p>
 <dt>py2</dt>
 <dd><p>(<code>numeric</code>)<br> 100PEY or 100PYAR in comparator treatment</p></dd>
 
+
+<dt>cl</dt>
+<dd><p>(<code>numeric</code>)<br> confidence level</p></dd>
+
 </dl></div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">calculate_diff_rates</span><span class="op">(</span><span class="fl">152.17</span>, <span class="fl">65.21</span>, <span class="fl">230</span>, <span class="fl">230</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> [2024-05-27 08:13:58] &gt;</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">calculate_diff_rates</span><span class="op">(</span>rate1 <span class="op">=</span> <span class="fl">152.17</span>, rate2 <span class="op">=</span> <span class="fl">65.21</span>, py1 <span class="op">=</span> <span class="fl">230</span>, py2 <span class="op">=</span> <span class="fl">230</span>,</span></span>
+<span class="r-in"><span>cl <span class="op">=</span> <span class="fl">0.95</span><span class="op">)</span></span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> [2024-05-29 08:43:01] &gt;</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> CI for treatment difference in exposure-adjusted rates</span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> is calculated and saved in a dataframe</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>    diff        se    lower    upper</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 86.96 0.9721782 85.05453 88.86547</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 86.96 0.9721782 85.05457 88.86543</span>
 </code></pre></div>
     </div>
   </div>

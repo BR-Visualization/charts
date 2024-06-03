@@ -12,10 +12,12 @@
 #' @export
 #'
 #' @examples
-#' calculate_diff_bin(prop1 = .45, prop2 = 0.25, N1 = 500, N2 = 500,
-#' cl = 0.95)
+#' calculate_diff_bin(
+#'   prop1 = .45, prop2 = 0.25, N1 = 500, N2 = 500,
+#'   cl = 0.95
+#' )
 calculate_diff_bin <- function(prop1, prop2, N1, N2, cl) {
-  zscore <- qnorm(0.5 + cl/2)
+  zscore <- qnorm(0.5 + cl / 2)
   # Calculating the different elements
   diff <- prop1 - prop2
   se <- sqrt((1 - prop1) * prop1 / N1 + (1 - prop2) * prop2 / N2)
@@ -47,10 +49,12 @@ calculate_diff_bin <- function(prop1, prop2, N1, N2, cl) {
 #' @export
 #'
 #' @examples
-#' calculate_log_rel_risk_bin(prop1 = .45, prop2 = 0.25, N1 = 500, N2 = 500,
-#' cl = 0.95)
+#' calculate_log_rel_risk_bin(
+#'   prop1 = .45, prop2 = 0.25, N1 = 500, N2 = 500,
+#'   cl = 0.95
+#' )
 calculate_log_rel_risk_bin <- function(prop1, prop2, N1, N2, cl) {
-  zscore <- qnorm(0.5 + cl/2)
+  zscore <- qnorm(0.5 + cl / 2)
   # Calculating the different elements
   diff <- log(prop1 / prop2)
   se <- sqrt((1 - prop1) / prop1 / N1 + (1 - prop2) / prop2 / N2)
@@ -88,10 +92,12 @@ calculate_log_rel_risk_bin <- function(prop1, prop2, N1, N2, cl) {
 #' @export
 #'
 #' @examples
-#' calculate_rel_risk_bin(prop1 = .45, prop2 = 0.25, N1 = 500, N2 = 500,
-#' cl = 0.95)
+#' calculate_rel_risk_bin(
+#'   prop1 = .45, prop2 = 0.25, N1 = 500, N2 = 500,
+#'   cl = 0.95
+#' )
 calculate_rel_risk_bin <- function(prop1, prop2, N1, N2, cl) {
-  zscore <- qnorm(0.5 + cl/2)
+  zscore <- qnorm(0.5 + cl / 2)
   # Calculating the different elements
   validate(need(
     prop2 != 0,
@@ -132,10 +138,12 @@ calculate_rel_risk_bin <- function(prop1, prop2, N1, N2, cl) {
 #' @export
 #'
 #' @examples
-#' calculate_log_odds_ratio_bin(prop1 = .45, prop2 = 0.25, N1 = 500, N2 = 500,
-#' cl = 0.95)
+#' calculate_log_odds_ratio_bin(
+#'   prop1 = .45, prop2 = 0.25, N1 = 500, N2 = 500,
+#'   cl = 0.95
+#' )
 calculate_log_odds_ratio_bin <- function(prop1, prop2, N1, N2, cl) {
-  zscore <- qnorm(0.5 + cl/2)
+  zscore <- qnorm(0.5 + cl / 2)
   # Calculating the different elements
   diff <- log((prop1 * (1 - prop2)) / (prop2 * (1 - prop1)))
   se <- sqrt(1 / (N1 * prop1) +
@@ -174,10 +182,12 @@ calculate_log_odds_ratio_bin <- function(prop1, prop2, N1, N2, cl) {
 #' @export
 #'
 #' @examples
-#' calculate_odds_ratio_bin(prop1 = .45, prop2 = 0.25, N1 = 500, N2 = 500,
-#' cl = 0.95)
+#' calculate_odds_ratio_bin(
+#'   prop1 = .45, prop2 = 0.25, N1 = 500, N2 = 500,
+#'   cl = 0.95
+#' )
 calculate_odds_ratio_bin <- function(prop1, prop2, N1, N2, cl) {
-  zscore <- qnorm(0.5 + cl/2)
+  zscore <- qnorm(0.5 + cl / 2)
   # Calculating the different elements
   validate(need(
     prop2 != 0,
@@ -224,10 +234,12 @@ calculate_odds_ratio_bin <- function(prop1, prop2, N1, N2, cl) {
 #' @export
 #'
 #' @examples
-#' calculate_diff_con(mean1 = 0.6, mean2 = 0.5, sd1 = 0.1, sd2 = 0.3,
-#' N1 = 400, N2 = 500, cl = 0.95)
+#' calculate_diff_con(
+#'   mean1 = 0.6, mean2 = 0.5, sd1 = 0.1, sd2 = 0.3,
+#'   N1 = 400, N2 = 500, cl = 0.95
+#' )
 calculate_diff_con <- function(mean1, mean2, sd1, sd2, N1, N2, cl) {
-  tscore <- qt(0.5 + cl/2, N1 + N2 -2)
+  tscore <- qt(0.5 + cl / 2, N1 + N2 - 2)
   # Calculating the different elements
   diff <- mean1 - mean2
   sp2 <- ((N1 - 1) * sd1^2 + (N2 - 1) * sd2^2) / (N1 + N2 - 2)
@@ -260,10 +272,12 @@ calculate_diff_con <- function(mean1, mean2, sd1, sd2, N1, N2, cl) {
 #' @export
 #'
 #' @examples
-#' calculate_diff_rates(rate1 = 152.17, rate2 = 65.21, py1 = 230, py2 = 230,
-#' cl = 0.95)
+#' calculate_diff_rates(
+#'   rate1 = 152.17, rate2 = 65.21, py1 = 230, py2 = 230,
+#'   cl = 0.95
+#' )
 calculate_diff_rates <- function(rate1, rate2, py1, py2, cl) {
-  zscore <- qnorm(0.5 + cl/2)
+  zscore <- qnorm(0.5 + cl / 2)
   # Calculating the different elements
   diff <- rate1 - rate2
   se <- sqrt(rate1 / py1 + rate2 / py2)

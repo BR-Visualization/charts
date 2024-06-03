@@ -79,3 +79,45 @@ grouped_barchart(
   chartcolors = colfun()$fig4_colors
 )
 ```
+
+## Figure 7 - Trade-off Plot
+
+```{r tradeoff_plot, message = FALSE, echo = FALSE, fig.width = 5, fig.height = 5.3}
+generate_tradeoff_plot(
+  data = effects_table, filter = "None", category = "All",
+  benefit = "Primary Efficacy", risk = "Reoccurring AE",
+  type_risk = "Crude proportions", type_graph = "Absolute risk",
+  ci = "Yes", ci_method = "Calculated", cl = 0.95,
+  mab = 0.05,
+  mar = 0.45,
+  threshold = "Segmented line",
+  ratio = 4,
+  b1 = 0.05,
+  b2 = 0.1,
+  b3 = 0.15,
+  b4 = 0.2,
+  b5 = 0.25,
+  b6 = 0.3,
+  b7 = 0.35,
+  b8 = 0.4,
+  b9 = 0.45,
+  b10 = 0.5,
+  r1 = 0.09,
+  r2 = 0.17,
+  r3 = 0.24,
+  r4 = 0.3,
+  r5 = 0.35,
+  r6 = 0.39,
+  r7 = 0.42,
+  r8 = 0.44,
+  r9 = 0.45,
+  r10 = 0.45,
+  testdrug = "Yes",
+  type_scale = "Free",
+  lower_x = 0,
+  upper_x = 0.5,
+  lower_y = 0,
+  upper_y = 0.5,
+  chartcolors <- colfun()$fig7_colors
+)
+```

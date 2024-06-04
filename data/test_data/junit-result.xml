@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="pyramid_chart" timestamp="2024-06-03T13:47:23Z" hostname="7f56fd83e6e4" tests="52" skipped="0" failures="0" errors="0" time="1.235">
-    <testcase time="0.101" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.131" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+  <testsuite name="pyramid_chart" timestamp="2024-06-04T11:45:58Z" hostname="8b9c3a30e1b9" tests="52" skipped="0" failures="0" errors="0" time="1.159">
+    <testcase time="0.091" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.112" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.017" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
     <testcase time="0.019" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.0219999999999999" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.022" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.04" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.0169999999999999" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.021" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.021" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.0489999999999999" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.017" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.017" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
     <testcase time="0.0170000000000001" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.0169999999999999" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.0170000000000001" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.0169999999999999" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.0210000000000001" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.0329999999999999" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.0169999999999999" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.02" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.03" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.02" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.0159999999999998" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.02" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.032" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
     <testcase time="0.0170000000000001" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
     <testcase time="0.0169999999999999" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.0130000000000001" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.0349999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0189999999999999" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.0169999999999999" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.0290000000000001" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.0169999999999999" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.0189999999999999" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.0169999999999999" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.012" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.0330000000000001" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
     <testcase time="0.0209999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0329999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
     <testcase time="0.0170000000000001" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0159999999999998" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.03" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
     <testcase time="0.0169999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.014" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0289999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
     <testcase time="0.0170000000000001" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
     <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0299999999999998" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0170000000000001" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0189999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0289999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0190000000000001" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
     <testcase time="0.0169999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0210000000000001" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0169999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0309999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0170000000000001" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0209999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0170000000000001" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0129999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.012" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
   </testsuite>
 </testsuites>

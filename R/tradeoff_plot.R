@@ -71,7 +71,7 @@
 #'   upper_x = 0.5,
 #'   lower_y = 0,
 #'   upper_y = 0.5,
-#'   chartcolors <- colfun()$fig7_colors
+#'   chartcolors = colfun()$fig7_colors
 #' )
 #'
 generate_tradeoff_plot <- function(data, filter, category, benefit, risk,

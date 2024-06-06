@@ -27,6 +27,8 @@ Derive mean difference and associated confidence intervals
 for continuous outcomes
 }
 \examples{
-calculate_diff_con(mean1 = 0.6, mean2 = 0.5, sd1 = 0.1, sd2 = 0.3,
-N1 = 400, N2 = 500, cl = 0.95)
+calculate_diff_con(
+  mean1 = 0.6, mean2 = 0.5, sd1 = 0.1, sd2 = 0.3,
+  N1 = 400, N2 = 500, cl = 0.95
+)
 }

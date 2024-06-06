@@ -22,6 +22,8 @@ Derive mean difference and associated confidence intervals
 for exposure-adjusted rates (per 100 PYs)
 }
 \examples{
-calculate_diff_rates(rate1 = 152.17, rate2 = 65.21, py1 = 230, py2 = 230,
-cl = 0.95)
+calculate_diff_rates(
+  rate1 = 152.17, rate2 = 65.21, py1 = 230, py2 = 230,
+  cl = 0.95
+)
 }

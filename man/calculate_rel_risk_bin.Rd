@@ -22,6 +22,8 @@ Derive relative risk and associated confidence intervals
 for binary outcomes
 }
 \examples{
-calculate_rel_risk_bin(prop1 = .45, prop2 = 0.25, N1 = 500, N2 = 500,
-cl = 0.95)
+calculate_rel_risk_bin(
+  prop1 = .45, prop2 = 0.25, N1 = 500, N2 = 500,
+  cl = 0.95
+)
 }

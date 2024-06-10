@@ -1,177 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="ci_calculation" timestamp="2024-06-10T16:15:05Z" hostname="accb2def51c5" tests="7" skipped="0" failures="0" errors="0" time="0.196">
-    <testcase time="0.027" classname="ci_calculation" name="calculate_diff_bin_function_test_Test_for_deriving_mean_difference_and_associated_confidence_intervals_for_binary_outcomes"/>
-    <testcase time="0.0499999999999999" classname="ci_calculation" name="calculate_log_rel_risk_bin_Test_for_deriving_log_relative_risk_and_associated_confidence_intervals_"/>
-    <testcase time="0.016" classname="ci_calculation" name="calculate_rel_risk_bin_Test_for_deriving_relative_risk_and_associated_confidence_intervals_"/>
-    <testcase time="0.0730000000000001" classname="ci_calculation" name="calculate_log_odds_ratio_bin_Test_for_deriving_log_odds_ratio_and_associated_confidence_intervals_"/>
-    <testcase time="0.01" classname="ci_calculation" name="calculate_odds_ratio_bin_Test_for_deriving_odds_ratio_and_associated_confidence_intervals_"/>
+  <testsuite name="ci_calculation" timestamp="2024-06-10T18:32:07Z" hostname="838ab28dff71" tests="7" skipped="0" failures="0" errors="0" time="0.216">
+    <testcase time="0.0299999999999999" classname="ci_calculation" name="calculate_diff_bin_function_test_Test_for_deriving_mean_difference_and_associated_confidence_intervals_for_binary_outcomes"/>
+    <testcase time="0.055" classname="ci_calculation" name="calculate_log_rel_risk_bin_Test_for_deriving_log_relative_risk_and_associated_confidence_intervals_"/>
+    <testcase time="0.019" classname="ci_calculation" name="calculate_rel_risk_bin_Test_for_deriving_relative_risk_and_associated_confidence_intervals_"/>
+    <testcase time="0.081" classname="ci_calculation" name="calculate_log_odds_ratio_bin_Test_for_deriving_log_odds_ratio_and_associated_confidence_intervals_"/>
+    <testcase time="0.011" classname="ci_calculation" name="calculate_odds_ratio_bin_Test_for_deriving_odds_ratio_and_associated_confidence_intervals_"/>
     <testcase time="0.01" classname="ci_calculation" name="calculate_diff_con_function_test_Test_for_deriving_mean_difference_and_associated_confidence_intervals_for_continuous_outcomes"/>
-    <testcase time="0.01" classname="ci_calculation" name="calculate_diff_rates_function_test_Test_for_deriving_mean_difference_and_associated_confidence_intervals_for_exposure_adjusted_rates"/>
+    <testcase time="0.00999999999999979" classname="ci_calculation" name="calculate_diff_rates_function_test_Test_for_deriving_mean_difference_and_associated_confidence_intervals_for_exposure_adjusted_rates"/>
   </testsuite>
-  <testsuite name="pyramid_chart" timestamp="2024-06-10T16:15:05Z" hostname="accb2def51c5" tests="52" skipped="0" failures="0" errors="0" time="1.083">
-    <testcase time="0.111" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.0169999999999999" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+  <testsuite name="pyramid_chart" timestamp="2024-06-10T18:32:08Z" hostname="838ab28dff71" tests="52" skipped="0" failures="0" errors="0" time="1.184">
+    <testcase time="0.119" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.0179999999999998" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
     <testcase time="0.0190000000000001" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.0299999999999998" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.0170000000000001" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.0189999999999999" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.0130000000000001" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.0319999999999998" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.022" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.032" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.0179999999999998" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.022" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.0190000000000001" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.014" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.0339999999999998" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.022" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
     <testcase time="0.0190000000000001" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
     <testcase time="0.0169999999999999" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.0170000000000001" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.0309999999999999" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.0189999999999999" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.0349999999999999" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
     <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.02" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.012" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.0329999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.02" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0170000000000001" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.022" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0299999999999998" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0170000000000001" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0169999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0190000000000001" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0169999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.012" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0289999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0330000000000001" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0169999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0170000000000001" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.0230000000000001" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.0129999999999999" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.0349999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0210000000000001" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0189999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0210000000000001" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0319999999999998" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0210000000000001" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.018" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0189999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0129999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.032" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.036" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0200000000000002" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0189999999999997" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
     <testcase time="0.0209999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0289999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0170000000000001" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.02" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0230000000000001" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0310000000000001" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0179999999999998" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0180000000000002" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0209999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0180000000000002" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
     <testcase time="0.0169999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.012" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0129999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
   </testsuite>
-  <testsuite name="tradeoff_plot" timestamp="2024-06-10T16:15:06Z" hostname="accb2def51c5" tests="109" skipped="0" failures="0" errors="0" time="2.649">
-    <testcase time="0.0630000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.036" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0489999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0209999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0169999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.024" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0170000000000003" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0209999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+  <testsuite name="tradeoff_plot" timestamp="2024-06-10T18:32:09Z" hostname="838ab28dff71" tests="109" skipped="0" failures="0" errors="0" time="2.774">
+    <testcase time="0.0640000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0379999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.048" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0219999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0180000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0249999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
     <testcase time="0.0179999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.024" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0180000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.024" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0209999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0230000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0189999999999997" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0180000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0189999999999997" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0230000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0289999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0170000000000003" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
     <testcase time="0.02" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0259999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0180000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0249999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0219999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0250000000000004" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0209999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.02" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0209999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0249999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0329999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0220000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0189999999999997" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
     <testcase time="0.0179999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0169999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.016" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0089999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0470000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0369999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0420000000000003" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0209999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0169999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0250000000000004" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0169999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.00900000000000034" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.048" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0389999999999997" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0449999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0220000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0269999999999997" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0220000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0189999999999997" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0260000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0189999999999997" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0300000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.028" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
     <testcase time="0.02" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0189999999999997" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.02" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.024" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.02" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0300000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0219999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0180000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0179999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
     <testcase time="0.0169999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
     <testcase time="0.024" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0179999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0290000000000004" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0279999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0179999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0230000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.032" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0209999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0169999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0169999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0170000000000003" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0209999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.00800000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.00900000000000034" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
     <testcase time="0.0419999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
     <testcase time="0.0420000000000003" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
     <testcase time="0.04" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0259999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0179999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.02" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0230000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0209999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0170000000000003" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0209999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0339999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0260000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0229999999999997" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0250000000000004" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0199999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0269999999999997" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
     <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0209999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0249999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0210000000000004" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0189999999999997" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0220000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.036" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.028" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0249999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0259999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0209999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
     <testcase time="0.02" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.024" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0289999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0180000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0210000000000004" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0249999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0310000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.02" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
     <testcase time="0.0229999999999997" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0180000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0169999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0180000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0089999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0459999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0420000000000003" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0409999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0219999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0230000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0209999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0180000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0259999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0179999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0209999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0180000000000007" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.032" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.02" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.00899999999999945" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0490000000000004" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0439999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0420000000000007" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
     <testcase time="0.0229999999999997" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0199999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
     <testcase time="0.024" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0200000000000005" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.024" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0299999999999994" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0180000000000007" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0169999999999995" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
     <testcase time="0.0220000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0269999999999992" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0220000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.032" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.024" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0209999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0259999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0200000000000005" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0209999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0249999999999995" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0310000000000006" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
     <testcase time="0.0179999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
     <testcase time="0.0179999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.00900000000000034" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.048" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_a_required_field_is_missing"/>
-    <testcase time="0.0440000000000005" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_a_required_field_is_missing"/>
-    <testcase time="0.0119999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_a_required_field_is_missing"/>
-    <testcase time="0.0430000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_data_is_not_of_required_type"/>
-    <testcase time="0.0430000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_data_is_not_of_required_type"/>
+    <testcase time="0.024" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0179999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.00999999999999979" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0490000000000004" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_a_required_field_is_missing"/>
+    <testcase time="0.0449999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_a_required_field_is_missing"/>
+    <testcase time="0.0129999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_a_required_field_is_missing"/>
+    <testcase time="0.0439999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_data_is_not_of_required_type"/>
+    <testcase time="0.0440000000000005" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_data_is_not_of_required_type"/>
     <testcase time="0.0149999999999997" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_data_is_not_of_required_type"/>
-    <testcase time="0.0469999999999997" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_data_is_out_of_required_range"/>
-    <testcase time="0.0390000000000006" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_data_is_out_of_required_range"/>
-    <testcase time="0.0209999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_data_is_out_of_required_range"/>
+    <testcase time="0.0490000000000004" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_data_is_out_of_required_range"/>
+    <testcase time="0.04" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_data_is_out_of_required_range"/>
+    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_data_is_out_of_required_range"/>
   </testsuite>
 </testsuites>

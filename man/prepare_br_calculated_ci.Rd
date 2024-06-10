@@ -6,7 +6,7 @@
 interval confidence
 identifies whether the dataframe is for Benefit or Risk analysis}
 \usage{
-prepare_br_calculated_ci(df, colname1, colname2, func)
+prepare_br_calculated_ci(df, colname1, colname2, cl, func)
 }
 \arguments{
 \item{df}{(\code{data.frame}) dataset
@@ -18,6 +18,8 @@ either \code{Mean}, \code{Prop}, \code{Rate}}
 
 \item{colname2}{(\code{character}) feature to fetch for the analysis
 either \code{nPat}, \code{Py}}
+
+\item{cl}{(\code{numeric}) confidence level}
 
 \item{func}{(\code{function}) function used to calculate metrics (or BR points)}
 }

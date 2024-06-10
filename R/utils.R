@@ -616,7 +616,7 @@ ggsave_custom <-
 #' @param diagfig mermaid object
 #' @param path `character` path to save file
 #'
-#' @return
+#' @return a saved image
 #' @export
 #'
 #' @examples

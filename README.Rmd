@@ -82,9 +82,10 @@ grouped_barchart(
 
 ## Figure 5 - Value Tree (Value Tree)
 
-```{r value_tree, echo = FALSE}
+```{r value_tree, echo = FALSE, fig.width = 7, fig.height = 6}
 value_tree()
 ```
+
 
 ## Figure 7 - Trade-off Plot
 

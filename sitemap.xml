@@ -28,6 +28,36 @@
     <loc>/reference/brdata.html</loc>
   </url>
   <url>
+    <loc>/reference/calculate_diff_bin.html</loc>
+  </url>
+  <url>
+    <loc>/reference/calculate_diff_con.html</loc>
+  </url>
+  <url>
+    <loc>/reference/calculate_diff_rates.html</loc>
+  </url>
+  <url>
+    <loc>/reference/calculate_log_odds_ratio_bin.html</loc>
+  </url>
+  <url>
+    <loc>/reference/calculate_log_rel_risk_bin.html</loc>
+  </url>
+  <url>
+    <loc>/reference/calculate_odds_ratio_bin.html</loc>
+  </url>
+  <url>
+    <loc>/reference/calculate_rel_risk_bin.html</loc>
+  </url>
+  <url>
+    <loc>/reference/check_effects_tables.html</loc>
+  </url>
+  <url>
+    <loc>/reference/check_feature.html</loc>
+  </url>
+  <url>
+    <loc>/reference/check_feature_string.html</loc>
+  </url>
+  <url>
     <loc>/reference/colfun.html</loc>
   </url>
   <url>
@@ -41,6 +71,9 @@
   </url>
   <url>
     <loc>/reference/effects_table.html</loc>
+  </url>
+  <url>
+    <loc>/reference/generate_tradeoff_plot.html</loc>
   </url>
   <url>
     <loc>/reference/ggsave_custom.html</loc>
@@ -59,6 +92,12 @@
   </url>
   <url>
     <loc>/reference/prepare_br_supplied_ci.html</loc>
+  </url>
+  <url>
+    <loc>/reference/prepare_tradeoff_data.html</loc>
+  </url>
+  <url>
+    <loc>/reference/prepare_tradeoff_plot.html</loc>
   </url>
   <url>
     <loc>/reference/pyramid_chart.html</loc>

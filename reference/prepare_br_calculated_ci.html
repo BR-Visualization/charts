@@ -51,7 +51,7 @@ identifies whether the dataframe is for Benefit or Risk analysis</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">prepare_br_calculated_ci</span><span class="op">(</span><span class="va">df</span>, <span class="va">colname1</span>, <span class="va">colname2</span>, <span class="va">func</span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">prepare_br_calculated_ci</span><span class="op">(</span><span class="va">df</span>, <span class="va">colname1</span>, <span class="va">colname2</span>, <span class="va">cl</span>, <span class="va">func</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -70,6 +70,10 @@ either <code>Mean</code>, <code>Prop</code>, <code>Rate</code></p></dd>
 <dt>colname2</dt>
 <dd><p>(<code>character</code>) feature to fetch for the analysis
 either <code>nPat</code>, <code>Py</code></p></dd>
+
+
+<dt>cl</dt>
+<dd><p>(<code>numeric</code>) confidence level</p></dd>
 
 
 <dt>func</dt>

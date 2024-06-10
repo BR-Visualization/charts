@@ -610,3 +610,25 @@ ggsave_custom <-
       ...
     )
   }
+
+#' Save DiagrameR::mermaid object
+#'
+#' @param diagfig mermaid object
+#' @param path `character` path to save file
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' save_mermaid(value_tree(), tempdir())
+save_mermaid <- function(diagfig, path){
+  try(diagfig |>
+        htmltools::html_print() |>
+        webshot::webshot(file = path,
+                         cliprect  = c(0, 25, 660, 500),
+                         delay = 10),
+      silent = TRUE
+
+  )
+}
+

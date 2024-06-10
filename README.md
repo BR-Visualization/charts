@@ -67,6 +67,14 @@ devtools::install_github("BR-Visualization/brcharts")
 
 <img src="man/figures/README-grouped_barchart-1.png" width="100%" />
 
+## Figure 5 - Value Tree (Value Tree)
+
+    #> QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-r755901'
+    #> TypeError: Attempting to change the setter of an unconfigurable property.
+    #> TypeError: Attempting to change the setter of an unconfigurable property.
+
+<img src="man/figures/README-value_tree-1.png" width="100%" />
+
 ## Figure 7 - Trade-off Plot
 
 <img src="man/figures/README-tradeoff_plot-1.png" width="100%" />

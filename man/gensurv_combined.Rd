@@ -2,7 +2,7 @@
 % Please edit documentation in R/cumulative_excess_functions.R
 \name{gensurv_combined}
 \alias{gensurv_combined}
-\title{Plot contains original generated plot with table of numbers at risk}
+\title{Combine the cumulative excess plot and corresponding table into one figure}
 \usage{
 gensurv_combined(
   df_plot,
@@ -73,10 +73,9 @@ of the legend relative to the y-axis (numeric).}
 A combined cumulative excess plot and table.
 }
 \description{
-Plot contains original generated plot with table of numbers at risk
+Combine the cumulative excess plot and corresponding table into one figure
 }
 \examples{
-
 gensurv_combined(
 df_plot = cumexcess, subjects_pt = 100, visits_pt = 6,
 df_table = cumexcess, fig_colors_pt = colfun()$fig13_colors

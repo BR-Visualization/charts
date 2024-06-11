@@ -121,3 +121,14 @@ generate_tradeoff_plot(
   chartcolors <- colfun()$fig7_colors
 )
 ```
+
+## Figure 13 - Cumulative Excess Plot
+
+```{r cumulative_excess_plot, echo = FALSE, fig.width = 7, fig.height = 5.3}
+gensurv_combined(
+                 df_plot = cumexcess, subjects_pt = 100, visits_pt = 6,
+                 df_table = cumexcess, fig_colors_pt = colfun()$fig13_colors,
+                 rel_heights_table = c(1, 0.4),
+                 legend_position_p = c(-0.2, 1.45)
+                )
+```

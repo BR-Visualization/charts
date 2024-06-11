@@ -59,6 +59,52 @@
 #' )
 #'
 
+gensurv_combined <- function(df_plot,
+                             df_table,
+                             subjects_pt,
+                             visits_pt,
+                             fig_colors_pt = c("#0571b0", "#ca0020"),
+                             titlename_p =
+                               "Cumulative Excess # of Subjects w/ Events
+                             (per 1000 Subjects)",
+                             rel_heights_table = c(1, 0.2),
+                             ben_name_p = "Primary Efficacy",
+                             risk_name_p = "Recurring AE",
+                             legend_position_p = c(-0.03, 1.15)) {
+  plot <- gensurv_plot(
+    df_plot, subjects_pt, visits_pt, fig_colors = fig_colors_pt,
+    ben_name = ben_name_p, risk_name = risk_name_p,
+    legend_position = legend_position_p
+  )
+  table <- gensurv_table(
+    df_table, subjects_pt, visits_pt, fig_colors = fig_colors_pt
+  )
+  fig_plot <- cowplot::plot_grid(
+    cowplot::plot_grid(
+      plot,
+      table +
+        ggplot2::theme(legend.position = "none"),
+      ncol = 1,
+      align = "v",
+      axis = "b",
+      rel_heights = rel_heights_table
+    ),
+    ncol = 1
+  )
+  mytitle <- cowplot::ggdraw() + cowplot::draw_label(
+    titlename_p, fontface = "bold", size = 12
+  )
+  fig_plot_title <- cowplot::plot_grid(
+    mytitle,
+    fig_plot,
+    ncol = 1,
+    align = "v",
+    axis = "l",
+    rel_heights = c(0.2, 2)
+  )
+  return(fig_plot_title)
+}
+
 gensurv_table <- function(df_table,
                           subjects,
                           visits,
@@ -270,50 +316,4 @@ gensurv_plot <- function(df_outcome,
   } else {
     plot1
   }
-}
-
-gensurv_combined <- function(df_plot,
-                             df_table,
-                             subjects_pt,
-                             visits_pt,
-                             fig_colors_pt = c("#0571b0", "#ca0020"),
-                             titlename_p =
-                               "Cumulative Excess # of Subjects w/ Events
-                             (per 1000 Subjects)",
-                             rel_heights_table = c(1, 0.2),
-                             ben_name_p = "Primary Efficacy",
-                             risk_name_p = "Recurring AE",
-                             legend_position_p = c(-0.03, 1.15)) {
-  plot <- gensurv_plot(
-    df_plot, subjects_pt, visits_pt, fig_colors = fig_colors_pt,
-    ben_name = ben_name_p, risk_name = risk_name_p,
-    legend_position = legend_position_p
-  )
-  table <- gensurv_table(
-    df_table, subjects_pt, visits_pt, fig_colors = fig_colors_pt
-  )
-  fig_plot <- cowplot::plot_grid(
-    cowplot::plot_grid(
-      plot,
-      table +
-        ggplot2::theme(legend.position = "none"),
-      ncol = 1,
-      align = "v",
-      axis = "b",
-      rel_heights = rel_heights_table
-    ),
-    ncol = 1
-  )
-  mytitle <- cowplot::ggdraw() + cowplot::draw_label(
-    titlename_p, fontface = "bold", size = 12
-  )
-  fig_plot_title <- cowplot::plot_grid(
-    mytitle,
-    fig_plot,
-    ncol = 1,
-    align = "v",
-    axis = "l",
-    rel_heights = c(0.2, 2)
-  )
-  return(fig_plot_title)
 }

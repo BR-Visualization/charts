@@ -146,8 +146,8 @@ are missing required variables",
   }
 )
 
-test_that("gensurv_table() expects an error when df_table() has misnamed
-          variables",
+test_that("gensurv_table() expects an error when df_table() and df_plot() have
+misnamed variables",
           {
             expect_error(
               gensurv_combined(

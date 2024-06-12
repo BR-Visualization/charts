@@ -2,7 +2,7 @@
 % Please edit documentation in R/cumulative_excess_functions.R
 \name{gensurv_table}
 \alias{gensurv_table}
-\title{Create a table that corresponds to a cumulative excess plot}
+\title{Create a table that corresponds to the cumulative excess plot}
 \usage{
 gensurv_table(df_table, subjects, visits, fig_colors = c("#0571b0", "#ca0020"))
 }
@@ -33,7 +33,7 @@ to benefit second and risk first.}
 A table.
 }
 \description{
-Create a table that corresponds to a cumulative excess plot
+Create a table that corresponds to the cumulative excess plot
 }
 \examples{
 gensurv_table(cumexcess, 100, 6)

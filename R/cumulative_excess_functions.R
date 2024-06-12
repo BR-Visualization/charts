@@ -55,8 +55,27 @@ gensurv_plot <- function(df_outcome,
   outcome <- active <- comparator <- NULL
   eventtime <- obsv_duration <- obsv_unit <- eff_diff_lbl <- NULL
 
+  all_columns <- c("obsv_duration", "eventtime", "diff", "obsv_unit",
+                   "outcome", "eff_diff_lbl")
+  nonexistent_columns <- setdiff(all_columns, colnames(df_outcome))
+
+  if (length(nonexistent_columns) > 0) {
+
+    error_message <- paste0("You are missing a required variable in your
+                            dataframe:", nonexistent_columns)
+    stop(error_message)
+  }
+
   df_outcome %>% select(eventtime, diff, obsv_duration, obsv_unit, outcome,
                         eff_diff_lbl)
+
+  if (any(is.na(df_outcome))) {
+    warning(paste("you have a missing value in
+                                             row(s)",
+                  which(rowSums(is.na(df_outcome)) >
+                          0)))
+    df_outcome <- na.omit(df_outcome)
+  }
 
   active <- strsplit(unique(df_outcome$eff_diff_lbl), "-")[[1]][1]
   comparator <- strsplit(unique(df_outcome$eff_diff_lbl), "-")[[1]][2]
@@ -190,24 +209,34 @@ gensurv_table <- function(df_table,
                           subjects,
                           visits,
                           fig_colors = c("#0571b0", "#ca0020")) {
+
   effect <- outcome <- visit <- y <- color_ctrl_var <- NULL
   eff_code <- eventtime <- obsv_duration <- NULL
 
   if (!is.null(df_table$eventtime)) {
-    df_table <- df_table %>%
-      select(obsv_duration, n, effect, outcome, eff_code, eventtime)
-
-    stopifnot(!is.null(df_table$obsv_duration) & !is.null(df_table$n) &
-                !is.null(df_table$effect) & !is.null(df_table$outcome) &
-                !is.null(df_table$eff_code) & !is.null(df_table$eventtime))
-
+    all_columns <- c("obsv_duration", "n", "effect", "outcome", "eff_code",
+                     "eventtime")
+    nonexistent_columns <- setdiff(all_columns, colnames(df_table))
+    if (length(nonexistent_columns) > 0) {
+      error_message <- paste0("You are missing a required variable in your
+                              dataframe:", nonexistent_columns)
+      stop(error_message)
+    } else {
+      df_table <- df_table %>%
+        select(obsv_duration, n, effect, outcome, eff_code, eventtime)
+    }
   } else {
-    df_table <- df_table %>%
-      select(obsv_duration, n, effect, outcome, eff_code)
+    all_columns <- c("obsv_duration", "n", "effect", "outcome", "eff_code")
+    nonexistent_columns <- setdiff(all_columns, colnames(df_table))
+    if (length(nonexistent_columns) > 0) {
+      error_message <- paste0("You are missing a required variable in your
+                              dataframe:", nonexistent_columns)
+      stop(error_message)
 
-    stopifnot(!is.null(df_table$obsv_duration) & !is.null(df_table$n) &
-                !is.null(df_table$effect) & !is.null(df_table$outcome) &
-                !is.null(df_table$eff_code))
+    } else {
+      df_table <- df_table %>%
+        select(obsv_duration, n, effect, outcome, eff_code)
+    }
   }
 
   active <- which(df_table$eff_code == 1)
@@ -215,9 +244,13 @@ gensurv_table <- function(df_table,
   comparator <- which(df_table$eff_code == 0)
   comparator1 <- df_table$effect[comparator[1]]
 
-  if(any(is.na(df_table))){
-    warning(paste("you have a missing value in row(s)", which(is.na(df_table))))
-    na.omit(df_table)
+  if (any(is.na(df_table))) {
+    miss_vars <- colnames(df_table)[colSums(is.na(df_table) > 0)]
+    warning(paste("you have a missing value in row(s)",
+                  which(rowSums(is.na(df_table)) > 0)))
+    df_table[miss_vars] <- lapply(df_table[miss_vars], function(x) {
+      ifelse(is.na(x), "NA", x)
+    })
   }
 
   df_table1 <- df_table %>%
@@ -237,20 +270,22 @@ gensurv_table <- function(df_table,
     ) %>%
     mutate(effect = forcats::fct_reorder(
                                          as.factor(paste(effect, outcome,
-                                                         sep = " ")), y)
+                                                         sep = " ")), y,
+                                         .na_rm = FALSE)
     )
+
   len <- df_table$obsv_duration[1]
-  vist <- seq.default(0, len, by = visits)
+  visit <- seq.default(0, len, by = visits)
 
   if (!is.null(df_table1$eventtime)) {
     df_table1 <- df_table1 %>%
-      filter(eventtime %in% unlist(vist)) %>%
+      filter(eventtime %in% unlist(visit)) %>%
       mutate(visit = eventtime) %>%
       select(visit, n, effect, y, color_ctrl_var) %>%
       distinct()
   } else {
-    df_table1$visit <- seq.default(0, len, by = visits)
-    df_table1 %>%
+    df_table1$visit <- visit
+    df_table1 <- df_table1 %>%
       select(visit, n, effect, y, color_ctrl_var)
   }
 
@@ -268,12 +303,26 @@ gensurv_table <- function(df_table,
   x_ctrl <- list(breaks = unique(df_table1$visit),
                  labels = NULL)
 
-  y_ctrl <- list(
-    name = "",
-    breaks = c(1, 2, 3, 4),
-    limits = c(0, 4.5),
-    labels = levels(df_table1$effect)
-  )
+
+  if (any(is.na(df_table))) {
+    df_table3 <- na.omit(df_table1)
+    df_table3 <- droplevels(df_table3)
+
+    y_ctrl <- list(
+      name = "",
+      breaks = c(1, 2, 3, 4),
+      limits = c(0, 4.5),
+      labels = levels(df_table3$effect)
+    )
+
+  } else {
+    y_ctrl <- list(
+      name = "",
+      breaks = c(1, 2, 3, 4),
+      limits = c(0, 4.5),
+      labels = levels(df_table1$effect)
+    )
+  }
 
   extra_code <- labs(titles = "Number With Event")
   geom_text_control <- do.call(geom_text, geom_text_ctrl)
@@ -366,6 +415,36 @@ gensurv_combined <- function(df_plot,
                              ben_name_p = "Primary Efficacy",
                              risk_name_p = "Recurring AE",
                              legend_position_p = c(-0.03, 1.15)) {
+
+  if (!is.null(df_table$eventtime)) {
+    all_columns <- c("obsv_duration", "n", "effect", "outcome", "eff_code",
+                     "eventtime")
+    nonexistent_columns <- setdiff(all_columns, colnames(df_table))
+    if (length(nonexistent_columns) > 0) {
+      error_message <- paste0("You are missing a required variable in your
+                              dataframe:", nonexistent_columns)
+      stop(error_message)
+
+    }
+  } else {
+    all_columns <- c("obsv_duration", "n", "effect", "outcome", "eff_code")
+    nonexistent_columns <- setdiff(all_columns, colnames(df_table))
+    if (length(nonexistent_columns) > 0) {
+      error_message <- paste0("You are missing a required variable in your
+                              dataframe:", nonexistent_columns)
+      stop(error_message)
+    }
+  }
+
+  all_columns <- c("obsv_duration", "eventtime", "diff", "obsv_unit",
+                   "outcome", "eff_diff_lbl")
+  nonexistent_columns <- setdiff(all_columns, colnames(df_plot))
+  if (length(nonexistent_columns) > 0) {
+    error_message <- paste0("You are missing a required variable in your
+                            dataframe:", nonexistent_columns)
+    stop(error_message)
+  }
+
   plot <- gensurv_plot(
     df_plot, subjects_pt, visits_pt, fig_colors = fig_colors_pt,
     ben_name = ben_name_p, risk_name = risk_name_p,
@@ -427,6 +506,7 @@ gensurv_combined <- function(df_plot,
 gensurv <- function(
   seed, n1, n2, obsv_duration, lambda1, lambda2, unit = "Months"
 ) {
+  diff_sim <- NULL
   stopifnot(is.numeric(seed))
   stopifnot(is.numeric(n1))
   stopifnot(is.numeric(n2))
@@ -459,6 +539,7 @@ gensurv <- function(
     ) /
       n1 - sum(sim2$eventtime < eventtime_sim[t] & sim2$status == 1) / n2
   }
-  df_sim %>% mutate(obsv_duration = obsv_duration, obsv_unit = unit) %>%
+  df_sim %>%
+    mutate(obsv_duration = obsv_duration, obsv_unit = unit) %>%
     rename(eventtime = eventtime_sim, diff = diff_sim)
 }

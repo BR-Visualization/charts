@@ -58,6 +58,8 @@ A cumulative excess plot.
 Create a cumulative excess plot from a given dataframe
 }
 \examples{
-gensurv_plot(cumexcess, 100, 6, titlename =
-"Cumulative Excess # of Subjects w/ Events (per 100 Subjects)")
+gensurv_plot(cumexcess, 100, 6,
+  titlename =
+    "Cumulative Excess # of Subjects w/ Events (per 100 Subjects)"
+)
 }

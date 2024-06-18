@@ -41,7 +41,7 @@ cumexcess_table <- data.frame(
 # testing gensurv_table for ggplot object
 
 test_that("gensurv_table() will ouput a ggplot object", {
-  expect_true(inherits(gensurv_table(cumexcess_table, 100, 6), "ggplot"))
+  expect_true(inherits(gensurv_table(cumexcess_table, 1000, 6), "ggplot"))
 })
 
 # testing df_table must have required variables
@@ -54,14 +54,14 @@ cumexcess_table1 <- cumexcess_table %>% select(
 
 test_that("gensurv_table() expects an error when df_table() is missing required
           variables", {
-  expect_error(gensurv_table(cumexcess_table1, 100, 6))
+  expect_error(gensurv_table(cumexcess_table1, 1000, 6))
 })
 
 cumexcess_table2 <- cumexcess_table %>% rename(results = outcome)
 
 test_that("gensurv_table() expects an error when df_table() has misnamed
           variables", {
-  expect_error(gensurv_table(cumexcess_table2, 100, 6))
+  expect_error(gensurv_table(cumexcess_table2, 1000, 6))
 })
 
 # testing gensurv_table's ability to handle missing data
@@ -71,18 +71,18 @@ cumexcess_table3$outcome[1] <- NA
 
 test_that("gensurv_table() will return a custom warning message concerning
 missing data", {
-  expect_warning(gensurv_table(cumexcess_table3, 100, 6))
+  expect_warning(gensurv_table(cumexcess_table3, 1000, 6))
 })
 
 test_that("gensurv_table() will return a visible object with
 missing data", {
-  expect_visible(gensurv_table(cumexcess_table3, 100, 6))
+  expect_visible(gensurv_table(cumexcess_table3, 1000, 6))
 })
 
 # testing gensurv_plot for visible object
 
 test_that("gensurv_plot() will ouput a visible object", {
-  expect_visible(gensurv_plot(cumexcess_plot, 100, 6))
+  expect_visible(gensurv_plot(cumexcess_plot, 1000, 6))
 })
 
 # testing df_outcome must have required variables
@@ -94,14 +94,14 @@ cumexcess_plot1 <- cumexcess_plot %>% select(
 
 test_that("gensurv_plot() expects an error when df_outcome() is missing required
           variables", {
-  expect_error(gensurv_plot(cumexcess_plot1, 100, 6))
+  expect_error(gensurv_plot(cumexcess_plot1, 1000, 6))
 })
 
 cumexcess_plot2 <- cumexcess_plot %>% rename(results = outcome)
 
 test_that("gensurv_plot() expects an error when df_outcome() has misnamed
           variables", {
-  expect_error(gensurv_plot(cumexcess_plot2, 100, 6))
+  expect_error(gensurv_plot(cumexcess_plot2, 1000, 6))
 })
 
 # testing gensurv_plot's ability to handle missing data
@@ -111,12 +111,12 @@ cumexcess_plot3$outcome[1] <- NA
 
 test_that("gensurv_plot() will return a custom warning concerning missing
           data", {
-  expect_warning(gensurv_plot(cumexcess_plot3, 100, 6))
+  expect_warning(gensurv_plot(cumexcess_plot3, 1000, 6))
 })
 
 test_that("gensurv_plot() will return a visible object with missing
           data", {
-  expect_visible(gensurv_plot(cumexcess_plot3, 100, 6))
+  expect_visible(gensurv_plot(cumexcess_plot3, 1000, 6))
 })
 
 # testing gensurv_combined outputs a visual object
@@ -125,7 +125,7 @@ test_that("gensurv_combined() will output a visible object", {
   expect_visible(
     gensurv_combined(
       df_plot = cumexcess_plot,
-      subjects_pt = 100,
+      subjects_pt = 1000,
       visits_pt = 6,
       df_table = cumexcess_table
     )
@@ -141,7 +141,7 @@ are missing required variables",
     expect_error(
       gensurv_combined(
         df_plot = cumexcess_plot1,
-        subjects_pt = 100,
+        subjects_pt = 1000,
         visits_pt = 6,
         df_table = cumexcess_table1
       )
@@ -156,7 +156,7 @@ misnamed variables",
     expect_error(
       gensurv_combined(
         df_plot = cumexcess_plot2,
-        subjects_pt = 100,
+        subjects_pt = 1000,
         visits_pt = 6,
         df_table = cumexcess_table2
       )
@@ -172,7 +172,7 @@ test_that("gensurv_combined() will return a custom warning concerning
   expect_warning(
     gensurv_combined(
       df_plot = cumexcess_plot3,
-      subjects_pt = 100,
+      subjects_pt = 1000,
       visits_pt = 6,
       df_table = cumexcess_table3
     )
@@ -184,7 +184,7 @@ test_that("gensurv_combined() will return a visible object with
   expect_visible(
     gensurv_combined(
       df_plot = cumexcess_plot3,
-      subjects_pt = 100,
+      subjects_pt = 1000,
       visits_pt = 6,
       df_table = cumexcess_table3
     )

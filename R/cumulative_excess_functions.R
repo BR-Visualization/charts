@@ -137,7 +137,13 @@ gensurv_plot <- function(
       limits = c("Benefit", "Risk")
     ) +
     geom_hline(yintercept = 0, color = "grey") +
-    coord_cartesian(ylim = c(actual_min, max1)) +
+    coord_cartesian(
+      ylim =
+        c(
+          pmax(min(breaks2), actual_min),
+          pmax(max(breaks2), max1)
+        )
+    ) +
     scale_x_continuous(
       limits = c(0, obsv_dur),
       breaks = seq(0, obsv_dur, visits)

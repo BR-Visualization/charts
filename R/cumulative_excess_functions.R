@@ -153,8 +153,7 @@ gensurv_plot <- function(
       subtitle = paste0(risk_name, "\n(>0: Favours ", comparator, ")")
     ) +
     br_charts_theme() +
-    theme(
-      axis.ticks.x = element_blank(),
+    theme(axis.ticks.x = element_blank(),
       axis.ticks.y = element_blank(),
       axis.text.y = element_text(color = fig_colors[1]),
       axis.text.y.right = element_text(color = fig_colors[2]),
@@ -163,18 +162,18 @@ gensurv_plot <- function(
       legend.position = legend_position,
       legend.justification = "left",
       legend.direction = "horizontal",
-      plot.title = element_text(
-        size = 10,
+      plot.title = element_text(size = 10,
         face = "plain",
         colour = fig_colors[1],
         hjust = 0,
-        vjust = -7,
+        vjust = - 7,
         margin = ggplot2::margin(
-          t = -1,
+          t = - 1,
           unit = "pt"
         )
       ),
       plot.subtitle = element_text(
+        colour = fig_colors[2], size = 10,
         hjust = 1
       ),
       plot.margin = margin(14.506, 30, 14.506, 14.506),
@@ -182,7 +181,7 @@ gensurv_plot <- function(
       axis.title.y.right = element_text(color = fig_colors[2])
     )
   if (!is.null(titlename)) {
-    cowplot::plot_grid(
+    plot_grid(
       mytitle,
       plot1,
       ncol = 1,

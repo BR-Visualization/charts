@@ -111,8 +111,8 @@ gensurv_plot <- function(
   obsv_dur <- unique(df_outcome$obsv_duration)
   min1 <- min((df_outcome$diff) * subjects)
   num_break <- ifelse(((min1 * (-2)) %% 6 == 0), 6,
-    ifelse(((min1 * (-2)) %% 8 == 0), 8,
-      ifelse(((min1 * (-2)) %% 7 == 0), 7, 9)
+    ifelse(((min1 * (-2)) %% 4 == 0), 4,
+      ifelse(((min1 * (-2)) %% 5 == 0), 5, 7)
     )
   )
 
@@ -144,7 +144,7 @@ gensurv_plot <- function(
     ) +
     scale_y_continuous(
       sec.axis = sec_axis(trans = ~., breaks = breaks2),
-      n.breaks = num_break
+      breaks = breaks2
     ) +
     xlab(paste("Time in", df_outcome$obsv_unit[1])) +
     labs(

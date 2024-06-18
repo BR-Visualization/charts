@@ -175,6 +175,7 @@ gensurv_plot <- function(
         )
       ),
       plot.subtitle = element_text(
+        colour = fig_colors[2], size = 10,
         hjust = 1
       ),
       plot.margin = margin(14.506, 30, 14.506, 14.506),
@@ -182,7 +183,7 @@ gensurv_plot <- function(
       axis.title.y.right = element_text(color = fig_colors[2])
     )
   if (!is.null(titlename)) {
-    cowplot::plot_grid(
+    plot_grid(
       mytitle,
       plot1,
       ncol = 1,
@@ -440,7 +441,7 @@ gensurv_combined <- function(df_plot,
     nonexistent_columns <- setdiff(all_columns, colnames(df_table))
     if (length(nonexistent_columns) > 0) {
       error_message <- paste0("You are missing a required variable in your
-                              dataframe:", nonexistent_columns)
+                              table dataframe:", nonexistent_columns)
       stop(error_message)
     }
   } else {
@@ -448,7 +449,7 @@ gensurv_combined <- function(df_plot,
     nonexistent_columns <- setdiff(all_columns, colnames(df_table))
     if (length(nonexistent_columns) > 0) {
       error_message <- paste0("You are missing a required variable in your
-                              dataframe:", nonexistent_columns)
+                              table dataframe:", nonexistent_columns)
       stop(error_message)
     }
   }
@@ -460,7 +461,7 @@ gensurv_combined <- function(df_plot,
   nonexistent_columns <- setdiff(all_columns, colnames(df_plot))
   if (length(nonexistent_columns) > 0) {
     error_message <- paste0("You are missing a required variable in your
-                            dataframe:", nonexistent_columns)
+                            plot dataframe:", nonexistent_columns)
     stop(error_message)
   }
 

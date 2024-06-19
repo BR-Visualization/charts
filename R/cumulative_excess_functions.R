@@ -53,7 +53,7 @@ gensurv_plot <- function(
     titlename = NULL, ben_name = "Primary Efficacy",
     risk_name = "Recurring AE",
     legend_position = c(-0.03, 1.15)) {
-  outcome <- active <- comparator <- NULL
+  outcome <- active <- control <- NULL
   eventtime <- obsv_duration <- obsv_unit <- eff_diff_lbl <- NULL
 
   all_columns <- c(
@@ -82,7 +82,7 @@ gensurv_plot <- function(
   }
 
   active <- strsplit(unique(df_outcome$eff_diff_lbl), "-")[[1]][1]
-  comparator <- strsplit(unique(df_outcome$eff_diff_lbl), "-")[[1]][2]
+  control <- strsplit(unique(df_outcome$eff_diff_lbl), "-")[[1]][2]
 
   df_ben <- df_outcome %>% dplyr::filter(outcome == "Benefit")
   mean1 <- mean(df_ben$diff)
@@ -140,8 +140,8 @@ gensurv_plot <- function(
     coord_cartesian(
       ylim =
         c(
-          pmax(min(breaks2), actual_min),
-          pmax(max(breaks2), max1)
+          actual_min,
+          max(breaks2)
         )
     ) +
     scale_x_continuous(
@@ -156,7 +156,7 @@ gensurv_plot <- function(
     labs(
       y = NULL,
       title = paste0(ben_name, "\n(>0: Favours ", active, ")"),
-      subtitle = paste0(risk_name, "\n(>0: Favours ", comparator, ")")
+      subtitle = paste0(risk_name, "\n(>0: Favours ", control, ")")
     ) +
     br_charts_theme() +
     theme(
@@ -261,8 +261,8 @@ gensurv_table <- function(df_table,
 
   active <- which(df_table$eff_code == 1)
   active1 <- df_table$effect[active[1]]
-  comparator <- which(df_table$eff_code == 0)
-  comparator1 <- df_table$effect[comparator[1]]
+  control <- which(df_table$eff_code == 0)
+  control1 <- df_table$effect[control[1]]
 
   if (any(is.na(df_table))) {
     miss_vars <- colnames(df_table)[colSums(is.na(df_table) > 0)]
@@ -361,7 +361,7 @@ gensurv_table <- function(df_table,
     labs(caption = paste(
       "Total number of subjects:", active1, "=",
       subjects,
-      "and", comparator1, "=",
+      "and", control1, "=",
       subjects
     )) +
     br_charts_theme() +

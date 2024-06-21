@@ -74,3 +74,7 @@ devtools::install_github("BR-Visualization/brcharts")
 ## Figure 7 - Trade-off Plot
 
 <img src="man/figures/README-tradeoff_plot-1.png" width="100%" />
+
+## Figure 13 - Cumulative Excess Plot
+
+<img src="man/figures/README-cumulative_excess_plot-1.png" width="100%" />

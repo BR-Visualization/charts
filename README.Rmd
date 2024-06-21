@@ -1,5 +1,5 @@
 ---
-output: html_document
+output: github_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -80,11 +80,13 @@ grouped_barchart(
 )
 ```
 
-## Figure 5 - Value Tree (Value Tree)
+## Figure 5 - Value Tree 
 
 ```{r value_tree, echo = FALSE, fig.width = 7, fig.height = 6}
-value_tree()
+save_mermaid(value_tree(), "inst/img/value_tree.png")
 ```
+
+![](inst/img/value_tree.png)
 
 
 ## Figure 7 - Trade-off Plot

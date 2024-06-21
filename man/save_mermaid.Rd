@@ -18,5 +18,5 @@ a saved image
 Save DiagrameR::mermaid object
 }
 \examples{
-save_mermaid(value_tree(), tempdir())
+save_mermaid(value_tree(), paste0(tempdir(), "/value_tree.png"))
 }

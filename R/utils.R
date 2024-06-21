@@ -620,15 +620,11 @@ ggsave_custom <-
 #' @export
 #'
 #' @examples
-#' save_mermaid(value_tree(), tempdir())
+#' save_mermaid(value_tree(), paste0(tempdir(), "/value_tree.png"))
 save_mermaid <- function(diagfig, path){
-  try(diagfig |>
-        htmltools::html_print() |>
-        webshot::webshot(file = path,
-                         cliprect  = c(0, 25, 660, 500),
-                         delay = 10),
-      silent = TRUE
-
+  try(
+    value_tree() %>%
+      rbokeh::widget2png(path)
   )
 }
 

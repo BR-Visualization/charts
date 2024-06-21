@@ -25,6 +25,7 @@ Imports:
     htmltools,
     magrittr,
     patchwork,
+    rbokeh,
     rlang,
     scales,
     shiny

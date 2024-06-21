@@ -82,9 +82,6 @@ grouped_barchart(
 
 ## Figure 5 - Value Tree 
 
-```{r value_tree, echo = FALSE, fig.width = 7, fig.height = 6}
-save_mermaid(value_tree(), "inst/img/value_tree.png")
-```
 
 ![](inst/img/value_tree.png)
 

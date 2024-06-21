@@ -1,7 +1,7 @@
 #' Create Value Tree
 #'
 #' Generate example value tree
-#' @inherit DiagrammeR description return
+#' @inheritParams DiagrammeR::mermaid
 #'
 #' @return value tree image
 #' @export

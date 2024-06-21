@@ -67,6 +67,9 @@
     <loc>/reference/control_fonts.html</loc>
   </url>
   <url>
+    <loc>/reference/cumexcess.html</loc>
+  </url>
+  <url>
     <loc>/reference/demography.html</loc>
   </url>
   <url>
@@ -74,6 +77,18 @@
   </url>
   <url>
     <loc>/reference/generate_tradeoff_plot.html</loc>
+  </url>
+  <url>
+    <loc>/reference/gensurv.html</loc>
+  </url>
+  <url>
+    <loc>/reference/gensurv_combined.html</loc>
+  </url>
+  <url>
+    <loc>/reference/gensurv_plot.html</loc>
+  </url>
+  <url>
+    <loc>/reference/gensurv_table.html</loc>
   </url>
   <url>
     <loc>/reference/ggsave_custom.html</loc>

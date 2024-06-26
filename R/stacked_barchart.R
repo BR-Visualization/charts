@@ -3,6 +3,7 @@
 #' @param data `dataframe` input data
 #' @param chartcolors `vector` a vector of colors, the same number of levels as
 #' the brcat variable
+#' @param xlabel `character` x label name, default is "Visit"
 #'
 #' @return a ggplot object
 #' @export
@@ -13,7 +14,7 @@
 #'   chartcolors = colfun()$fig12_colors,
 #'   xlabel = "Study Week"
 #'  )
-#' ggsave(plot1, filename = "tests/testthat/_snaps/stacked_barchart1.png", width = 7, height = 5)
+#' ggsave(plot1, filename = "tests/testthat/snapshots/stacked_barchart1.png", width = 7, height = 5)
 #'
 #' # unequal number of subjects across treatments
 #' comp_outcome2 <- comp_outcome[
@@ -26,7 +27,7 @@
 #'   chartcolors = colfun()$fig12_colors,
 #'   xlabel = "Study Week"
 #'  )
-#' ggsave(plot2, filename = "tests/testthat/_snaps/stacked_barchart2.png", width = 7, height = 5)
+#' ggsave(plot2, filename = "tests/testthat/snapshots/stacked_barchart2.png", width = 7, height = 5)
 #'
 #' # unequal number of observations across visits
 #' comp_outcome3 <- comp_outcome[!(comp_outcome$trtn == 1 &
@@ -36,7 +37,7 @@
 #'   chartcolors = colfun()$fig12_colors,
 #'   xlabel = "Study Week"
 #'  )
-#' ggsave(plot3, filename = "tests/testthat/_snaps/stacked_barchart3.png", width = 7, height = 5)
+#' ggsave(plot3, filename = "tests/testthat/snapshots/stacked_barchart3.png", width = 7, height = 5)
 
 stacked_barchart <- function(data, chartcolors, xlabel = "Visit"){
   all_columns <- c(

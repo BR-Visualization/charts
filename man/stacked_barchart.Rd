@@ -11,6 +11,8 @@ stacked_barchart(data, chartcolors, xlabel = "Visit")
 
 \item{chartcolors}{\code{vector} a vector of colors, the same number of levels as
 the brcat variable}
+
+\item{xlabel}{\code{character} x label name, default is "Visit"}
 }
 \value{
 a ggplot object
@@ -19,10 +21,33 @@ a ggplot object
 Stacked Bar Chart
 }
 \examples{
-stacked_barchart(
+plot1 <- stacked_barchart(
   data = comp_outcome,
   chartcolors = colfun()$fig12_colors,
   xlabel = "Study Week"
  )
+ggsave(plot1, filename = "tests/testthat/_snaps/stacked_barchart1.png", width = 7, height = 5)
 
+# unequal number of subjects across treatments
+comp_outcome2 <- comp_outcome[
+  (comp_outcome$trtn == 1 & comp_outcome$usubjid \%in\% c(1:40))
+  | (comp_outcome$trtn == 2 & comp_outcome$usubjid \%in\% c(101:160))
+  | (comp_outcome$trtn == 3 & comp_outcome$usubjid \%in\% c(201:250))
+,]
+plot2 <- stacked_barchart(
+  data = comp_outcome2,
+  chartcolors = colfun()$fig12_colors,
+  xlabel = "Study Week"
+ )
+ggsave(plot2, filename = "tests/testthat/_snaps/stacked_barchart2.png", width = 7, height = 5)
+
+# unequal number of observations across visits
+comp_outcome3 <- comp_outcome[!(comp_outcome$trtn == 1 &
+  comp_outcome$usubjid \%in\% c(1:40) & comp_outcome$visit == 5), ]
+plot3 <- stacked_barchart(
+  data = comp_outcome3,
+  chartcolors = colfun()$fig12_colors,
+  xlabel = "Study Week"
+ )
+ggsave(plot3, filename = "tests/testthat/_snaps/stacked_barchart3.png", width = 7, height = 5)
 }

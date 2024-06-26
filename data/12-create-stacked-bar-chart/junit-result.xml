@@ -1,318 +1,309 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="ci_calculation" timestamp="2024-06-26T10:10:52Z" hostname="a1d9a129444a" tests="7" skipped="0" failures="0" errors="0" time="0.193">
-    <testcase time="0.0979999999999999" classname="ci_calculation" name="calculate_diff_bin_function_test_Test_for_deriving_mean_difference_and_associated_confidence_intervals_for_binary_outcomes"/>
-    <testcase time="0.0250000000000001" classname="ci_calculation" name="calculate_log_rel_risk_bin_Test_for_deriving_log_relative_risk_and_associated_confidence_intervals_"/>
-    <testcase time="0.02" classname="ci_calculation" name="calculate_rel_risk_bin_Test_for_deriving_relative_risk_and_associated_confidence_intervals_"/>
-    <testcase time="0.0129999999999999" classname="ci_calculation" name="calculate_log_odds_ratio_bin_Test_for_deriving_log_odds_ratio_and_associated_confidence_intervals_"/>
-    <testcase time="0.012" classname="ci_calculation" name="calculate_odds_ratio_bin_Test_for_deriving_odds_ratio_and_associated_confidence_intervals_"/>
-    <testcase time="0.0130000000000001" classname="ci_calculation" name="calculate_diff_con_function_test_Test_for_deriving_mean_difference_and_associated_confidence_intervals_for_continuous_outcomes"/>
-    <testcase time="0.0119999999999998" classname="ci_calculation" name="calculate_diff_rates_function_test_Test_for_deriving_mean_difference_and_associated_confidence_intervals_for_exposure_adjusted_rates"/>
+  <testsuite name="ci_calculation" timestamp="2024-06-26T13:30:18Z" hostname="57b3f420e754" tests="7" skipped="0" failures="0" errors="0" time="0.21">
+    <testcase time="0.105" classname="ci_calculation" name="calculate_diff_bin_function_test_Test_for_deriving_mean_difference_and_associated_confidence_intervals_for_binary_outcomes"/>
+    <testcase time="0.0269999999999999" classname="ci_calculation" name="calculate_log_rel_risk_bin_Test_for_deriving_log_relative_risk_and_associated_confidence_intervals_"/>
+    <testcase time="0.024" classname="ci_calculation" name="calculate_rel_risk_bin_Test_for_deriving_relative_risk_and_associated_confidence_intervals_"/>
+    <testcase time="0.014" classname="ci_calculation" name="calculate_log_odds_ratio_bin_Test_for_deriving_log_odds_ratio_and_associated_confidence_intervals_"/>
+    <testcase time="0.0129999999999999" classname="ci_calculation" name="calculate_odds_ratio_bin_Test_for_deriving_odds_ratio_and_associated_confidence_intervals_"/>
+    <testcase time="0.014" classname="ci_calculation" name="calculate_diff_con_function_test_Test_for_deriving_mean_difference_and_associated_confidence_intervals_for_continuous_outcomes"/>
+    <testcase time="0.0130000000000001" classname="ci_calculation" name="calculate_diff_rates_function_test_Test_for_deriving_mean_difference_and_associated_confidence_intervals_for_exposure_adjusted_rates"/>
   </testsuite>
-  <testsuite name="cumulative_excess_plot" timestamp="2024-06-26T10:10:53Z" hostname="a1d9a129444a" tests="124" skipped="0" failures="0" errors="0" time="3.377">
-    <testcase time="0.27" classname="cumulative_excess_plot" name="gensurv_table_will_ouput_a_ggplot_object"/>
-    <testcase time="0.038" classname="cumulative_excess_plot" name="gensurv_table_will_ouput_a_ggplot_object"/>
-    <testcase time="0.0230000000000001" classname="cumulative_excess_plot" name="gensurv_table_will_ouput_a_ggplot_object"/>
-    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_table_will_ouput_a_ggplot_object"/>
-    <testcase time="0.016" classname="cumulative_excess_plot" name="gensurv_table_will_ouput_a_ggplot_object"/>
-    <testcase time="0.0170000000000001" classname="cumulative_excess_plot" name="gensurv_table_will_ouput_a_ggplot_object"/>
-    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_table_will_ouput_a_ggplot_object"/>
-    <testcase time="0.016" classname="cumulative_excess_plot" name="gensurv_table_will_ouput_a_ggplot_object"/>
+  <testsuite name="cumulative_excess_plot" timestamp="2024-06-26T13:30:19Z" hostname="57b3f420e754" tests="124" skipped="0" failures="0" errors="0" time="3.568">
+    <testcase time="0.277" classname="cumulative_excess_plot" name="gensurv_table_will_ouput_a_ggplot_object"/>
+    <testcase time="0.04" classname="cumulative_excess_plot" name="gensurv_table_will_ouput_a_ggplot_object"/>
+    <testcase time="0.0269999999999999" classname="cumulative_excess_plot" name="gensurv_table_will_ouput_a_ggplot_object"/>
+    <testcase time="0.018" classname="cumulative_excess_plot" name="gensurv_table_will_ouput_a_ggplot_object"/>
+    <testcase time="0.0190000000000001" classname="cumulative_excess_plot" name="gensurv_table_will_ouput_a_ggplot_object"/>
+    <testcase time="0.0189999999999999" classname="cumulative_excess_plot" name="gensurv_table_will_ouput_a_ggplot_object"/>
+    <testcase time="0.0189999999999999" classname="cumulative_excess_plot" name="gensurv_table_will_ouput_a_ggplot_object"/>
+    <testcase time="0.018" classname="cumulative_excess_plot" name="gensurv_table_will_ouput_a_ggplot_object"/>
     <testcase time="0.00600000000000001" classname="cumulative_excess_plot" name="gensurv_table_will_ouput_a_ggplot_object"/>
-    <testcase time="0.0089999999999999" classname="cumulative_excess_plot" name="gensurv_table_expects_an_error_when_df_table_is_missing_required_variables"/>
-    <testcase time="0.00800000000000001" classname="cumulative_excess_plot" name="gensurv_table_expects_an_error_when_df_table_has_misnamed_variables"/>
-    <testcase time="0.0349999999999999" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_custom_warning_message_concerning_missing_data"/>
-    <testcase time="0.0230000000000001" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_custom_warning_message_concerning_missing_data"/>
-    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_custom_warning_message_concerning_missing_data"/>
-    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_custom_warning_message_concerning_missing_data"/>
-    <testcase time="0.0170000000000001" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_custom_warning_message_concerning_missing_data"/>
-    <testcase time="0.0289999999999999" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_custom_warning_message_concerning_missing_data"/>
-    <testcase time="0.0170000000000001" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_custom_warning_message_concerning_missing_data"/>
-    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_custom_warning_message_concerning_missing_data"/>
-    <testcase time="0.004" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_custom_warning_message_concerning_missing_data"/>
-    <testcase time="0.00800000000000001" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.0129999999999999" classname="cumulative_excess_plot" name="gensurv_table_expects_an_error_when_df_table_is_missing_required_variables"/>
+    <testcase time="0.00900000000000012" classname="cumulative_excess_plot" name="gensurv_table_expects_an_error_when_df_table_has_misnamed_variables"/>
+    <testcase time="0.04" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_custom_warning_message_concerning_missing_data"/>
+    <testcase time="0.026" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_custom_warning_message_concerning_missing_data"/>
+    <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_custom_warning_message_concerning_missing_data"/>
+    <testcase time="0.018" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_custom_warning_message_concerning_missing_data"/>
+    <testcase time="0.0190000000000001" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_custom_warning_message_concerning_missing_data"/>
+    <testcase time="0.0329999999999999" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_custom_warning_message_concerning_missing_data"/>
+    <testcase time="0.018" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_custom_warning_message_concerning_missing_data"/>
+    <testcase time="0.0180000000000002" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_custom_warning_message_concerning_missing_data"/>
+    <testcase time="0.00299999999999967" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_custom_warning_message_concerning_missing_data"/>
+    <testcase time="0.0100000000000002" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_visible_object_with_missing_data"/>
     <testcase time="0.024" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.0229999999999999" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.0210000000000001" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.0170000000000001" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.016" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.024" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.0219999999999998" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.0180000000000002" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.0180000000000002" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.0190000000000001" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_visible_object_with_missing_data"/>
     <testcase time="0.004" classname="cumulative_excess_plot" name="gensurv_table_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.0460000000000003" classname="cumulative_excess_plot" name="gensurv_plot_will_ouput_a_visible_object"/>
+    <testcase time="0.0539999999999998" classname="cumulative_excess_plot" name="gensurv_plot_will_ouput_a_visible_object"/>
+    <testcase time="0.0249999999999999" classname="cumulative_excess_plot" name="gensurv_plot_will_ouput_a_visible_object"/>
+    <testcase time="0.0190000000000001" classname="cumulative_excess_plot" name="gensurv_plot_will_ouput_a_visible_object"/>
+    <testcase time="0.0190000000000001" classname="cumulative_excess_plot" name="gensurv_plot_will_ouput_a_visible_object"/>
+    <testcase time="0.0189999999999997" classname="cumulative_excess_plot" name="gensurv_plot_will_ouput_a_visible_object"/>
+    <testcase time="0.024" classname="cumulative_excess_plot" name="gensurv_plot_will_ouput_a_visible_object"/>
+    <testcase time="0.0180000000000002" classname="cumulative_excess_plot" name="gensurv_plot_will_ouput_a_visible_object"/>
+    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_plot_will_ouput_a_visible_object"/>
     <testcase time="0.0209999999999999" classname="cumulative_excess_plot" name="gensurv_plot_will_ouput_a_visible_object"/>
-    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_plot_will_ouput_a_visible_object"/>
-    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_plot_will_ouput_a_visible_object"/>
-    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_plot_will_ouput_a_visible_object"/>
-    <testcase time="0.02" classname="cumulative_excess_plot" name="gensurv_plot_will_ouput_a_visible_object"/>
-    <testcase time="0.0170000000000003" classname="cumulative_excess_plot" name="gensurv_plot_will_ouput_a_visible_object"/>
-    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_plot_will_ouput_a_visible_object"/>
-    <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_plot_will_ouput_a_visible_object"/>
-    <testcase time="0.00200000000000022" classname="cumulative_excess_plot" name="gensurv_plot_will_ouput_a_visible_object"/>
-    <testcase time="0.0089999999999999" classname="cumulative_excess_plot" name="gensurv_plot_expects_an_error_when_df_outcome_is_missing_required_variables"/>
-    <testcase time="0.0089999999999999" classname="cumulative_excess_plot" name="gensurv_plot_expects_an_error_when_df_outcome_has_misnamed_variables"/>
-    <testcase time="0.0449999999999999" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_custom_warning_concerning_missing_data"/>
-    <testcase time="0.0220000000000002" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_custom_warning_concerning_missing_data"/>
-    <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_custom_warning_concerning_missing_data"/>
-    <testcase time="0.0170000000000003" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_custom_warning_concerning_missing_data"/>
-    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_custom_warning_concerning_missing_data"/>
-    <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_custom_warning_concerning_missing_data"/>
-    <testcase time="0.02" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_custom_warning_concerning_missing_data"/>
-    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_custom_warning_concerning_missing_data"/>
+    <testcase time="0.00300000000000011" classname="cumulative_excess_plot" name="gensurv_plot_will_ouput_a_visible_object"/>
+    <testcase time="0.00999999999999979" classname="cumulative_excess_plot" name="gensurv_plot_expects_an_error_when_df_outcome_is_missing_required_variables"/>
+    <testcase time="0.00900000000000034" classname="cumulative_excess_plot" name="gensurv_plot_expects_an_error_when_df_outcome_has_misnamed_variables"/>
+    <testcase time="0.048" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_custom_warning_concerning_missing_data"/>
+    <testcase time="0.0229999999999997" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_custom_warning_concerning_missing_data"/>
     <testcase time="0.0180000000000002" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_custom_warning_concerning_missing_data"/>
-    <testcase time="0.00300000000000011" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_custom_warning_concerning_missing_data"/>
-    <testcase time="0.0089999999999999" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.0329999999999999" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.024" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_custom_warning_concerning_missing_data"/>
+    <testcase time="0.0180000000000002" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_custom_warning_concerning_missing_data"/>
+    <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_custom_warning_concerning_missing_data"/>
+    <testcase time="0.024" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_custom_warning_concerning_missing_data"/>
+    <testcase time="0.0180000000000002" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_custom_warning_concerning_missing_data"/>
+    <testcase time="0.02" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_custom_warning_concerning_missing_data"/>
+    <testcase time="0.00299999999999967" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_custom_warning_concerning_missing_data"/>
+    <testcase time="0.0100000000000002" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.0339999999999998" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.0260000000000002" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.0189999999999997" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.0170000000000003" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_visible_object_with_missing_data"/>
     <testcase time="0.0180000000000002" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.02" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.0219999999999998" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_visible_object_with_missing_data"/>
     <testcase time="0.0190000000000001" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_visible_object_with_missing_data"/>
     <testcase time="0.00300000000000011" classname="cumulative_excess_plot" name="gensurv_plot_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.0379999999999998" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
-    <testcase time="0.0209999999999999" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
-    <testcase time="0.0170000000000003" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
-    <testcase time="0.0209999999999999" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
+    <testcase time="0.04" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
+    <testcase time="0.0229999999999997" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
     <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
-    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
-    <testcase time="0.0170000000000003" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
-    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
+    <testcase time="0.0219999999999998" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
+    <testcase time="0.0180000000000002" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
     <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
-    <testcase time="0.0300000000000002" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
-    <testcase time="0.024" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
+    <testcase time="0.0180000000000002" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
+    <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
+    <testcase time="0.0190000000000001" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
+    <testcase time="0.0309999999999997" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
+    <testcase time="0.0230000000000001" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
     <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
-    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
-    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
-    <testcase time="0.0209999999999999" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
     <testcase time="0.0170000000000003" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
     <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
-    <testcase time="0.316" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
-    <testcase time="0.00800000000000001" classname="cumulative_excess_plot" name="gensurv_combined_expects_an_error_when_df_table_and_df_plot_are_missing_required_variables"/>
-    <testcase time="0.00700000000000012" classname="cumulative_excess_plot" name="gensurv_table_expects_an_error_when_df_table_and_df_plot_have_misnamed_variables"/>
-    <testcase time="0.0409999999999999" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
-    <testcase time="0.0209999999999999" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
+    <testcase time="0.0230000000000001" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
+    <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
+    <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
+    <testcase time="0.335" classname="cumulative_excess_plot" name="gensurv_combined_will_output_a_visible_object"/>
+    <testcase time="0.0089999999999999" classname="cumulative_excess_plot" name="gensurv_combined_expects_an_error_when_df_table_and_df_plot_are_missing_required_variables"/>
+    <testcase time="0.00800000000000001" classname="cumulative_excess_plot" name="gensurv_table_expects_an_error_when_df_table_and_df_plot_have_misnamed_variables"/>
+    <testcase time="0.0419999999999998" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
     <testcase time="0.0220000000000002" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
+    <testcase time="0.0219999999999998" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
+    <testcase time="0.0180000000000002" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
     <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
-    <testcase time="0.0170000000000003" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
-    <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
-    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
-    <testcase time="0.0209999999999999" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
-    <testcase time="0.02" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
-    <testcase time="0.00700000000000012" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
-    <testcase time="0.0249999999999999" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
+    <testcase time="0.0180000000000002" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
+    <testcase time="0.0189999999999997" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
     <testcase time="0.024" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
-    <testcase time="0.0220000000000002" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
-    <testcase time="0.0169999999999999" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
-    <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
-    <testcase time="0.0170000000000003" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
-    <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
     <testcase time="0.0209999999999999" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
-    <testcase time="0.241" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
-    <testcase time="0.104" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
-    <testcase time="0.00900000000000034" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.0559999999999992" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.0220000000000002" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.0170000000000003" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.00800000000000001" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
+    <testcase time="0.0260000000000002" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
+    <testcase time="0.0249999999999999" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
+    <testcase time="0.0230000000000001" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
+    <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
+    <testcase time="0.0190000000000001" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
+    <testcase time="0.0180000000000002" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
+    <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
+    <testcase time="0.0220000000000002" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
+    <testcase time="0.250999999999999" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
+    <testcase time="0.108000000000001" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_custom_warning_concerning_missing_data"/>
+    <testcase time="0.00999999999999979" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.0599999999999996" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.0210000000000008" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
     <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
     <testcase time="0.0220000000000002" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
     <testcase time="0.0190000000000001" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.0169999999999995" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
     <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.0190000000000001" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.00700000000000056" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.0289999999999999" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.024" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.0169999999999995" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
     <testcase time="0.0180000000000007" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.0169999999999995" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.0190000000000001" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.00699999999999967" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.0300000000000002" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.024" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
     <testcase time="0.0230000000000006" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
     <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
     <testcase time="0.0179999999999998" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.123" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
-    <testcase time="0.107" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.124000000000001" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
+    <testcase time="0.116" classname="cumulative_excess_plot" name="gensurv_combined_will_return_a_visible_object_with_missing_data"/>
   </testsuite>
-  <testsuite name="pyramid_chart" timestamp="2024-06-26T10:10:56Z" hostname="a1d9a129444a" tests="52" skipped="0" failures="0" errors="0" time="1.06">
-    <testcase time="0.0539999999999994" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.0170000000000003" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+  <testsuite name="pyramid_chart" timestamp="2024-06-26T13:30:22Z" hostname="57b3f420e754" tests="52" skipped="0" failures="0" errors="0" time="1.124">
+    <testcase time="0.056" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
     <testcase time="0.0169999999999995" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
     <testcase time="0.0170000000000003" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.0220000000000002" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.0169999999999995" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.0300000000000002" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
     <testcase time="0.0170000000000003" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.0169999999999995" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.0220000000000002" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.0229999999999997" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
     <testcase time="0.0179999999999998" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.0310000000000006" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.0169999999999995" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
     <testcase time="0.0170000000000003" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.0129999999999999" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
-    <testcase time="0.0380000000000003" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.0169999999999995" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.024" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.0169999999999995" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.0180000000000007" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.0139999999999993" classname="pyramid_chart" name="pyramid_chart_returns_a_ggplot_object"/>
+    <testcase time="0.04" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.0180000000000007" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.0179999999999998" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.0179999999999998" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
     <testcase time="0.0170000000000003" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.0169999999999995" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.0369999999999999" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
     <testcase time="0.0170000000000003" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
     <testcase time="0.0179999999999998" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.0169999999999995" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.0350000000000001" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.0170000000000003" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.0169999999999995" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.0170000000000003" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.0220000000000002" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.0169999999999995" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.0130000000000008" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
-    <testcase time="0.0329999999999995" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0170000000000003" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0219999999999994" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0170000000000003" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0170000000000003" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0169999999999995" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0179999999999998" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.024" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.0180000000000007" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
+    <testcase time="0.0129999999999999" classname="pyramid_chart" name="pyramid_chart_handles_missing_data_correctly"/>
     <testcase time="0.0350000000000001" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0170000000000003" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
     <testcase time="0.0169999999999995" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.024" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
     <testcase time="0.0170000000000003" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0179999999999998" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
     <testcase time="0.0170000000000003" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0219999999999994" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0129999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0300000000000002" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0170000000000003" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0169999999999995" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0230000000000006" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0169999999999995" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0170000000000003" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0309999999999997" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0220000000000002" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0169999999999995" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0170000000000003" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.0169999999999995" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.016" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0369999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0179999999999998" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0179999999999998" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0190000000000001" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0179999999999998" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0289999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0140000000000002" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0329999999999995" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0190000000000001" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0179999999999998" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.024" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0209999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
     <testcase time="0.0180000000000007" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
-    <testcase time="0.858" classname="character(0)" name="_unnamed_"/>
-    <testcase time="0.731" classname="character(0)" name="_unnamed_"/>
-    <testcase time="0.0120000000000005" classname="character(0)" name="_unnamed_"/>
-    <testcase time="0.724" classname="character(0)" name="_unnamed_"/>
+    <testcase time="0.0329999999999995" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0289999999999999" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0190000000000001" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0170000000000003" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0179999999999998" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0170000000000003" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.0179999999999998" classname="pyramid_chart" name="pyramid_chart_handles_different_input_types_correctly"/>
+    <testcase time="0.66" classname="character(0)" name="_unnamed_">
+      <error type="error" message="Error in `readPNG(test_path(&quot;stacked_barchart1.png&quot;))`: unable to open stacked_barchart1.png ('test-stacked_barchart.R:14:1')">Error in `readPNG(test_path("stacked_barchart1.png"))`: unable to open stacked_barchart1.png
+Backtrace:
+    ▆
+ 1. └─png::readPNG(test_path("stacked_barchart1.png")) at test-stacked_barchart.R:14:1</error>
+    </testcase>
   </testsuite>
-  <testsuite name="stacked_barchart" timestamp="2024-06-26T10:10:59Z" hostname="a1d9a129444a" tests="13" skipped="0" failures="0" errors="0" time="2.489">
-    <testcase time="0.00799999999999912" classname="stacked_barchart" name="test_that_stacked_barchart_returns_an_error_when_a_required_field_is_missing"/>
-    <testcase time="0.0490000000000013" classname="stacked_barchart" name="test_that_stacked_barchart_returns_warning_message_concerning_missing_data"/>
-    <testcase time="0.0169999999999995" classname="stacked_barchart" name="test_that_stacked_barchart_returns_warning_message_concerning_missing_data"/>
-    <testcase time="0.020999999999999" classname="stacked_barchart" name="test_that_stacked_barchart_returns_warning_message_concerning_missing_data"/>
-    <testcase time="0.016" classname="stacked_barchart" name="test_that_stacked_barchart_returns_warning_message_concerning_missing_data"/>
-    <testcase time="0.0170000000000012" classname="stacked_barchart" name="test_that_stacked_barchart_returns_warning_message_concerning_missing_data"/>
-    <testcase time="0.0169999999999995" classname="stacked_barchart" name="test_that_stacked_barchart_returns_warning_message_concerning_missing_data"/>
-    <testcase time="0.016" classname="stacked_barchart" name="test_that_stacked_barchart_returns_warning_message_concerning_missing_data"/>
-    <testcase time="0.00300000000000011" classname="stacked_barchart" name="test_that_stacked_barchart_returns_warning_message_concerning_missing_data"/>
-  </testsuite>
-  <testsuite name="tradeoff_plot" timestamp="2024-06-26T10:10:59Z" hostname="a1d9a129444a" tests="109" skipped="0" failures="0" errors="0" time="2.488">
-    <testcase time="0.0489999999999995" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0359999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0420000000000016" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0199999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0169999999999995" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0199999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0200000000000014" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0169999999999995" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0199999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0210000000000008" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0239999999999991" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0210000000000008" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0179999999999989" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+  <testsuite name="tradeoff_plot" timestamp="2024-06-26T13:30:24Z" hostname="57b3f420e754" tests="110" skipped="0" failures="0" errors="1" time="3.409">
+    <testcase time="0.0590000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0409999999999995" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0390000000000006" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0219999999999994" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
     <testcase time="0.0220000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0180000000000007" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0179999999999989" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0180000000000007" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.032" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.016" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0169999999999995" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0170000000000012" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0169999999999995" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0209999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0170000000000003" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0229999999999997" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
     <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.00799999999999912" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
-    <testcase time="0.0410000000000004" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0400000000000009" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.036999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0210000000000008" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.020999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0259999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0179999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0230000000000006" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0209999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.024" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0199999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0200000000000005" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.024" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0299999999999994" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0180000000000007" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0169999999999995" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0179999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0209999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0170000000000003" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.00900000000000034" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_straight_line"/>
+    <testcase time="0.0430000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0409999999999995" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0389999999999997" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0259999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0170000000000003" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
     <testcase time="0.0199999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0170000000000012" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0199999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0199999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0199999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.016" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0280000000000005" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0250000000000004" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
     <testcase time="0.0180000000000007" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0179999999999989" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0229999999999997" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0179999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0209999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0179999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0330000000000004" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.024" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0199999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0220000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0199999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.032" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
     <testcase time="0.0220000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
     <testcase time="0.0180000000000007" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0279999999999987" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0170000000000012" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0249999999999986" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0170000000000012" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.016" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
     <testcase time="0.0169999999999995" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0080000000000009" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
-    <testcase time="0.0449999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.036999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0410000000000004" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0210000000000008" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0169999999999995" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0229999999999997" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0169999999999995" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0200000000000014" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0169999999999995" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0239999999999991" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0170000000000012" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0239999999999991" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0229999999999997" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0220000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0180000000000007" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0179999999999989" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0180000000000007" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0220000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0280000000000005" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0169999999999995" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0170000000000003" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0219999999999994" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.00900000000000034" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_benefit_risk_trade_off_threshold_is_a_smooth_curve"/>
+    <testcase time="0.0439999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0420000000000007" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.04" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
     <testcase time="0.020999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0170000000000012" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.016" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0220000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0200000000000014" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0179999999999989" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0210000000000008" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0220000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0199999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0180000000000007" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0259999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0269999999999992" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0199999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0229999999999997" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0310000000000006" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0220000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0180000000000007" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
     <testcase time="0.0169999999999995" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.00900000000000034" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
-    <testcase time="0.0449999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.036999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0420000000000016" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.020999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0169999999999995" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0230000000000015" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0179999999999989" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0199999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0170000000000012" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0229999999999997" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0169999999999995" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0250000000000004" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0169999999999995" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0180000000000007" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0129999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_when_CI_is_calculated"/>
+    <testcase time="0.0419999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.177" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.043000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
     <testcase time="0.0220000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0220000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0179999999999989" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
     <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0199999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0199999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0289999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
     <testcase time="0.0180000000000007" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0220000000000002" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0280000000000005" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0199999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0180000000000007" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0259999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0239999999999991" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0199999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0240000000000009" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0190000000000001" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0199999999999996" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0299999999999994" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0180000000000007" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
     <testcase time="0.0169999999999995" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.020999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0170000000000012" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.016" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0210000000000008" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
     <testcase time="0.0169999999999995" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
+    <testcase time="0.0180000000000007" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
     <testcase time="0.00900000000000034" classname="tradeoff_plot" name="test_that_tradeoff_plot_returns_a_ggplot_object_for_subgroup_data"/>
-    <testcase time="0.0449999999999999" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_a_required_field_is_missing"/>
+    <testcase time="0.0429999999999993" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_a_required_field_is_missing"/>
     <testcase time="0.0380000000000003" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_a_required_field_is_missing"/>
     <testcase time="0.016" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_a_required_field_is_missing"/>
-    <testcase time="0.0429999999999993" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_data_is_not_of_required_type"/>
-    <testcase time="0.0410000000000004" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_data_is_not_of_required_type"/>
-    <testcase time="0.0139999999999993" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_data_is_not_of_required_type"/>
-    <testcase time="0.0419999999999998" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_data_is_out_of_required_range"/>
-    <testcase time="0.0400000000000009" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_data_is_out_of_required_range"/>
-    <testcase time="0.0139999999999993" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_data_is_out_of_required_range"/>
+    <testcase time="0.0440000000000005" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_data_is_not_of_required_type"/>
+    <testcase time="0.0399999999999991" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_data_is_not_of_required_type"/>
+    <testcase time="0.0150000000000006" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_data_is_not_of_required_type"/>
+    <testcase time="0.0469999999999988" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_data_is_out_of_required_range"/>
+    <testcase time="0.0380000000000003" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_data_is_out_of_required_range"/>
+    <testcase time="0.0150000000000006" classname="tradeoff_plot" name="test_that_tradeoff_plot_throws_an_error_when_data_is_out_of_required_range"/>
   </testsuite>
 </testsuites>

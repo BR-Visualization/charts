@@ -3,6 +3,7 @@
 #' @param data `dataframe` input data
 #' @param chartcolors `vector` a vector of colors, the same number of levels as
 #' the brcat variable
+#' @param xlabel `character` x label name, default is "Visit"
 #'
 #' @return a ggplot object
 #' @export

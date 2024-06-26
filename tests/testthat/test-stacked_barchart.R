@@ -1,4 +1,5 @@
 library(testthat)
+library(grDevices)
 
 # Test if the new plot is identical to the saved plot
 # Example 1 - manuscript example

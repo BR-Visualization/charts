@@ -60,6 +60,10 @@
 <dd><p><code>vector</code> a vector of colors, the same number of levels as
 the brcat variable</p></dd>
 
+
+<dt>xlabel</dt>
+<dd><p><code>character</code> x label name, default is "Visit"</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
@@ -70,13 +74,42 @@ the brcat variable</p></dd>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">stacked_barchart</span><span class="op">(</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">plot1</span> <span class="op">&lt;-</span> <span class="fu">stacked_barchart</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  data <span class="op">=</span> <span class="va">comp_outcome</span>,</span></span>
 <span class="r-in"><span>  chartcolors <span class="op">=</span> <span class="fu"><a href="colfun.html">colfun</a></span><span class="op">(</span><span class="op">)</span><span class="op">$</span><span class="va">fig12_colors</span>,</span></span>
 <span class="r-in"><span>  xlabel <span class="op">=</span> <span class="st">"Study Week"</span></span></span>
 <span class="r-in"><span> <span class="op">)</span></span></span>
-<span class="r-plt img"><img src="stacked_barchart-1.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html" class="external-link">ggsave</a></span><span class="op">(</span><span class="va">plot1</span>, filename <span class="op">=</span> <span class="st">"tests/testthat/_snaps/stacked_barchart1.png"</span>, width <span class="op">=</span> <span class="fl">7</span>, height <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in ggsave(plot1, filename = "tests/testthat/_snaps/stacked_barchart1.png",     width = 7, height = 5):</span> Cannot find directory <span style="color: #0000BB;">tests/testthat/_snaps</span>.</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Please supply an existing directory or use `create.dir = TRUE`.</span>
 <span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># unequal number of subjects across treatments</span></span></span>
+<span class="r-in"><span><span class="va">comp_outcome2</span> <span class="op">&lt;-</span> <span class="va">comp_outcome</span><span class="op">[</span></span></span>
+<span class="r-in"><span>  <span class="op">(</span><span class="va">comp_outcome</span><span class="op">$</span><span class="va">trtn</span> <span class="op">==</span> <span class="fl">1</span> <span class="op">&amp;</span> <span class="va">comp_outcome</span><span class="op">$</span><span class="va">usubjid</span> <span class="op"><a href="https://rdrr.io/r/base/match.html" class="external-link">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">40</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="op">|</span> <span class="op">(</span><span class="va">comp_outcome</span><span class="op">$</span><span class="va">trtn</span> <span class="op">==</span> <span class="fl">2</span> <span class="op">&amp;</span> <span class="va">comp_outcome</span><span class="op">$</span><span class="va">usubjid</span> <span class="op"><a href="https://rdrr.io/r/base/match.html" class="external-link">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">101</span><span class="op">:</span><span class="fl">160</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="op">|</span> <span class="op">(</span><span class="va">comp_outcome</span><span class="op">$</span><span class="va">trtn</span> <span class="op">==</span> <span class="fl">3</span> <span class="op">&amp;</span> <span class="va">comp_outcome</span><span class="op">$</span><span class="va">usubjid</span> <span class="op"><a href="https://rdrr.io/r/base/match.html" class="external-link">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">201</span><span class="op">:</span><span class="fl">250</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span>,<span class="op">]</span></span></span>
+<span class="r-in"><span><span class="va">plot2</span> <span class="op">&lt;-</span> <span class="fu">stacked_barchart</span><span class="op">(</span></span></span>
+<span class="r-in"><span>  data <span class="op">=</span> <span class="va">comp_outcome2</span>,</span></span>
+<span class="r-in"><span>  chartcolors <span class="op">=</span> <span class="fu"><a href="colfun.html">colfun</a></span><span class="op">(</span><span class="op">)</span><span class="op">$</span><span class="va">fig12_colors</span>,</span></span>
+<span class="r-in"><span>  xlabel <span class="op">=</span> <span class="st">"Study Week"</span></span></span>
+<span class="r-in"><span> <span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html" class="external-link">ggsave</a></span><span class="op">(</span><span class="va">plot2</span>, filename <span class="op">=</span> <span class="st">"tests/testthat/_snaps/stacked_barchart2.png"</span>, width <span class="op">=</span> <span class="fl">7</span>, height <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in ggsave(plot2, filename = "tests/testthat/_snaps/stacked_barchart2.png",     width = 7, height = 5):</span> Cannot find directory <span style="color: #0000BB;">tests/testthat/_snaps</span>.</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Please supply an existing directory or use `create.dir = TRUE`.</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># unequal number of observations across visits</span></span></span>
+<span class="r-in"><span><span class="va">comp_outcome3</span> <span class="op">&lt;-</span> <span class="va">comp_outcome</span><span class="op">[</span><span class="op">!</span><span class="op">(</span><span class="va">comp_outcome</span><span class="op">$</span><span class="va">trtn</span> <span class="op">==</span> <span class="fl">1</span> <span class="op">&amp;</span></span></span>
+<span class="r-in"><span>  <span class="va">comp_outcome</span><span class="op">$</span><span class="va">usubjid</span> <span class="op"><a href="https://rdrr.io/r/base/match.html" class="external-link">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">40</span><span class="op">)</span> <span class="op">&amp;</span> <span class="va">comp_outcome</span><span class="op">$</span><span class="va">visit</span> <span class="op">==</span> <span class="fl">5</span><span class="op">)</span>, <span class="op">]</span></span></span>
+<span class="r-in"><span><span class="va">plot3</span> <span class="op">&lt;-</span> <span class="fu">stacked_barchart</span><span class="op">(</span></span></span>
+<span class="r-in"><span>  data <span class="op">=</span> <span class="va">comp_outcome3</span>,</span></span>
+<span class="r-in"><span>  chartcolors <span class="op">=</span> <span class="fu"><a href="colfun.html">colfun</a></span><span class="op">(</span><span class="op">)</span><span class="op">$</span><span class="va">fig12_colors</span>,</span></span>
+<span class="r-in"><span>  xlabel <span class="op">=</span> <span class="st">"Study Week"</span></span></span>
+<span class="r-in"><span> <span class="op">)</span></span></span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>You have unequal number of observations across visits, please check missing data.</span>
+<span class="r-in"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsave.html" class="external-link">ggsave</a></span><span class="op">(</span><span class="va">plot3</span>, filename <span class="op">=</span> <span class="st">"tests/testthat/_snaps/stacked_barchart3.png"</span>, width <span class="op">=</span> <span class="fl">7</span>, height <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in ggsave(plot3, filename = "tests/testthat/_snaps/stacked_barchart3.png",     width = 7, height = 5):</span> Cannot find directory <span style="color: #0000BB;">tests/testthat/_snaps</span>.</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span style="color: #00BBBB;">ℹ</span> Please supply an existing directory or use `create.dir = TRUE`.</span>
 </code></pre></div>
     </div>
   </div>

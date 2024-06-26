@@ -26,6 +26,7 @@ Imports:
     glue,
     magrittr,
     patchwork,
+    png,
     reshape2,
     rlang,
     scales,

@@ -9,6 +9,7 @@
 #' @export
 #'
 #' @examples
+#' library(testthat)
 #' plot1 <- stacked_barchart(
 #'   data = comp_outcome,
 #'   chartcolors = colfun()$fig12_colors,

@@ -11,7 +11,7 @@ plot1 <- stacked_barchart(
 ggsave(plot1, filename = "test_stacked_barchart1.png", width = 7, height = 5)
 
 test_stacked_barchart1 <- readPNG("test_stacked_barchart1.png")
-stacked_barchart1 <- readPNG(test_path("stacked_barchart1.png"))
+stacked_barchart1 <- readPNG(paste0(test_path(),"/snapshots/stacked_barchart1.png"))
 
 test1 <- paste(100 * sum(test_stacked_barchart1 == stacked_barchart1) /
                  length(test_stacked_barchart1), "%")
@@ -33,7 +33,7 @@ plot2 <- stacked_barchart(
 ggsave(plot2, filename = "test_stacked_barchart2.png", width = 7, height = 5)
 
 test_stacked_barchart2 <- readPNG("test_stacked_barchart2.png")
-stacked_barchart2 <- readPNG(test_path("stacked_barchart2.png"))
+stacked_barchart2 <- readPNG(paste0(test_path(),"/snapshots/stacked_barchart2.png"))
 
 test2 <- paste(100 * sum(test_stacked_barchart2 == stacked_barchart2) /
                  length(test_stacked_barchart2), "%")
@@ -52,7 +52,7 @@ plot3 <- stacked_barchart(
 ggsave(plot3, filename = "test_stacked_barchart3.png", width = 7, height = 5)
 
 test_stacked_barchart3 <- readPNG("test_stacked_barchart3.png")
-stacked_barchart3 <- readPNG(test_path("stacked_barchart3.png"))
+stacked_barchart3 <- readPNG(paste0(test_path(),"/snapshots/stacked_barchart3.png"))
 
 test3 <- paste(100 * sum(test_stacked_barchart3 == stacked_barchart3) /
                  length(test_stacked_barchart3), "%")

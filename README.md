@@ -70,3 +70,7 @@ devtools::install_github("BR-Visualization/brcharts")
 ## Figure 7 - Trade-off Plot
 
 <img src="man/figures/README-tradeoff_plot-1.png" width="100%" />
+
+## Figure 12 - Composite Outcome (Stacked Bar Chart)
+
+<img src="man/figures/README-stacked_barchart-1.png" width="100%" />

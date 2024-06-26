@@ -121,3 +121,13 @@ generate_tradeoff_plot(
   chartcolors <- colfun()$fig7_colors
 )
 ```
+
+## Figure 12 - Composite Outcome (Stacked Bar Chart)
+
+```{r stacked_barchart, echo = FALSE}
+stacked_barchart(
+  data = comp_outcome,
+  chartcolors = colfun()$fig12_colors,
+  xlabel = "Study Week"
+)
+```

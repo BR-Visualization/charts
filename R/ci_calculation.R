@@ -9,6 +9,7 @@
 #' @param N2 (`numeric`)\cr Total number of subjects in comparator treatment
 #' @param cl (`numeric`)\cr confidence level
 #'
+#' @importFrom stats qnorm
 #' @export
 #'
 #' @examples
@@ -231,6 +232,7 @@ calculate_odds_ratio_bin <- function(prop1, prop2, N1, N2, cl) {
 #' @param N2 (`numeric`)\cr Total number of subjects in comparator treatment
 #' @param cl (`numeric`)\cr confidence level
 #'
+#' @importFrom stats qt
 #' @export
 #'
 #' @examples

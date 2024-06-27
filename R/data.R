@@ -41,10 +41,10 @@
 #' @name scatterplot
 #' @format A data frame with 500 rows and 2 columns:
 #'   \describe{
-#'   \item{bdiff}{Simulated difference in incremental probabilities for outcome
-#'   "Benefit"}
-#'   \item{rdiff}{Simulated difference in incremental probabilities for outcome
-#'   "Risk"}
+#'   \item{bdiff}{Simulated difference in incremental probabilities for
+#'   active/control effects and outcome "Benefit"}
+#'   \item{rdiff}{Simulated difference in incremental probabilities for
+#'   active/control effects and outcome "Risk"}
 #'
 #'   }
 "scatterplot"

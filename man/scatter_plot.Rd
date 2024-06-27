@@ -39,5 +39,5 @@ Scatter plot
 }
 \examples{
 outcome <- c("Benefit", "Risk")
-scatter_plot(scatterplot1, outcome)
+scatter_plot(scatterplot, outcome)
 }

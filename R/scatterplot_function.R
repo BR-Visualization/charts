@@ -90,10 +90,8 @@ scatter_plot <- function(df_diff, outcome, legend_position = c(0, 1.05),
 
   dfdiff <- data.frame(diff1, diff2, brratio)
 
-  floor_dec <- function(x, level = 1) round(x - 5 * 10^(-level - 1), level)
-  ceiling_dec <- function(x, level = 1) round(x + 5 * 10^(-level - 1), level)
-  max1 <- ceiling_dec(max(diff1, diff2), 1)
-  min1 <- floor_dec(min(diff1, diff2), 1)
+  max1 <- max(diff1, diff2)
+  min1 <- min(diff1, diff2)
 
   meanbfdiff <- data.frame(
     mdiff1 = mean(diff1),

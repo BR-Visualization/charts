@@ -2,7 +2,7 @@
 % Please edit documentation in R/scatterplot_function.R
 \name{scatter_plot}
 \alias{scatter_plot}
-\title{Scatter plot}
+\title{Create a scatterplot from a given dataframe.}
 \usage{
 scatter_plot(
   df_diff,
@@ -32,10 +32,10 @@ to the scatter plot points, the second corresponding to the overall mean, and
 third to the written probability text color.}
 }
 \value{
-ggplot object
+A scatterplot.
 }
 \description{
-Scatter plot
+Create a scatterplot from a given dataframe.
 }
 \examples{
 outcome <- c("Benefit", "Risk")

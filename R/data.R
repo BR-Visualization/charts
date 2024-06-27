@@ -36,6 +36,19 @@
 #' @format A data frame with 105 rows and 51 variables
 "brdata"
 
+#' Example scatterplot data used for Figure 11
+#'
+#' @name scatterplot
+#' @format A data frame with 500 rows and 2 columns:
+#'   \describe{
+#'   \item{bdiff}{Simulated difference in incremental probabilities for outcome
+#'   "Benefit"}
+#'   \item{rdiff}{Simulated difference in incremental probabilities for outcome
+#'   "Risk"}
+#'
+#'   }
+"scatterplot"
+
 #' Example cumulative excess plot data used for Figure 13
 #'
 #' @name cumexcess

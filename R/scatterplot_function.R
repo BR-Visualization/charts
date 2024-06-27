@@ -1,4 +1,4 @@
-#' Scatter plot
+#' Create a scatterplot from a given dataframe.
 #'
 #' @param df_diff A dataframe containing two vectors, each of which display the
 #' difference between incremental probabilities in active and control effects
@@ -16,10 +16,10 @@
 #' to the scatter plot points, the second corresponding to the overall mean, and
 #' third to the written probability text color.
 #'
-#' @import ggplot2
 #'
-#' @return ggplot object
+#' @return A scatterplot.
 #' @export
+#' @import ggplot2
 #'
 #' @examples
 #' outcome <- c("Benefit", "Risk")

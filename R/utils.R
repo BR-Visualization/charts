@@ -621,14 +621,13 @@ ggsave_custom <-
 #'
 #' @examples
 #' if (interactive()) {
-#' # from github:
-#' remotes::install_github("bokeh/rbokeh")
-#' save_mermaid(value_tree(), paste0(tempdir(), "/value_tree.png"))
+#'   # from github:
+#'   remotes::install_github("bokeh/rbokeh")
+#'   save_mermaid(value_tree(), paste0(tempdir(), "/value_tree.png"))
 #' }
-save_mermaid <- function(diagfig, path){
+save_mermaid <- function(diagfig, path) {
   try(
     value_tree() %>%
       widget2png(path)
   )
 }
-

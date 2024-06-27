@@ -19,8 +19,8 @@ Save DiagrameR::mermaid object
 }
 \examples{
 if (interactive()) {
-# from github:
-remotes::install_github("bokeh/rbokeh")
-save_mermaid(value_tree(), paste0(tempdir(), "/value_tree.png"))
+  # from github:
+  remotes::install_github("bokeh/rbokeh")
+  save_mermaid(value_tree(), paste0(tempdir(), "/value_tree.png"))
 }
 }

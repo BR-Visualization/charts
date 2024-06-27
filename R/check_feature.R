@@ -218,6 +218,7 @@ check_effects_table <- function(df) {
 #' @details DETAILS
 #' @rdname check_feature
 #' @importFrom shiny tags
+#' @importFrom stats na.omit
 #' @export
 #'
 check_feature <- function(data, feature, plots, func, na_check, values,

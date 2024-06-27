@@ -41,6 +41,7 @@ Check](https://github.com/BR-Visualization/brcharts/actions/workflows/build-chec
 bump](https://github.com/BR-Visualization/brcharts/actions/workflows/version-bump.yaml/badge.svg)](https://github.com/BR-Visualization/brcharts/actions/workflows/version-bump.yaml)
 [![Version
 check](https://github.com/BR-Visualization/brcharts/actions/workflows/version.yaml/badge.svg)](https://github.com/BR-Visualization/brcharts/actions/workflows/version.yaml)
+
 <!-- badges: end -->
 
 The goal of brcharts is to create benefit-risk charts in the
@@ -69,7 +70,7 @@ devtools::install_github("BR-Visualization/brcharts")
 
 ## Figure 5 - Value Tree
 
-![](inst/img/value_tree.png)
+<img src="inst/img/value_tree.png" width="100%" />
 
 ## Figure 7 - Trade-off Plot
 

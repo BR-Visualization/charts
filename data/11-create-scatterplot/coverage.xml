@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "https://raw.githubusercontent.com/cobertura/cobertura/master/cobertura/src/site/htdocs/xml/coverage-04.dtd">
-<coverage line-rate="0.611726685133887" branch-rate="0" lines-covered="1325" lines-valid="2166" branches-covered="0" branches-valid="0" complexity="0" version="3.6.4" timestamp="2024-06-27 15:21:46.345922">
+<coverage line-rate="0.611367837338262" branch-rate="0" lines-covered="1323" lines-valid="2164" branches-covered="0" branches-valid="0" complexity="0" version="3.6.4" timestamp="2024-06-27 15:57:15.077435">
   <sources>
     <source>/__w/brcharts/brcharts/brcharts</source>
   </sources>
   <packages>
-    <package name="brcharts" line-rate="0.611726685133887" branch-rate="0" complexity="0">
+    <package name="brcharts" line-rate="0.611367837338262" branch-rate="0" complexity="0">
       <classes>
         <class name="check_feature.R" filename="R/check_feature.R" line-rate="0.130434782608696" branch-rate="0" complexity="0">
           <methods>
@@ -1845,9 +1845,9 @@
             <line number="126" hits="4" branch="false"/>
           </lines>
         </class>
-        <class name="scatterplot_function.R" filename="R/scatterplot_function.R" line-rate="0.890756302521008" branch-rate="0" complexity="0">
+        <class name="scatterplot_function.R" filename="R/scatterplot_function.R" line-rate="0.888888888888889" branch-rate="0" complexity="0">
           <methods>
-            <method name="scatter_plot" signature="" line-rate="0.890756302521008" branch-rate="0" complexity="0">
+            <method name="scatter_plot" signature="" line-rate="0.888888888888889" branch-rate="0" complexity="0">
               <lines>
                 <line number="30" hits="5" branch="false"/>
                 <line number="32" hits="5" branch="false"/>
@@ -1893,8 +1893,8 @@
                 <line number="91" hits="3" branch="false"/>
                 <line number="93" hits="3" branch="false"/>
                 <line number="94" hits="3" branch="false"/>
-                <line number="95" hits="3" branch="false"/>
                 <line number="96" hits="3" branch="false"/>
+                <line number="97" hits="3" branch="false"/>
                 <line number="98" hits="3" branch="false"/>
                 <line number="99" hits="3" branch="false"/>
                 <line number="100" hits="3" branch="false"/>
@@ -1904,8 +1904,8 @@
                 <line number="104" hits="3" branch="false"/>
                 <line number="105" hits="3" branch="false"/>
                 <line number="106" hits="3" branch="false"/>
-                <line number="107" hits="3" branch="false"/>
                 <line number="108" hits="3" branch="false"/>
+                <line number="109" hits="3" branch="false"/>
                 <line number="110" hits="3" branch="false"/>
                 <line number="111" hits="3" branch="false"/>
                 <line number="112" hits="3" branch="false"/>
@@ -1966,8 +1966,6 @@
                 <line number="167" hits="3" branch="false"/>
                 <line number="168" hits="3" branch="false"/>
                 <line number="169" hits="3" branch="false"/>
-                <line number="170" hits="3" branch="false"/>
-                <line number="171" hits="3" branch="false"/>
               </lines>
             </method>
           </methods>
@@ -2016,8 +2014,8 @@
             <line number="91" hits="3" branch="false"/>
             <line number="93" hits="3" branch="false"/>
             <line number="94" hits="3" branch="false"/>
-            <line number="95" hits="3" branch="false"/>
             <line number="96" hits="3" branch="false"/>
+            <line number="97" hits="3" branch="false"/>
             <line number="98" hits="3" branch="false"/>
             <line number="99" hits="3" branch="false"/>
             <line number="100" hits="3" branch="false"/>
@@ -2027,8 +2025,8 @@
             <line number="104" hits="3" branch="false"/>
             <line number="105" hits="3" branch="false"/>
             <line number="106" hits="3" branch="false"/>
-            <line number="107" hits="3" branch="false"/>
             <line number="108" hits="3" branch="false"/>
+            <line number="109" hits="3" branch="false"/>
             <line number="110" hits="3" branch="false"/>
             <line number="111" hits="3" branch="false"/>
             <line number="112" hits="3" branch="false"/>
@@ -2089,8 +2087,6 @@
             <line number="167" hits="3" branch="false"/>
             <line number="168" hits="3" branch="false"/>
             <line number="169" hits="3" branch="false"/>
-            <line number="170" hits="3" branch="false"/>
-            <line number="171" hits="3" branch="false"/>
           </lines>
         </class>
         <class name="tradeoff_plot.R" filename="R/tradeoff_plot.R" line-rate="0.523595505617978" branch-rate="0" complexity="0">

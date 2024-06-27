@@ -154,15 +154,16 @@ scatter_plot <- function(df_diff, outcome, legend_position = c(0, 1.05),
     annotate(
       "text",
       x = max1 * 0.9,
-      y = max1 * 0.6,
+      y = max1 * 0.55,
       label = paste0("Prob.==", sprintf("%1.1f", 100 * prob_good), "*\'%\'"),
       parse = TRUE,
       color = fig_colors[3],
       size = 9 * 0.35,
       fontface = "bold"
     ) +
+    coord_fixed(5.3 / 5) +
     annotate("text",
-      x = 0.90 * max1, y = 0.925 * max1, label =
+      x = 0.85 * max1, y = 0.89 * max1, label =
         paste0(outcome[1], " = ", outcome[2]),
       color = fig_colors[3], size = 9 * 0.35, vjust = 0,
       angle = 45

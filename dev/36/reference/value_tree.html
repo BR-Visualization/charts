@@ -47,11 +47,7 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">value_tree</span><span class="op">(</span></span>
-<span>  diagram <span class="op">=</span></span>
-<span>    <span class="st">"graph LR;\n  A(&lt;B&gt;Benefit-Risk Balance&lt;/B&gt;)--&gt;B(&lt;B&gt;Benefits&lt;/B&gt;)\n  B--&gt;C(&lt;B&gt;Primary Efficacy&lt;/B&gt;)\n  B--&gt;D(&lt;B&gt;Secondary Efficacy&lt;/B&gt;)\n  B--&gt;E(&lt;B&gt;Quality of life&lt;/B&gt;)\n  C--&gt;F(&lt;B&gt;% Success&lt;/B&gt;)\n  D--&gt;G(&lt;B&gt;Mean change&lt;/B&gt;)\n  E--&gt;H(&lt;B&gt;Mean change&lt;/B&gt;)\n  A--&gt;I(&lt;B&gt;Risks&lt;/B&gt;)\n  I--&gt;J(&lt;B&gt;Recurring AE&lt;/B&gt;)\n  I--&gt;K(&lt;B&gt;Rare SAE&lt;/B&gt;)\n  I--&gt;L(&lt;B&gt;Liver Toxicity&lt;/B&gt;)\n  J--&gt;M(&lt;B&gt;Event rate&lt;/B&gt;)\n  K--&gt;N(&lt;B&gt;% Event&lt;/B&gt;)\n  L--&gt;O(&lt;B&gt;% Event&lt;/B&gt;)\n  style A fill:#7ABD7E\n  style B fill:#7ABD7E\n  style I fill:#7ABD7E\n\n  style C fill:#FFE733\n  style D fill:#FFE733\n  style E fill:#FFE733\n  style J fill:#FFE733\n  style K fill:#FFE733\n  style L fill:#C6C6C6\n\n  style F fill: #FFAA1C\n  style G fill: #FFAA1C\n  style H fill: #FFAA1C\n  style M fill: #FFAA1C\n  style N fill: #FFAA1C\n  style O fill: #C6C6C6\n"</span>,</span>
-<span>  <span class="va">...</span></span>
-<span><span class="op">)</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">value_tree</span><span class="op">(</span><span class="va">diagram</span>, <span class="va">...</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
@@ -78,9 +74,41 @@ JavaScript.</p></dd>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">value_tree</span><span class="op">(</span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">value_tree</span><span class="op">(</span></span></span>
+<span class="r-in"><span>diagram <span class="op">=</span></span></span>
+<span class="r-in"><span><span class="st">"graph LR;</span></span></span>
+<span class="r-in"><span><span class="st">A(&lt;B&gt;Benefit-Risk Balance&lt;/B&gt;)--&gt;B(&lt;B&gt;Benefits&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">B--&gt;C(&lt;B&gt;Primary Efficacy&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">B--&gt;D(&lt;B&gt;Secondary Efficacy&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">B--&gt;E(&lt;B&gt;Quality of life&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">C--&gt;F(&lt;B&gt;% Success&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">D--&gt;G(&lt;B&gt;Mean change&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">E--&gt;H(&lt;B&gt;Mean change&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">A--&gt;I(&lt;B&gt;Risks&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">I--&gt;J(&lt;B&gt;Recurring AE&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">I--&gt;K(&lt;B&gt;Rare SAE&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">I--&gt;L(&lt;B&gt;Liver Toxicity&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">J--&gt;M(&lt;B&gt;Event rate&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">K--&gt;N(&lt;B&gt;% Event&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">L--&gt;O(&lt;B&gt;% Event&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">style A fill:#7ABD7E</span></span></span>
+<span class="r-in"><span><span class="st">style B fill:#7ABD7E</span></span></span>
+<span class="r-in"><span><span class="st">style I fill:#7ABD7E</span></span></span>
+<span class="r-in"><span><span class="st">style C fill:#FFE733</span></span></span>
+<span class="r-in"><span><span class="st">style D fill:#FFE733</span></span></span>
+<span class="r-in"><span><span class="st">style E fill:#FFE733</span></span></span>
+<span class="r-in"><span><span class="st">style J fill:#FFE733</span></span></span>
+<span class="r-in"><span><span class="st">style K fill:#FFE733</span></span></span>
+<span class="r-in"><span><span class="st">style L fill:#C6C6C6</span></span></span>
+<span class="r-in"><span><span class="st">style F fill: #FFAA1C</span></span></span>
+<span class="r-in"><span><span class="st">style G fill: #FFAA1C</span></span></span>
+<span class="r-in"><span><span class="st">style H fill: #FFAA1C</span></span></span>
+<span class="r-in"><span><span class="st">style M fill: #FFAA1C</span></span></span>
+<span class="r-in"><span><span class="st">style N fill: #FFAA1C</span></span></span>
+<span class="r-in"><span><span class="st">style O fill: #C6C6C6</span></span></span>
+<span class="r-in"><span><span class="st">"</span><span class="op">)</span></span></span>
 <div id="htmlwidget-ac96cb3ee4656e2e9ec3" style="width:700px;height:432.632880098888px;" class="DiagrammeR html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ac96cb3ee4656e2e9ec3">{"x":{"diagram":"graph LR;\n  A(<B>Benefit-Risk Balance<\/B>)-->B(<B>Benefits<\/B>)\n  B-->C(<B>Primary Efficacy<\/B>)\n  B-->D(<B>Secondary Efficacy<\/B>)\n  B-->E(<B>Quality of life<\/B>)\n  C-->F(<B>% Success<\/B>)\n  D-->G(<B>Mean change<\/B>)\n  E-->H(<B>Mean change<\/B>)\n  A-->I(<B>Risks<\/B>)\n  I-->J(<B>Recurring AE<\/B>)\n  I-->K(<B>Rare SAE<\/B>)\n  I-->L(<B>Liver Toxicity<\/B>)\n  J-->M(<B>Event rate<\/B>)\n  K-->N(<B>% Event<\/B>)\n  L-->O(<B>% Event<\/B>)\n  style A fill:#7ABD7E\n  style B fill:#7ABD7E\n  style I fill:#7ABD7E\n\n  style C fill:#FFE733\n  style D fill:#FFE733\n  style E fill:#FFE733\n  style J fill:#FFE733\n  style K fill:#FFE733\n  style L fill:#C6C6C6\n\n  style F fill: #FFAA1C\n  style G fill: #FFAA1C\n  style H fill: #FFAA1C\n  style M fill: #FFAA1C\n  style N fill: #FFAA1C\n  style O fill: #C6C6C6\n"},"evals":[],"jsHooks":[]}</script></code></pre></div>
+<script type="application/json" data-for="htmlwidget-ac96cb3ee4656e2e9ec3">{"x":{"diagram":"graph LR;\nA(<B>Benefit-Risk Balance<\/B>)-->B(<B>Benefits<\/B>)\nB-->C(<B>Primary Efficacy<\/B>)\nB-->D(<B>Secondary Efficacy<\/B>)\nB-->E(<B>Quality of life<\/B>)\nC-->F(<B>% Success<\/B>)\nD-->G(<B>Mean change<\/B>)\nE-->H(<B>Mean change<\/B>)\nA-->I(<B>Risks<\/B>)\nI-->J(<B>Recurring AE<\/B>)\nI-->K(<B>Rare SAE<\/B>)\nI-->L(<B>Liver Toxicity<\/B>)\nJ-->M(<B>Event rate<\/B>)\nK-->N(<B>% Event<\/B>)\nL-->O(<B>% Event<\/B>)\nstyle A fill:#7ABD7E\nstyle B fill:#7ABD7E\nstyle I fill:#7ABD7E\nstyle C fill:#FFE733\nstyle D fill:#FFE733\nstyle E fill:#FFE733\nstyle J fill:#FFE733\nstyle K fill:#FFE733\nstyle L fill:#C6C6C6\nstyle F fill: #FFAA1C\nstyle G fill: #FFAA1C\nstyle H fill: #FFAA1C\nstyle M fill: #FFAA1C\nstyle N fill: #FFAA1C\nstyle O fill: #C6C6C6\n"},"evals":[],"jsHooks":[]}</script></code></pre></div>
     </div>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

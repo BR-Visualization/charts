@@ -69,7 +69,47 @@
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span></span>
+<span class="r-in"><span><span class="co"># from github:</span></span></span>
+<span class="r-in"><span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"bokeh/rbokeh"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">save_mermaid</span><span class="op">(</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="value_tree.html">value_tree</a></span><span class="op">(</span></span></span>
+<span class="r-in"><span>  diagram <span class="op">=</span></span></span>
+<span class="r-in"><span>  <span class="st">"graph LR;</span></span></span>
+<span class="r-in"><span><span class="st">  A(&lt;B&gt;Benefit-Risk Balance&lt;/B&gt;)--&gt;B(&lt;B&gt;Benefits&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">  B--&gt;C(&lt;B&gt;Primary Efficacy&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">  B--&gt;D(&lt;B&gt;Secondary Efficacy&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">  B--&gt;E(&lt;B&gt;Quality of life&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">  C--&gt;F(&lt;B&gt;% Success&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">  D--&gt;G(&lt;B&gt;Mean change&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">  E--&gt;H(&lt;B&gt;Mean change&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">  A--&gt;I(&lt;B&gt;Risks&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">  I--&gt;J(&lt;B&gt;Recurring AE&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">  I--&gt;K(&lt;B&gt;Rare SAE&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">  I--&gt;L(&lt;B&gt;Liver Toxicity&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">  J--&gt;M(&lt;B&gt;Event rate&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">  K--&gt;N(&lt;B&gt;% Event&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">  L--&gt;O(&lt;B&gt;% Event&lt;/B&gt;)</span></span></span>
+<span class="r-in"><span><span class="st">  style A fill:#7ABD7E</span></span></span>
+<span class="r-in"><span><span class="st">  style B fill:#7ABD7E</span></span></span>
+<span class="r-in"><span><span class="st">  style I fill:#7ABD7E</span></span></span>
+<span class="r-in"><span><span class="st">  style C fill:#FFE733</span></span></span>
+<span class="r-in"><span><span class="st">  style D fill:#FFE733</span></span></span>
+<span class="r-in"><span><span class="st">  style E fill:#FFE733</span></span></span>
+<span class="r-in"><span><span class="st">  style J fill:#FFE733</span></span></span>
+<span class="r-in"><span><span class="st">  style K fill:#FFE733</span></span></span>
+<span class="r-in"><span><span class="st">  style L fill:#C6C6C6</span></span></span>
+<span class="r-in"><span><span class="st">  style F fill: #FFAA1C</span></span></span>
+<span class="r-in"><span><span class="st">  style G fill: #FFAA1C</span></span></span>
+<span class="r-in"><span><span class="st">  style H fill: #FFAA1C</span></span></span>
+<span class="r-in"><span><span class="st">  style M fill: #FFAA1C</span></span></span>
+<span class="r-in"><span><span class="st">  style N fill: #FFAA1C</span></span></span>
+<span class="r-in"><span><span class="st">  style O fill: #C6C6C6</span></span></span>
+<span class="r-in"><span><span class="st">  "</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste0</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span>, <span class="st">"/value_tree.png"</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="op">)</span></span></span>
+<span class="r-in"><span><span class="op">}</span></span></span>
+</code></pre></div>
     </div>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "https://raw.githubusercontent.com/cobertura/cobertura/master/cobertura/src/site/htdocs/xml/coverage-04.dtd">
-<coverage line-rate="0.594054580896686" branch-rate="0" lines-covered="1219" lines-valid="2052" branches-covered="0" branches-valid="0" complexity="0" version="3.6.4" timestamp="2024-06-28 15:12:51.080327">
+<coverage line-rate="0.594054580896686" branch-rate="0" lines-covered="1219" lines-valid="2052" branches-covered="0" branches-valid="0" complexity="0" version="3.6.4" timestamp="2024-06-28 15:16:35.739144">
   <sources>
     <source>/__w/brcharts/brcharts/brcharts</source>
   </sources>
@@ -3972,10 +3972,10 @@
             </method>
             <method name="save_mermaid" signature="" line-rate="0" branch-rate="0" complexity="0">
               <lines>
-                <line number="664" hits="0" branch="false"/>
                 <line number="665" hits="0" branch="false"/>
                 <line number="666" hits="0" branch="false"/>
                 <line number="667" hits="0" branch="false"/>
+                <line number="668" hits="0" branch="false"/>
               </lines>
             </method>
           </methods>
@@ -4265,22 +4265,22 @@
             <line number="609" hits="0" branch="false"/>
             <line number="610" hits="0" branch="false"/>
             <line number="611" hits="0" branch="false"/>
-            <line number="664" hits="0" branch="false"/>
             <line number="665" hits="0" branch="false"/>
             <line number="666" hits="0" branch="false"/>
             <line number="667" hits="0" branch="false"/>
+            <line number="668" hits="0" branch="false"/>
           </lines>
         </class>
         <class name="value_tree.R" filename="R/value_tree.R" line-rate="0" branch-rate="0" complexity="0">
           <methods>
             <method name="value_tree" signature="" line-rate="0" branch-rate="0" complexity="0">
               <lines>
-                <line number="44" hits="0" branch="false"/>
+                <line number="45" hits="0" branch="false"/>
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="44" hits="0" branch="false"/>
+            <line number="45" hits="0" branch="false"/>
           </lines>
         </class>
       </classes>

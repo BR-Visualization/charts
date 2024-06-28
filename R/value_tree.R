@@ -9,7 +9,7 @@
 #' @examples
 #' value_tree(
 #'   diagram =
-#'   "graph LR;
+#'     "graph LR;
 #'   A(<B>Benefit-Risk Balance</B>)-->B(<B>Benefits</B>)
 #'   B-->C(<B>Primary Efficacy</B>)
 #'   B-->D(<B>Secondary Efficacy</B>)
@@ -39,7 +39,8 @@
 #'   style M fill: #FFAA1C
 #'   style N fill: #FFAA1C
 #'   style O fill: #C6C6C6
-#'   ")
+#'   "
+#' )
 value_tree <- function(diagram, ...) {
   DiagrammeR::mermaid(diagram = diagram, ...)
 }

@@ -8,7 +8,7 @@ scatter_plot(
   df_diff,
   outcome,
   legend_position = c(0, 1.05),
-  fig_colors = c("#00AFBB", "red", "blue")
+  fig_colors = colfun()$fig11_colors
 )
 }
 \arguments{

@@ -4,11 +4,7 @@
 \alias{value_tree}
 \title{Create Value Tree}
 \usage{
-value_tree(
-  diagram =
-    "graph LR;\\n  A(<B>Benefit-Risk Balance</B>)-->B(<B>Benefits</B>)\\n  B-->C(<B>Primary Efficacy</B>)\\n  B-->D(<B>Secondary Efficacy</B>)\\n  B-->E(<B>Quality of life</B>)\\n  C-->F(<B>\% Success</B>)\\n  D-->G(<B>Mean change</B>)\\n  E-->H(<B>Mean change</B>)\\n  A-->I(<B>Risks</B>)\\n  I-->J(<B>Recurring AE</B>)\\n  I-->K(<B>Rare SAE</B>)\\n  I-->L(<B>Liver Toxicity</B>)\\n  J-->M(<B>Event rate</B>)\\n  K-->N(<B>\% Event</B>)\\n  L-->O(<B>\% Event</B>)\\n  style A fill:#7ABD7E\\n  style B fill:#7ABD7E\\n  style I fill:#7ABD7E\\n\\n  style C fill:#FFE733\\n  style D fill:#FFE733\\n  style E fill:#FFE733\\n  style J fill:#FFE733\\n  style K fill:#FFE733\\n  style L fill:#C6C6C6\\n\\n  style F fill: #FFAA1C\\n  style G fill: #FFAA1C\\n  style H fill: #FFAA1C\\n  style M fill: #FFAA1C\\n  style N fill: #FFAA1C\\n  style O fill: #C6C6C6\\n",
-  ...
-)
+value_tree(diagram, ...)
 }
 \arguments{
 \item{diagram}{Diagram in mermaid markdown-like language or file (as a
@@ -27,5 +23,37 @@ value tree image
 Generate example value tree
 }
 \examples{
-value_tree()
+value_tree(
+  diagram =
+  "graph LR;
+  A(<B>Benefit-Risk Balance</B>)-->B(<B>Benefits</B>)
+  B-->C(<B>Primary Efficacy</B>)
+  B-->D(<B>Secondary Efficacy</B>)
+  B-->E(<B>Quality of life</B>)
+  C-->F(<B>\% Success</B>)
+  D-->G(<B>Mean change</B>)
+  E-->H(<B>Mean change</B>)
+  A-->I(<B>Risks</B>)
+  I-->J(<B>Recurring AE</B>)
+  I-->K(<B>Rare SAE</B>)
+  I-->L(<B>Liver Toxicity</B>)
+  J-->M(<B>Event rate</B>)
+  K-->N(<B>\% Event</B>)
+  L-->O(<B>\% Event</B>)
+  style A fill:#7ABD7E
+  style B fill:#7ABD7E
+  style I fill:#7ABD7E
+  style C fill:#FFE733
+  style D fill:#FFE733
+  style E fill:#FFE733
+  style J fill:#FFE733
+  style K fill:#FFE733
+  style L fill:#C6C6C6
+  style F fill: #FFAA1C
+  style G fill: #FFAA1C
+  style H fill: #FFAA1C
+  style M fill: #FFAA1C
+  style N fill: #FFAA1C
+  style O fill: #C6C6C6
+  ")
 }

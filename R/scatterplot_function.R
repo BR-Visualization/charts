@@ -82,13 +82,13 @@ scatter_plot <- function(df_diff, outcome, legend_position = c(0, 1.05),
     diff2 <- na.omit(diff2)
   }
 
-  brratio <- diff1 - diff2
+  diffratio <- diff1 - diff2
 
   # calculate probability of ratio being in NE and below threshold=1
-  good <- ifelse(brratio > 0, 1, 0)
-  prob_good <- sum(good) / length(brratio)
+  good <- ifelse(diffratio > 0, 1, 0)
+  prob_good <- sum(good) / length(diffratio)
 
-  dfdiff <- data.frame(diff1, diff2, brratio)
+  dfdiff <- data.frame(diff1, diff2, diffratio)
 
   max1 <- max(diff1, diff2)
   min1 <- min(diff1, diff2)

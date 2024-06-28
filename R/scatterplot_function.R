@@ -26,7 +26,7 @@
 #' scatter_plot(scatterplot, outcome)
 
 scatter_plot <- function(df_diff, outcome, legend_position = c(0, 1.05),
-                         fig_colors = c("#00AFBB", "red", "blue")) {
+                         fig_colors = colfun()$fig11_colors) {
   mdiff1 <- mdiff2 <- label <- NULL
 
   df_diff <- as.data.frame(df_diff)
@@ -126,7 +126,7 @@ scatter_plot <- function(df_diff, outcome, legend_position = c(0, 1.05),
     geom_abline(intercept = 0, slope = 1, linetype = 2, size = 1) +
     labs(y = paste("Incremental", outcome[2], " ")) +
     labs(x = paste("Incremental", outcome[1], " ")) +
-    theme_minimal() +
+    br_charts_theme() +
     theme(
       legend.position = legend_position,
       legend.justification = c(0, 1),

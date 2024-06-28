@@ -125,7 +125,7 @@ generate_tradeoff_plot(
 ## Figure 11 - Scatterplot
 
 ```{r scatterplot, echo = FALSE}
-scatter_plot(scatterplot,outcome = c("Benefit", "Risk"))
+scatter_plot(scatterplot, outcome = c("Benefit", "Risk"))
 ```
 
 ## Figure 13 - Cumulative Excess Plot

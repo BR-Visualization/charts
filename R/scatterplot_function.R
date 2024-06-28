@@ -24,7 +24,6 @@
 #' @examples
 #' outcome <- c("Benefit", "Risk")
 #' scatter_plot(scatterplot, outcome)
-
 scatter_plot <- function(df_diff, outcome, legend_position = c(0, 1.05),
                          fig_colors = colfun()$fig11_colors) {
   mdiff1 <- mdiff2 <- label <- NULL

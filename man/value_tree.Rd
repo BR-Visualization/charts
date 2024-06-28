@@ -25,7 +25,7 @@ Generate example value tree
 \examples{
 value_tree(
   diagram =
-  "graph LR;
+    "graph LR;
   A(<B>Benefit-Risk Balance</B>)-->B(<B>Benefits</B>)
   B-->C(<B>Primary Efficacy</B>)
   B-->D(<B>Secondary Efficacy</B>)
@@ -55,5 +55,6 @@ value_tree(
   style M fill: #FFAA1C
   style N fill: #FFAA1C
   style O fill: #C6C6C6
-  ")
+  "
+)
 }

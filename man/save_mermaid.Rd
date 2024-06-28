@@ -19,12 +19,12 @@ Save DiagrameR::mermaid object
 }
 \examples{
 if (interactive()) {
-# from github:
-remotes::install_github("bokeh/rbokeh")
-save_mermaid(
-  value_tree(
-  diagram =
-  "graph LR;
+  # from github:
+  remotes::install_github("bokeh/rbokeh")
+  save_mermaid(
+    value_tree(
+      diagram =
+        "graph LR;
   A(<B>Benefit-Risk Balance</B>)-->B(<B>Benefits</B>)
   B-->C(<B>Primary Efficacy</B>)
   B-->D(<B>Secondary Efficacy</B>)
@@ -54,8 +54,9 @@ save_mermaid(
   style M fill: #FFAA1C
   style N fill: #FFAA1C
   style O fill: #C6C6C6
-  "),
-  paste0(tempdir(), "/value_tree.png")
+  "
+    ),
+    paste0(tempdir(), "/value_tree.png")
   )
 }
 }

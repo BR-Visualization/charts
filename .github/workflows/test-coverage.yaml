@@ -30,7 +30,7 @@ on:
         type: boolean
       publish-coverage-report:
         description: Publish the coverage report as a pull request comment
-        required: false
+        required: true
         default: true
         type: boolean
       allow-failure:
@@ -40,9 +40,9 @@ on:
         default: false
       enable-covtracer:
         description: Enable the covtracer job
-        required: false
+        required: true
         type: boolean
-        default: false
+        default: true
       additional-env-vars:
         description: |
           Extra environment variables, as a 'key=value' pair, with each pair on a new line.

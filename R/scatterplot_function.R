@@ -125,8 +125,13 @@ scatter_plot <- function(df_diff, outcome, legend_position = c(0, 1.05),
     geom_abline(intercept = 0, slope = 1, linetype = 2, size = 1) +
     labs(y = paste("Incremental", outcome[2], " ")) +
     labs(x = paste("Incremental", outcome[1], " ")) +
-    br_charts_theme() +
+    br_charts_theme(
+    ) +
     theme(
+      axis.line.x = element_blank(),
+      axis.line.y = element_blank(),
+      axis.ticks.x = element_blank(),
+      axis.ticks.y = element_blank(),
       legend.position = legend_position,
       legend.justification = c(0, 1),
       legend.box.just = "left",

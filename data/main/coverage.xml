@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "https://raw.githubusercontent.com/cobertura/cobertura/master/cobertura/src/site/htdocs/xml/coverage-04.dtd">
-<coverage line-rate="0.595505617977528" branch-rate="0" lines-covered="1219" lines-valid="2047" branches-covered="0" branches-valid="0" complexity="0" version="3.6.4" timestamp="2024-06-21 13:11:39.81004">
+<coverage line-rate="0.594054580896686" branch-rate="0" lines-covered="1219" lines-valid="2052" branches-covered="0" branches-valid="0" complexity="0" version="3.6.4" timestamp="2024-07-01 06:34:25.359151">
   <sources>
     <source>/__w/brcharts/brcharts/brcharts</source>
   </sources>
   <packages>
-    <package name="brcharts" line-rate="0.595505617977528" branch-rate="0" complexity="0">
+    <package name="brcharts" line-rate="0.594054580896686" branch-rate="0" complexity="0">
       <classes>
         <class name="check_feature.R" filename="R/check_feature.R" line-rate="0.130434782608696" branch-rate="0" complexity="0">
           <methods>
@@ -3643,7 +3643,7 @@
             <line number="1244" hits="4" branch="false"/>
           </lines>
         </class>
-        <class name="utils.R" filename="R/utils.R" line-rate="0.821052631578947" branch-rate="0" complexity="0">
+        <class name="utils.R" filename="R/utils.R" line-rate="0.809688581314879" branch-rate="0" complexity="0">
           <methods>
             <method name="colfun" signature="" line-rate="1" branch-rate="0" complexity="0">
               <lines>
@@ -3970,6 +3970,14 @@
                 <line number="611" hits="0" branch="false"/>
               </lines>
             </method>
+            <method name="save_mermaid" signature="" line-rate="0" branch-rate="0" complexity="0">
+              <lines>
+                <line number="665" hits="0" branch="false"/>
+                <line number="666" hits="0" branch="false"/>
+                <line number="667" hits="0" branch="false"/>
+                <line number="668" hits="0" branch="false"/>
+              </lines>
+            </method>
           </methods>
           <lines>
             <line number="8" hits="25" branch="false"/>
@@ -4257,6 +4265,22 @@
             <line number="609" hits="0" branch="false"/>
             <line number="610" hits="0" branch="false"/>
             <line number="611" hits="0" branch="false"/>
+            <line number="665" hits="0" branch="false"/>
+            <line number="666" hits="0" branch="false"/>
+            <line number="667" hits="0" branch="false"/>
+            <line number="668" hits="0" branch="false"/>
+          </lines>
+        </class>
+        <class name="value_tree.R" filename="R/value_tree.R" line-rate="0" branch-rate="0" complexity="0">
+          <methods>
+            <method name="value_tree" signature="" line-rate="0" branch-rate="0" complexity="0">
+              <lines>
+                <line number="45" hits="0" branch="false"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="45" hits="0" branch="false"/>
           </lines>
         </class>
       </classes>
